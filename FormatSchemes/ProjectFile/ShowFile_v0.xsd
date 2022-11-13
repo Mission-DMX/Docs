@@ -32,13 +32,16 @@
         	<documentation>A Filter object is used to construct a filter in the processing chain. It may refer to an input filter, a processing filter or an output filter.</documentation>
         </annotation>
         <sequence>
-            <annotation>
-            	<documentation>This sequence specifies the inking of output channels to this filters input channels.
-</documentation>
-            </annotation>
-            <element name="channellink" type="tns:ChannelLink"></element>
-    	</sequence>
-    	<attribute name="type" type="int">
+        	<annotation>
+        		<documentation>
+        			This sequence specifies the linking of output
+        			channels to this filters input channels.
+        		</documentation>
+        	</annotation>
+        	<element name="channellink" type="tns:ChannelLink"></element>
+        	<element name="filterConfiguration" type="tns:KeyValuePair"></element>
+        </sequence>
+        <attribute name="type" type="int">
     		<annotation>
     			<documentation>The type contains the type ID of the filter (for example a sequence or shiftregister).</documentation>
     		</annotation></attribute>
@@ -197,7 +200,7 @@
     	</simpleType>
     </attribute>
 
-    <complexType name="UIHint">
+    <complexType name="KeyValuePair">
     	<annotation>
     		<documentation>
     			This type contains a K-V pair for UI hints that will not
@@ -219,5 +222,5 @@
     		</annotation></attribute>
     </complexType>
 
-    <element name="hint" type="tns:UIHint"></element>
+    <element name="uihint" type="tns:KeyValuePair"></element>
 </schema>
