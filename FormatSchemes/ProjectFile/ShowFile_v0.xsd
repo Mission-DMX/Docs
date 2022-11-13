@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.asta.uni-luebeck.de/MissionDMX/ShowFile" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.asta.uni-luebeck.de/MissionDMX/ShowFile">
+
+    <complexType name="BordConfiguration">
+    	<sequence>
+    		<element name="scene" type="tns:Scene"></element>
+    		<element name="device" type="tns:Device"></element>
+    		<element name="universe" type="tns:Universe"></element>
+    	</sequence>
+    	<attribute name="show_name" type="string">
+    		<annotation>
+    			<documentation>
+    				A human readable Name of the show
+    			</documentation>
+    		</annotation>
+    	</attribute>
+    	<attribute name="default_active_scene" type="int">
+    		<annotation>
+    			<documentation>
+    				The ID of the scene to start at first startup.
+    			</documentation>
+    		</annotation>
+    	</attribute>
+    	<attribute name="notes" type="string">
+    		<annotation>
+    			<documentation>A human readable description of the show file or notes that can be viewed by the operator. This attribute is not used by the real time software.</documentation>
+    		</annotation></attribute>
+    </complexType>
+
+    <complexType name="Filter">
+        <annotation>
+        	<documentation>A Filter object is used to construct a filter in the processing chain. It may refer to an input filter, a processing filter or an output filter.</documentation>
+        </annotation>
+        <sequence>
+            <annotation>
+            	<documentation>This sequence specifies the inking of output channels to this filters input channels.
+</documentation>
+            </annotation>
+            <element name="channellink" type="tns:ChannelLink"></element>
+    	</sequence>
+    	<attribute name="type" type="int">
+    		<annotation>
+    			<documentation>The type contains the type ID of the filter (for example a sequence or shiftregister).</documentation>
+    		</annotation></attribute>
+    	<attribute name="id" type="string">
+    		<annotation>
+    			<documentation>The ID is used to query this filter during scene construction (to the filters output to the inputs of other filters). It must not contain colons.</documentation></annotation></attribute>
+    </complexType>
+
+    <complexType name="Scene">
+        <annotation>
+        	<documentation>A scene contains the filter chain description.</documentation>
+        </annotation>
+        <sequence>
+        	<element name="filter" type="tns:Filter"></element>
+        </sequence>
+        <attribute name="human_readable_name" type="string">
+    		<annotation>
+    			<documentation>A human readable name for the scene</documentation>
+    		</annotation></attribute>
+    	<attribute name="id" type="int">
+    		<annotation>
+    			<documentation>The internal ID of the scene used for reference and for communication with other bords. It must be unique.</documentation>
+    		</annotation></attribute>
+    </complexType>
+
+    <complexType name="ChannelLink">
+        <annotation>
+        	<documentation>A Channel link is used to register the pointer of an output channel with an input channel of the current filter</documentation>
+        </annotation>
+        <sequence>
+    		<element name="input_channel" type="string">
+    			<annotation>
+    				<documentation>The input channel id to register the pointer of the previous filters output with.</documentation>
+    			</annotation></element>
+    		<element name="output_channel_id" type="string">
+    			<annotation>
+    				<documentation>This id is used to fetch the output channel pointer. It's syntax is <filter_id>:<channel_id>.</documentation>
+    			</annotation></element>
+    	</sequence>
+    </complexType>
+
+
+    <element name="bord_configuration" type="tns:BordConfiguration"></element>
+
+
+    <complexType name="Universe">
+    	<annotation>
+    		<documentation>
+    			A universe contains the routing information for the
+    			devices.
+    		</documentation>
+    	</annotation>
+    	<choice>
+    		<element name="pysical_location" type="int">
+    			<annotation>
+    				<documentation>
+    					Route the universe to one of the physical
+    					outputs of the desk
+    				</documentation>
+    			</annotation>
+    		</element>
+    		<element name="artnet_location" type="tns:ArtnetLocation"></element>
+    	</choice>
+    	<attribute name="name" type="string">
+    		<annotation>
+    			<documentation>
+    				A human readable name of the universe. It is only
+    				relevant to the operator but not to the real time
+    				application.
+    			</documentation>
+    		</annotation>
+    	</attribute>
+    	<attribute name="description" type="string">
+    		<annotation>
+    			<documentation>
+    				A human readable description of the universe. It is
+    				only relevant to the operator but not to the real
+    				time application.
+    			</documentation>
+    		</annotation>
+    	</attribute>
+    	<attribute name="id" type="int">
+    		<annotation>
+    			<documentation>
+    				The id used to identify the universe.
+    			</documentation>
+    		</annotation>
+    	</attribute>
+    </complexType>
+
+    <complexType name="ArtnetLocation">
+    	<attribute name="ip_address" type="string">
+    		<annotation>
+    			<documentation>The IPv4 or IPv6 address of the stage box</documentation>
+    		</annotation></attribute>
+    	<attribute name="udp_port" type="int">
+    		<annotation>
+    			<documentation>The udp port the stage box listens on</documentation>
+    		</annotation></attribute>
+    	<attribute name="device_universe_id" type="int">
+    		<annotation>
+    			<documentation>The configured universe id on the stage box</documentation>
+    		</annotation></attribute>
+    </complexType>
+
+    <complexType name="Device">
+    	<attribute name="id" type="int">
+    		<annotation>
+    			<documentation>
+    				Internal id to identify the device
+    			</documentation>
+    		</annotation>
+    	</attribute>
+    	<attribute name="channel" type="string">
+    		<annotation>
+    			<documentation>
+    				The lowest channel utilized by the device
+    			</documentation>
+    		</annotation>
+    	</attribute>
+    	<attribute name="type" type="string">
+    		<annotation>
+    			<documentation>
+    				The Model / Manufacturer of the device
+    			</documentation>
+    		</annotation>
+    	</attribute>
+    	<attribute name="name" type="string">
+    		<annotation>
+    			<documentation>
+    				The human readable name used to refer to this device
+    				in the GUI
+    			</documentation>
+    		</annotation>
+    	</attribute>
+    	<attribute name="universe_id" type="int">
+    		<annotation>
+    			<documentation>
+    				The ID of the universe where the device is located.
+    			</documentation>
+    		</annotation>
+    	</attribute>
+    </complexType>
+
+
+    <attribute name="version">
+    	<annotation>
+    		<documentation>
+    			Specify the file format version used. This is version 0.
+    		</documentation>
+    	</annotation>
+    	<simpleType>
+    		<restriction base="int">
+    			<minInclusive value="0"></minInclusive>
+    		</restriction>
+    	</simpleType>
+    </attribute>
+
+    <complexType name="UIHint">
+    	<annotation>
+    		<documentation>
+    			This type contains a K-V pair for UI hints that will not
+    			be utilized by the real time engine but can be used by
+    			the project editor to store miscallaneus things, like
+    			for example view settings or filter groups
+    		</documentation>
+    	</annotation>
+    	<attribute name="name" type="string">
+    		<annotation>
+    			<documentation>
+    				This is the unique name of the data entry
+    			</documentation>
+    		</annotation>
+    	</attribute>
+    	<attribute name="value" type="string">
+    		<annotation>
+    			<documentation>The data to be stored (needs to be encoded as an XML compliant string).</documentation>
+    		</annotation></attribute>
+    </complexType>
+
+    <element name="hint" type="tns:UIHint"></element>
+</schema>
