@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package missiondmx.fish.ipcmessages;
+
+option optimize_for = LITE_RUNTIME;
+
+/*
+ * This file specifies messages used for manual universe routing.
+ */
+
+// This will update or configure a new universe (based on the id) if send to fish
+message Universe {
+  message ArtNet {
+    string ip_address = 1;
+    int32 port = 2;
+    int32 universe_on_device = 3;
+  }
+
+  int32 id = 1;
+  oneof Location {
+    int32 physical_location = 2;
+    ArtNet remote_location = 3;
+  }
+}
+
+message universes_list {
+   repeated Universe list_of_universes = 1;
+}
+
+message request_universe_list {
+  sint32 universe_id = 1; // Request info about a specific configured
+  // universe. The answer will contain an exhaustive list if negative.
+}
+
+message delete_universe {
+  int32 id = 1;
+}

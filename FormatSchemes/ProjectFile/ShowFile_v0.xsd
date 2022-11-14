@@ -5,7 +5,10 @@
     	<sequence>
     		<element name="scene" type="tns:Scene"></element>
     		<element name="device" type="tns:Device"></element>
-    		<element name="universe" type="tns:Universe"></element>
+    		<element name="universe" type="tns:Universe">
+    			<annotation>
+    				<documentation>The universe option will be updated by the real time application. It can to be configured using protobuffs though.</documentation>
+    			</annotation></element>
     	</sequence>
     	<attribute name="show_name" type="string">
     		<annotation>
@@ -39,7 +42,21 @@
         		</documentation>
         	</annotation>
         	<element name="channellink" type="tns:ChannelLink"></element>
-        	<element name="filterConfiguration" type="tns:KeyValuePair"></element>
+        	<element name="filterConfiguration"
+        		type="tns:KeyValuePair">
+        		<annotation>
+        			<documentation>
+        				The static filter properties (used in
+        				construction)
+        			</documentation>
+        		</annotation>
+        	</element>
+        	<element name="initialParameters" type="tns:KeyValuePair">
+        		<annotation>
+        			<documentation>The initial filter parameters. Parameters can be used to set data from the non real time application.
+These should only be used if strictly nessessary as updating them is very expensive.
+They can be used to implement UI controls on the touch screens besides scene switching though.</documentation>
+        		</annotation></element>
         </sequence>
         <attribute name="type" type="int">
     		<annotation>

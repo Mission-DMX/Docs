@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package missiondmx.fish.ipcmessages;
+
+import public "UniverseControl.proto";
+import public "DirectMode.proto";
+import public "FilterMode.proto";
+import public "Console.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+/*
+ * This file specifies messages and types used for general control.
+ * It also imports the definitions from direct and filter mode.
+ */
+
+enum RunMode {
+  RM_FILTER = 0; // Goto filter mode if transmitted
+  RM_DIRECT = 1; // Goto direct mode if transmitted
+  RM_STOP = 2; // Stop the real time server if transmitted
+}
+
+// Tell Fish to enter a new run mode
+message update_state {
+  RunMode new_state = 1;
+}
+
+// Will be pushed from Fish to UI after every cycle
+message current_state {
+  RunMode current_state = 1;
+  ShowFileApplyState showfile_apply_state = 2;
+  int32 current_scene = 3; // Will be -1 if not applicable
+  int32 last_cycle_time = 4; // Cycle time in ms
+  string last_error = 5; // The last error that occured
+}

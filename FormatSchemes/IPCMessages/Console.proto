@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package missiondmx.fish.ipcmessages;
+
+option optimize_for = LITE_RUNTIME;
+
+/*
+ * This file specifies messages and types used for controlling the physical user interface
+ */
+
+ enum ButtonState {
+   BS_SET_LED_NOT_ACTIVE = 0;
+   BS_ACTIVE = 1;
+   BS_SET_LED_BLINKING = 2;
+   BS_BUTTON_PRESSED = 3;
+   BS_BUTTON_RELEASED = 4;
+ }
+
+ // This message can be send both ways:
+ // Fish -> UI: if a button was pressed
+ // UI -> Fish: Change the LED of a button
+ message button_state_change {
+   int32 button = 1;
+   ButtonState new_state = 2;
+ }
+
+// This message can be used to set the fader position or be notified about a change done by the user
+ message fader_position {
+   int32 fader_id = 1;
+   int32 position = 2;
+ }
+
+// This message informs the UI about a rotary encoder change
+// A positive value encodes n steps clock wise
+ message rotary_encoder_change {
+   int32 encoder_id = 1;
+   sint32 amount = 2;
+ }

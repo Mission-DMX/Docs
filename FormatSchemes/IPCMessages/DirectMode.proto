@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package missiondmx.fish.ipcmessages;
+
+option optimize_for = LITE_RUNTIME;
+
+/*
+ * This file specifies messages and types used in direct mode.
+ */
+
+// Set the content of a universe or receive requested information about a universe
+message dmx_output {
+  int32 universe_id = 1;
+  repeated int32 channel_data = 2 [packed=true];
+}
+
+// Request the current universe data
+message request_dmx_data {
+  int32 universe_id = 1;
+}

@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package missiondmx.fish.ipcmessages;
+
+option optimize_for = LITE_RUNTIME;
+
+/*
+ * This file specifies messages and types used in filter mode.
+ */
+
+// Tell Fish to enter a specific scene or be notified about a change of scene
+message enter_scene {
+  int32 scene_id = 1; // The scene to load from the project file
+}
+
+enum ShowFileApplyState {
+  SFAS_INVALID = 0; // No file loaded
+  SFAS_SHOW_ACTIVE = 1; // A show file is loaded and no update is running
+  SFAS_SHOW_LOADING = 2; // No show file is loaded but one is loading
+  SFAS_SHOW_UPDATING = 3; // A show file is running and a new one is being loaded
+  SFAS_NO_SHOW_ERROR = 4; // An error occured and there is currently no show file active
+  SFAS_ERROR_SHOW_RUNNING = 5; // An error occured but the current show is still running
+}
+
+message load_show_file {
+  string show_data = 1; // The show file as XML data
+  bool goto_default_scene = 2; // Should the default scene be started if one is already loaded or should the current one be kept active
+}
+
+message update_parameter {
+  string filter_id = 1; // The filter whose update_paramter method should be called
+  string parameter_key = 2; // The key of the parameter to update
+  string parameter_value = 3; // The value of the parameter to set
+}
