@@ -9,16 +9,16 @@ Fish constists out of the following components:
 ## Update cycle
 ```mermaid
 graph TD;
-	Start Cycletimer --> Wait for input data structure to be ready;
-	Wait for input data structure to be ready --> Lock input data structure;
-	Lock input data structure --> Choose Execution Engine;
-	Choose Execution Engine --> Calculate filters;
-	Choose Execution Engine --> output values from direct mode;
-	Calculate filters --> Release Input data structure;
-	output values from direct mode --> Release Input data structure;
-	Release Input data structure --> Construct output packages;
-	Construct output packages --> Stop Cycle timer;
-	Stop Cycle timer --> Send state to UI;
-	Send state to UI --> Wait until 2ms prior to the next required cycle;
-	Wait until 2ms prior to the next required cycle --> Start Cycletimer;
+	A[Start Cycletimer] --> B;
+	B[Wait for input data structure to be ready] --> C;
+	C[Lock input data structure] --> D;
+	D[Choose Execution Engine] --> E;
+	D[Choose Execution Engine] --> F;
+	E[Calculate filters] --> G;
+	F[output values from direct mode] --> G;
+	G[Release Input data structure] --> H;
+	H[Construct output packages] --> I;
+	I[Stop Cycle timer] --> J;
+	J[Send state to UI] --> K;
+	K[Wait until 2ms prior to the next required cycle] --> A;
 ```
