@@ -26,7 +26,7 @@ message update_state {
 }
 
 // Will be pushed from Fish to UI after every cycle
-message current_state {
+message current_state_update {
   RunMode current_state = 1;
   ShowFileApplyState showfile_apply_state = 2;
   int32 current_scene = 3; // Will be -1 if not applicable
