@@ -20,12 +20,6 @@ enum RunMode {
   RM_STOP = 2; // Stop the real time server if transmitted
 }
 
-enum MsgType {
- MSGT_NOTHING = 0;
- MSGT_UPDATE_STATE = 1;
- MSGT_CURRENT_STATE_UPDATE = 2;
-}
-
 // Tell Fish to enter a new run mode
 message update_state {
   RunMode new_state = 1;
