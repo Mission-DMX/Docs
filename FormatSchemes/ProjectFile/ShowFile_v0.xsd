@@ -95,7 +95,7 @@ They can be used to implement UI controls on the touch screens besides scene swi
     			</annotation></element>
     		<element name="output_channel_id" type="string">
     			<annotation>
-    				<documentation>This id is used to fetch the output channel pointer. It's syntax is <filter_id>:<channel_id>.</documentation>
+    				<documentation>This id is used to fetch the output channel pointer. It's syntax is &lt;filter_id&gt;:&lt;channel_id&gt;.</documentation>
     			</annotation></element>
     	</sequence>
     </complexType>
