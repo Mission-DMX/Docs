@@ -8,7 +8,8 @@
     		<element name="universe" type="tns:Universe">
     			<annotation>
     				<documentation>The universe option will be updated by the real time application. It can to be configured using protobuffs though.</documentation>
-    			</annotation></element>
+    			</annotation>
+            </element>
     	</sequence>
     	<attribute name="show_name" type="string">
     		<annotation>
@@ -27,7 +28,8 @@
     	<attribute name="notes" type="string">
     		<annotation>
     			<documentation>A human readable description of the show file or notes that can be viewed by the operator. This attribute is not used by the real time software.</documentation>
-    		</annotation></attribute>
+    		</annotation>
+        </attribute>
     </complexType>
 
     <complexType name="Filter">
@@ -56,7 +58,8 @@
         			<documentation>The initial filter parameters. Parameters can be used to set data from the non real time application.
 These should only be used if strictly nessessary as updating them is very expensive.
 They can be used to implement UI controls on the touch screens besides scene switching though.</documentation>
-        		</annotation></element>
+        		</annotation>
+            </element>
         </sequence>
         <attribute name="type" type="int">
     		<annotation>
@@ -64,7 +67,9 @@ They can be used to implement UI controls on the touch screens besides scene swi
     		</annotation></attribute>
     	<attribute name="id" type="string">
     		<annotation>
-    			<documentation>The ID is used to query this filter during scene construction (to the filters output to the inputs of other filters). It must not contain colons.</documentation></annotation></attribute>
+    			<documentation>The ID is used to query this filter during scene construction (to the filters output to the inputs of other filters). It must not contain colons.</documentation>
+            </annotation>
+        </attribute>
     </complexType>
 
     <complexType name="Scene">
@@ -77,11 +82,13 @@ They can be used to implement UI controls on the touch screens besides scene swi
         <attribute name="human_readable_name" type="string">
     		<annotation>
     			<documentation>A human readable name for the scene</documentation>
-    		</annotation></attribute>
+    		</annotation>
+        </attribute>
     	<attribute name="id" type="int">
     		<annotation>
     			<documentation>The internal ID of the scene used for reference and for communication with other bords. It must be unique.</documentation>
-    		</annotation></attribute>
+    		</annotation>
+        </attribute>
     </complexType>
 
     <complexType name="ChannelLink">
@@ -92,11 +99,13 @@ They can be used to implement UI controls on the touch screens besides scene swi
     		<element name="input_channel" type="string">
     			<annotation>
     				<documentation>The input channel id to register the pointer of the previous filters output with.</documentation>
-    			</annotation></element>
+    			</annotation>
+            </element>
     		<element name="output_channel_id" type="string">
     			<annotation>
     				<documentation>This id is used to fetch the output channel pointer. It's syntax is &lt;filter_id&gt;:&lt;channel_id&gt;.</documentation>
-    			</annotation></element>
+    			</annotation>
+            </element>
     	</sequence>
     </complexType>
 
@@ -153,15 +162,18 @@ They can be used to implement UI controls on the touch screens besides scene swi
     	<attribute name="ip_address" type="string">
     		<annotation>
     			<documentation>The IPv4 or IPv6 address of the stage box</documentation>
-    		</annotation></attribute>
+    		</annotation>
+        </attribute>
     	<attribute name="udp_port" type="int">
     		<annotation>
     			<documentation>The udp port the stage box listens on</documentation>
-    		</annotation></attribute>
+    		</annotation>
+        </attribute>
     	<attribute name="device_universe_id" type="int">
     		<annotation>
     			<documentation>The configured universe id on the stage box</documentation>
-    		</annotation></attribute>
+    		</annotation>
+        </attribute>
     </complexType>
 
     <complexType name="Device">
@@ -236,7 +248,8 @@ They can be used to implement UI controls on the touch screens besides scene swi
     	<attribute name="value" type="string">
     		<annotation>
     			<documentation>The data to be stored (needs to be encoded as an XML compliant string).</documentation>
-    		</annotation></attribute>
+    		</annotation>
+        </attribute>
     </complexType>
 
     <element name="uihint" type="tns:KeyValuePair"></element>
