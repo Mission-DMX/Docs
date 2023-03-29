@@ -3,9 +3,9 @@
 
     <complexType name="BordConfiguration">
     	<sequence>
-    		<element name="scene" type="tns:Scene"></element>
-    		<element name="device" type="tns:Device"></element>
-    		<element name="universe" type="tns:Universe">
+    		<element name="scene" type="tns:Scene" maxOccurs="unbounded"></element>
+    		<element name="device" maxOccurs="unbounded" type="tns:Device"></element>
+    		<element name="universe" maxOccurs="unbounded" type="tns:Universe">
     			<annotation>
     				<documentation>The universe option will be updated by the real time application. It can to be configured using protobuffs though.</documentation>
     			</annotation>
@@ -43,9 +43,9 @@
         			channels to this filters input channels.
         		</documentation>
         	</annotation>
-        	<element name="channellink" type="tns:ChannelLink"></element>
+        	<element name="channellink" maxOccurs="unbounded" type="tns:ChannelLink"></element>
         	<element name="filterConfiguration"
-        		type="tns:KeyValuePair">
+        		maxOccurs="unbounded" type="tns:KeyValuePair">
         		<annotation>
         			<documentation>
         				The static filter properties (used in
@@ -53,7 +53,7 @@
         			</documentation>
         		</annotation>
         	</element>
-        	<element name="initialParameters" type="tns:KeyValuePair">
+        	<element name="initialParameters" maxOccurs="unbounded" type="tns:KeyValuePair">
         		<annotation>
         			<documentation>The initial filter parameters. Parameters can be used to set data from the non real time application.
 These should only be used if strictly nessessary as updating them is very expensive.
@@ -77,7 +77,7 @@ They can be used to implement UI controls on the touch screens besides scene swi
         	<documentation>A scene contains the filter chain description.</documentation>
         </annotation>
         <sequence>
-        	<element name="filter" type="tns:Filter"></element>
+        	<element name="filter" maxOccurs="unbounded" type="tns:Filter"></element>
         </sequence>
         <attribute name="human_readable_name" type="string">
     		<annotation>
@@ -95,18 +95,16 @@ They can be used to implement UI controls on the touch screens besides scene swi
         <annotation>
         	<documentation>A Channel link is used to register the pointer of an output channel with an input channel of the current filter</documentation>
         </annotation>
-        <sequence>
-    		<element name="input_channel" type="string">
-    			<annotation>
-    				<documentation>The input channel id to register the pointer of the previous filters output with.</documentation>
-    			</annotation>
-            </element>
-    		<element name="output_channel_id" type="string">
-    			<annotation>
-    				<documentation>This id is used to fetch the output channel pointer. It's syntax is &lt;filter_id&gt;:&lt;channel_id&gt;.</documentation>
-    			</annotation>
-            </element>
-    	</sequence>
+    	<attribute name="input_channel_id" type="string">
+    		<annotation>
+    			<documentation>The input channel id to register the pointer of the previous filters output with.</documentation>
+    		</annotation>
+        </attribute>
+    	<attribute name="output_channel_id" type="string">
+    		<annotation>
+    			<documentation>This id is used to fetch the output channel pointer. It's syntax is &lt;filter_id&gt;:&lt;channel_id&gt;. For example move_head_control1:pan</documentation>
+    		</annotation>
+        </attribute>
     </complexType>
 
 
