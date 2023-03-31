@@ -61,11 +61,11 @@ They can be used to implement UI controls on the touch screens besides scene swi
         		</annotation>
             </element>
         </sequence>
-        <attribute name="type" type="int">
+        <attribute name="type" type="int" use="required">
     		<annotation>
     			<documentation>The type contains the type ID of the filter (for example a sequence or shiftregister).</documentation>
     		</annotation></attribute>
-    	<attribute name="id" type="string">
+    	<attribute name="id" type="string" use="required">
     		<annotation>
     			<documentation>The ID is used to query this filter during scene construction (to the filters output to the inputs of other filters). It must not contain colons.</documentation>
             </annotation>
@@ -147,7 +147,7 @@ They can be used to implement UI controls on the touch screens besides scene swi
     			</documentation>
     		</annotation>
     	</attribute>
-    	<attribute name="id" type="int">
+    	<attribute name="id" type="int" use="required">
     		<annotation>
     			<documentation>
     				The id used to identify the universe.
@@ -157,17 +157,17 @@ They can be used to implement UI controls on the touch screens besides scene swi
     </complexType>
 
     <complexType name="ArtnetLocation">
-    	<attribute name="ip_address" type="string">
+    	<attribute name="ip_address" type="string" use="required">
     		<annotation>
     			<documentation>The IPv4 or IPv6 address of the stage box</documentation>
     		</annotation>
         </attribute>
-    	<attribute name="udp_port" type="int">
+    	<attribute name="udp_port" type="int" use="required">
     		<annotation>
     			<documentation>The udp port the stage box listens on</documentation>
     		</annotation>
         </attribute>
-    	<attribute name="device_universe_id" type="int">
+    	<attribute name="device_universe_id" type="int" use="required">
     		<annotation>
     			<documentation>The configured universe id on the stage box</documentation>
     		</annotation>
@@ -236,14 +236,14 @@ They can be used to implement UI controls on the touch screens besides scene swi
     			for example view settings or filter groups
     		</documentation>
     	</annotation>
-    	<attribute name="name" type="string">
+    	<attribute name="name" type="string" use="required">
     		<annotation>
     			<documentation>
     				This is the unique name of the data entry
     			</documentation>
     		</annotation>
     	</attribute>
-    	<attribute name="value" type="string">
+    	<attribute name="value" type="string" use="required">
     		<annotation>
     			<documentation>The data to be stored (needs to be encoded as an XML compliant string).</documentation>
     		</annotation>
