@@ -5,6 +5,7 @@ The following file specifies the type identifiers as well as the channel names o
 These filters provide constant inputs and their values can be updated from the GUI.
 ### 8 bit constant
 - Type name: `constants:8bit`
+- Type id: `0`
 - Input channels: None
 - Output channels:
   * `value`: the stored 8 bit value
@@ -16,6 +17,7 @@ These filters provide constant inputs and their values can be updated from the G
 
 ### 16 bit constant
 - Type name: `constants:16bit`
+- Type id: `1`
 - Input channels: None
 - Output channels:
   * `value`: the stored 16 bit value
@@ -27,6 +29,7 @@ These filters provide constant inputs and their values can be updated from the G
 
 ### float constant
 - Type name: `constants:float`
+- Type id: `2`
 - Input channels: None
 - Output channels:
   * `value`: the stored double value
@@ -38,6 +41,7 @@ These filters provide constant inputs and their values can be updated from the G
 
 ### color constant
 - Type name: `constants:pixel`
+- Type id: `3`
 - Input channels: None
 - Output channels:
   * `value`: the stored color value
