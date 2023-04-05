@@ -1,0 +1,51 @@
+# filter types
+The following file specifies the type identifiers as well as the channel names of the filters.
+
+## Constants
+These filters provide constant inputs and their values can be updated from the GUI.
+### 8 bit constant
+- Type name: `constants:8bit`
+- Input channels: None
+- Output channels:
+  * `value`: the stored 8 bit value
+- Configuration parameters: None
+- initial parameters:
+  * `value`: the content of the storage to be set (needs to be parsable as an int)
+- GUI update keys:
+  * `value`: the content of the storage to be set (needs to be parsable as an int)
+
+### 16 bit constant
+- Type name: `constants:16bit`
+- Input channels: None
+- Output channels:
+  * `value`: the stored 16 bit value
+- Configuration parameters: None
+- initial parameters:
+  * `value`: the content of the storage to be set (needs to be parsable as an int)
+- GUI update keys:
+  * `value`: the content of the storage to be set (needs to be parsable as an int)
+
+### float constant
+- Type name: `constants:float`
+- Input channels: None
+- Output channels:
+  * `value`: the stored double value
+- Configuration parameters: None
+- initial parameters:
+  * `value`: the content of the storage to be set (needs to be parsable as a double)
+- GUI update keys:
+  * `value`: the content of the storage to be set (needs to be parsable as a double)
+
+### color constant
+- Type name: `constants:pixel`
+- Input channels: None
+- Output channels:
+  * `value`: the stored color value
+- Configuration parameters: None
+- initial parameters:
+  * `value`: the content of the storage to be set (needs to be in the color format specified below)
+- GUI update keys:
+  * `value`: the content of the storage to be set (needs to be in the color format specified below)
+#### color format
+The following format can be parsed: `<hue as a double>,<saturation as a double>,<value as a double>`.
+For example: `180.0,1.0,1.0` is a cyan like color.
