@@ -10,6 +10,7 @@
     				<documentation>The universe option will be updated by the real time application. It can to be configured using protobuffs though.</documentation>
     			</annotation>
             </element>
+            <element name="uihint" type="tns:KeyValuePair" maxOccurs="unbounded"></element>
     	</sequence>
     	<attribute name="show_name" type="string">
     		<annotation>
@@ -106,10 +107,6 @@ They can be used to implement UI controls on the touch screens besides scene swi
     		</annotation>
         </attribute>
     </complexType>
-
-
-    <element name="bord_configuration" type="tns:BordConfiguration"></element>
-
 
     <complexType name="Universe">
     	<annotation>
@@ -249,6 +246,6 @@ They can be used to implement UI controls on the touch screens besides scene swi
     		</annotation>
         </attribute>
     </complexType>
-
-    <element name="uihint" type="tns:KeyValuePair"></element>
+    
+    <element name="bord_configuration" type="tns:BordConfiguration" maxOccurs="1" minOccurs="1"></element>
 </schema>
