@@ -116,7 +116,7 @@ They can be used to implement UI controls on the touch screens besides scene swi
     		</documentation>
     	</annotation>
     	<choice>
-    		<element name="pysical_location" type="int">
+    		<element name="physical_location" type="int">
     			<annotation>
     				<documentation>
     					Route the universe to one of the physical
@@ -179,7 +179,7 @@ They can be used to implement UI controls on the touch screens besides scene swi
     			</documentation>
     		</annotation>
     	</attribute>
-    	<attribute name="channel" type="string">
+    	<attribute name="channel" type="int">
     		<annotation>
     			<documentation>
     				The lowest channel utilized by the device
