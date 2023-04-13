@@ -92,3 +92,15 @@ post them to the debug table of the GUI.
 - Configuration parameters: None (Later: method to be used for gui communication)
 - initial parameters: None
 - GUI update keys: None
+
+## Adapters
+### Split 16 bit unsigned ints to two 8 bit unsigned ints
+- Type name: `adapter:16bit_to_dual_byte`
+- Type id: `8`
+- Input channels: `value` of type `16bit`
+- Output channels:
+  * `value_lower`: The lower part of the original variable
+  * `value_upper`: The upper part of the original variable
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
