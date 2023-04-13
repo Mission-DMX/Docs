@@ -104,3 +104,12 @@ post them to the debug table of the GUI.
 - Configuration parameters: None
 - initial parameters: None
 - GUI update keys: None
+
+### Convert 16 bit to ngn
+- Type name: `adapter:16bit_to_bool`
+- Type id: `9`
+- Input channels: `value` of type `16bit`
+- Output channels: `value` (0 if input was 0, 1 if input was greater than zero)
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
