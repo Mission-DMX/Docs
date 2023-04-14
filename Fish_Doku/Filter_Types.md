@@ -93,7 +93,7 @@ post them to the debug table of the GUI.
 - initial parameters: None
 - GUI update keys: None
 
-## Adapters
+## Adapters and Arithmetics
 ### Split 16 bit unsigned ints to two 8 bit unsigned ints
 - Type name: `adapter:16bit_to_dual_byte`
 - Type id: `8`
@@ -110,6 +110,18 @@ post them to the debug table of the GUI.
 - Type id: `9`
 - Input channels: `value` of type `16bit`
 - Output channels: `value` (0 if input was 0, 1 if input was greater than zero)
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+
+### MAC filter
+- Type name: `arith:mac`
+- Type id: `10`
+- Input channels:
+  * `factor1`: double
+  * `factor2`: double
+  * `summand`: double
+- Output channels: `value` (:= `(factor1 * factor2) + summand`)
 - Configuration parameters: None
 - initial parameters: None
 - GUI update keys: None
