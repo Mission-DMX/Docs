@@ -31,4 +31,5 @@ message update_parameter {
   string filter_id = 1; // The filter whose update_paramter method should be called
   string parameter_key = 2; // The key of the parameter to update
   string parameter_value = 3; // The value of the parameter to set
+  int32 scene_id = 4; // The scene where the filter is located
 }
