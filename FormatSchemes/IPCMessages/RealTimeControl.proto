@@ -33,3 +33,17 @@ message current_state_update {
   int32 last_cycle_time = 4; // Cycle time in ms
   string last_error = 5; // The last error that occured
 }
+
+enum LogLevel {
+  LL_DEBUG = 0;
+  LL_INFO = 1;
+  LL_WARNING = 2;
+  LL_ERROR = 3;
+}
+
+// This message will post log content to the GUI for every issue that is too long to be displayed within the status bar
+message long_log_update {
+  LogLevel level = 1;
+  uint64 time_stamp = 2; // Unix time stamp of event
+  string what = 3; // Content of the log entry
+}
