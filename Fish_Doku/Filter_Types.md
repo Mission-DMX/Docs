@@ -127,6 +127,7 @@ post them to the debug table of the GUI.
 - GUI update keys: None
 
 ### Universe Output
+Note: While technically possible, it is advised to use one output filter per universe, as each filter looks up its universe on every cycle and this operation, while being quite fast, cannot be performed in constant time and will, most likely, introduce cache misses.
 - Type name: `output`
 - Type id: `11`
 - Input channels:
