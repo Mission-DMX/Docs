@@ -138,3 +138,21 @@ Note: While technically possible, it is advised to use one output filter per uni
   * every other supplied parameter will be parsed in the format `<universe channel>`:`<filter input channel id>` and registered with the output module, where `<universe channel>` is the key and `<filter input channel id>` the value of the parameter. Every supplied input channel id needs to pe avaiable as an 8 bit input channel within the filter mapping.
 - initial parameters: None
 - GUI update keys: None
+
+### float to 16bit
+- Type name: `arith:round_to_16bit`
+- Type id: `12`
+- Input channels: `value` of type `double`
+- Output channels: `value` of type `16bit` (= rounded and then cut value of input channel)
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+
+### float to 8bit
+- Type name: `arith:round_to_8bit`
+- Type id: `13`
+- Input channels: `value` of type `double`
+- Output channels: `value` of type `8bit` (= rounded and then cut value of input channel)
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
