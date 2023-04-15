@@ -156,3 +156,12 @@ Note: While technically possible, it is advised to use one output filter per uni
 - Configuration parameters: None
 - initial parameters: None
 - GUI update keys: None
+
+### round float
+- Type name: `arith:round`
+- Type id: `14`
+- Input channels: `value` of type `double`
+- Output channels: `value` of type `double` (= rounded value of input channel)
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
