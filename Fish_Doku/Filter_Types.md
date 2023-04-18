@@ -51,7 +51,7 @@ These filters provide constant inputs and their values can be updated from the G
 - GUI update keys:
   * `value`: the content of the storage to be set (needs to be in the color format specified below)
 #### color format
-The following format can be parsed: `<hue as a double>,<saturation as a double>,<value as a double>`.
+The following format can be parsed: `<hue as a double>,<saturation as a double>,<iluminance as a double>`.
 For example: `180.0,1.0,1.0` is a cyan like color.
 
 ## Debug Filters
