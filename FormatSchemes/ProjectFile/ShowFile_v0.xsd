@@ -175,8 +175,8 @@ They can be used to implement UI controls on the touch screens besides scene swi
     <complexType name="FTDILocation">
         <attribute name="vendor_id" use="required" type="int"></attribute>
         <attribute name="product_id" use="required" type="int"></attribute>
-        <attribute name="device_name" use="required"></attribute>
-        <attribute name="serial_identifier"></attribute>
+        <attribute name="device_name" use="required" type="string"></attribute>
+        <attribute name="serial_identifier" type="string"></attribute>
     </complexType>
 
     <complexType name="Device">
