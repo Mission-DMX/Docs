@@ -15,11 +15,19 @@ message Universe {
     int32 port = 2;
     int32 universe_on_device = 3;
   }
+  
+  message USBConfig {
+    int32 device_id = 1;
+    int32 vendor_id = 2;
+    string device_name = 3;
+    string serial = 4;
+  }
 
   int32 id = 1;
   oneof Location {
     int32 physical_location = 2;
     ArtNet remote_location = 3;
+    USBConfig ftdi_dongle = 4;
   }
 }
 
