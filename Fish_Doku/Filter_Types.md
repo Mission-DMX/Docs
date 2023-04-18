@@ -165,3 +165,41 @@ Note: While technically possible, it is advised to use one output filter per uni
 - Configuration parameters: None
 - initial parameters: None
 - GUI update keys: None
+
+### color to RGB
+- Type name: `hsi_to_rgb`
+- Type id: `15`
+- Input channels: `value` of type `color`
+- Output channels:
+  * `r` of type `8bit`
+  * `g` of type `8bit`
+  * `b` of type `8bit`
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+
+### color to RGBW
+- Type name: `hsi_to_rgbw`
+- Type id: `16`
+- Input channels: `value` of type `color`
+- Output channels:
+  * `r` of type `8bit`
+  * `g` of type `8bit`
+  * `b` of type `8bit`
+  * `w` of type `8bit`
+- Configuration parameters: None
+- initial parameters: None
+
+### color to RGBWA
+- Type name: `hsi_to_rgbw`
+- Type id: `16`
+- Input channels: `value` of type `color`
+- Output channels:
+  * `r` of type `8bit`
+  * `g` of type `8bit`
+  * `b` of type `8bit`
+  * `w` of type `8bit`
+  * `a` of type `8bit`
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
