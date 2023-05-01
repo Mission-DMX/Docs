@@ -70,8 +70,8 @@ option optimize_for = LITE_RUNTIME;
      
      oneof value {
        hsi_color plain_color = 6;
-       hsi_u_color = 7;
-       raw_fader_data = 8;
+       hsi_u_color color_with_uv = 7;
+       raw_fader_data raw_data = 8;
      }
    }
  
