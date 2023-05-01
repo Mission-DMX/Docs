@@ -26,13 +26,64 @@ option optimize_for = LITE_RUNTIME;
 
 // This message can be used to set the fader position or be notified about a change done by the user
  message fader_position {
-   int32 fader_id = 1;
-   int32 position = 2;
+   string column_id = 1;
+   uint32 position = 2;
  }
 
 // This message informs the UI about a rotary encoder change
 // A positive value encodes n steps clock wise
  message rotary_encoder_change {
-   int32 encoder_id = 1;
+   string column_id = 1;
    sint32 amount = 2;
+ }
+ 
+ message remove_fader_bank_set {
+   string bank_id = 1;
+ }
+ 
+ message fader_column {
+     string column_id = 1;
+     string upper_display_text = 3;
+     string lower_display_text = 4;
+     uint32 display_color = 5;
+     
+     message hsi_color {
+       double hue = 1;
+       double saturation = 2;
+       double intensity = 3;
+     }
+     
+     message hsi_u_color {
+       hsi_color base = 1;
+       uint32 uv = 2;
+     }
+     
+     message raw_fader_data {
+       uint32 fader = 1;
+       sint32 rotary_position = 2;
+       uint32 meter_leds = 3;
+       ButtonState select = 4;
+       ButtonState b1 = 5;
+       ButtonState b2 = 6;
+       ButtonState b3 = 7;
+     }
+     
+     oneof value {
+       hsi_color plain_color = 6;
+       hsi_u_color = 7;
+       raw_fader_data = 8;
+     }
+   }
+ 
+ message add_fader_bank_set {
+   // This message defines a fader bank. Please be aware that it is not possible
+   // to use more columns than there are physically on the board. For example 8 if
+   // only a single X-Touch is attached.
+   message fader_bank {
+     repeated fader_column cols = 1;
+   }
+ 
+   string bank_id = 1;
+   uint32 default_active_fader_bank = 2;
+   repeated fader_bank banks = 3;
  }
