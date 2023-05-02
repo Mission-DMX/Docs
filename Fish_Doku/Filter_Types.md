@@ -192,7 +192,7 @@ Note: While technically possible, it is advised to use one output filter per uni
 
 ### color to RGBWA
 - Type name: `hsi_to_rgbw`
-- Type id: `16`
+- Type id: `17`
 - Input channels: `value` of type `color`
 - Output channels:
   * `r` of type `8bit`
@@ -201,5 +201,296 @@ Note: While technically possible, it is advised to use one output filter per uni
   * `w` of type `8bit`
   * `a` of type `8bit`
 - Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+
+### float to color
+- Type name: `float_to_pixel`
+- Type id: `18`
+- Input channels:
+  * `h` of type `double`
+  * `s` of type `double`
+  * `i` of type `double`
+- Output channels:
+  * `value` of type `color`
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+
+### sine
+- Type name: `sine`
+- Type id: `19`
+- Input channels: 
+  * `value` of type `double`
+  * `factor_outer` of type `double` (default `1`)
+  * `factor_inner` of type `double` (default `1`)
+  * `phase` of type `double` (default `0`)
+  * `offset` of type `double` (default `0`)
+- Output channels: `value` of type `double`
+  * = `factor_outer*(sin((value+phase)*factor_inner)) + offset`
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+- Notes
+  * defaults were taken by fish, if these values are not set
+  * is calculated as degree
+
+### cosine
+- Type name: `cosine`
+- Type id: `20`
+- Input channels: 
+  * `value` of type `double`
+  * `factor_outer` of type `double` (default `1`)
+  * `factor_inner` of type `double` (default `1`)
+  * `phase` of type `double` (default `0`)
+  * `offset` of type `double` (default `0`)
+- Output channels: `value` of type `double`
+  * = `factor_outer*(cos((value+phase)*factor_inner)) + offset`
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+- Notes
+  * defaults were taken by fish, if these values are not set
+  * is calculated as degree
+
+### tangent
+- Type name: `tangent`
+- Type id: `21`
+- Input channels: 
+  * `value` of type `double`
+  * `factor_outer` of type `double` (default `1`)
+  * `factor_inner` of type `double` (default `1`)
+  * `phase` of type `double` (default `0`)
+  * `offset` of type `double` (default `0`)
+- Output channels: `value` of type `double`
+  * = `factor_outer*(tan((value+phase)*factor_inner)) + offset`
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+- Notes
+  * defaults were taken by fish, if these values are not set
+  * is calculated as degree
+
+### arcsine
+- Type name: `arcsine`
+- Type id: `22`
+- Input channels: 
+  * `value` of type `double`
+- Output channels: `value` of type `double`
+  * = `arcsin(value)`
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+- Notes
+  * is calculated as degree
+
+### arccosine
+- Type name: `arccosine`
+- Type id: `23`
+- Input channels: 
+  * `value` of type `double`
+- Output channels: `value` of type `double`
+  * = `arccos(value)`
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+- Notes
+  * is calculated as degree
+
+### arctangent
+- Type name: `arctangent`
+- Type id: `24`
+- Input channels: 
+  * `value` of type `double`
+- Output channels: `value` of type `double`
+  * = `arctan(value)`
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+- Notes
+  * is calculated as degree
+
+### square
+- Type name: `square_wave`
+- Type id: `25`
+- Input channels: 
+  * `value` of type `double`
+  * `factor_outer` of type `double` (default `1`)
+  * `factor_inner` of type `double` (default `1`)
+  * `phase` of type `double` (default `0`)
+  * `offset` of type `double` (default `0`)
+  * `length` of type `double` (default `180`)
+- Output channels: `value` of type `double`
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+- Notes
+  * defaults were taken by fish, if these values are not set
+  * the period is `360°`
+  * the length defines the part (in degrees) where the square is `1` the rest of the period is `-1`
+
+![](images/Waveforms.svg.png)
+I took this picture as reference, so the waves are also defined like the sine with `360°` and an output between `-1` and `1`.
+
+### triangle
+- Type name: `triangle_wave`
+- Type id: `26`
+- Input channels: 
+  * `value` of type `double`
+  * `factor_outer` of type `double` (default `1`)
+  * `factor_inner` of type `double` (default `1`)
+  * `phase` of type `double` (default `0`)
+  * `offset` of type `double` (default `0`)
+- Output channels: `value` of type `double`
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+- Notes
+  * defaults were taken by fish, if these values are not set
+  * the period is `360°`
+
+### sawtooth
+- Type name: `sawtooth_wave`
+- Type id: `27`
+- Input channels: 
+  * `value` of type `double`
+  * `factor_outer` of type `double` (default `1`)
+  * `factor_inner` of type `double` (default `1`)
+  * `phase` of type `double` (default `0`)
+  * `offset` of type `double` (default `0`)
+- Output channels: `value` of type `double`
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+- Notes
+  * defaults were taken by fish, if these values are not set
+  * the period is `360°`
+
+### logarithm
+- Type name: `logarithm`
+- Type id: `28`
+- Input channels: 
+  * `value` of type `double`
+- Output channels: `value` of type `double`
+  * = `ln(value)`
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+
+### exponential
+- Type name: `exponential`
+- Type id: `29`
+- Input channels: 
+  * `value` of type `double`
+- Output channels: `value` of type `double`
+  * = `e(value)`
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+
+### minimum
+- Type name: `minimum`
+- Type id: `30`
+- Input channels: 
+  * `param1` of type `double`
+  * `param2` of type `double`
+- Output channels: `value` of type `double`
+  * = `min(param1, param2)`
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+
+### maximum
+- Type name: `maximum`
+- Type id: `31`
+- Input channels: 
+  * `param1` of type `double`
+  * `param2` of type `double`
+- Output channels: `value` of type `double`
+  * = `max(param1, param2)`
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+
+### time
+- Type name: `time`
+- Type id: `32`
+- Input channels: None
+- Output channels: `value` of type `double`
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+- Notes
+  * time is the number of millisecons since start of the program
+
+### switch_on_delay_8bit
+- Type name: `switch_on_delay_8bit`
+- Type id: `33`
+- Input channels: 
+  * `value` of type of type `8bit`
+  * `time` of type of type `double`
+- Output channels: `value` of type of type `8bit`
+- Configuration parameters: 
+  * `delay` should be parseable as `double`
+- initial parameters: None
+- GUI update keys: None
+
+### switch_on_delay_16bit
+- Type name: `switch_on_delay_16bit`
+- Type id: `34`
+- Input channels: 
+  * `value` of type of type `16bit`
+  * `time` of type of type `double`
+- Output channels: `value` of type of type `16bit`
+- Configuration parameters: 
+  * `delay` should be parseable as `double`
+- initial parameters: None
+- GUI update keys: None
+
+### switch_on_delay_double
+- Type name: `switch_on_delay_double`
+- Type id: `35`
+- Input channels: 
+  * `value` of type `double`
+  * `time` of type of type `double`
+- Output channels: `value` of type `double`
+- Configuration parameters: 
+  * `delay` should be parseable as `double`
+- initial parameters: None
+- GUI update keys: None
+
+### switch_off_delay_8bit
+- Type name: `switch_off_delay_8bit`
+- Type id: `36`
+- Input channels: 
+  * `value` of type of type `8bit`
+  * `time` of type of type `double`
+- Output channels: `value` of type of type `8bit`
+- Configuration parameters: 
+  * `delay` should be parseable as `double`
+- initial parameters: None
+- GUI update keys: None
+
+### switch_off_delay_16bit
+- Type name: `switch_off_delay_16bit`
+- Type id: `37`
+- Input channels: 
+  * `value` of type of type `16bit`
+  * `time` of type of type `double`
+- Output channels: `value` of type of type `16bit`
+- Configuration parameters: 
+  * `delay` should be parseable as `double`
+- initial parameters: None
+- GUI update keys: None
+
+### switch_off_delay_double
+- Type name: `switch_off_delay_double`
+- Type id: `38`
+- Input channels: 
+  * `value` of type `double`
+  * `time` of type of type `double`
+- Output channels: `value` of type `double`
+- Configuration parameters: 
+  * `delay` should be parseable as `double`
 - initial parameters: None
 - GUI update keys: None
