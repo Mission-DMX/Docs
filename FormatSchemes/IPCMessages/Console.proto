@@ -16,10 +16,13 @@ option optimize_for = LITE_RUNTIME;
    BS_BUTTON_RELEASED = 4;
  }
 
- // This enum defines the buttons that are not internally handled by the driver
+ // This enum defines all buttons but some are internally handled by the driver and wont be commited
  enum ButtonCode {
+   // Until BTN_TRACK_EDITSHOW (excluding) the following buttons are handled internally by the driver.
    BTN_TRACK_EDITSHOW = 40; // Open the show file editor
    BTN_PAN_COMMITSHOW = 41; // Apply the changes of the edited show
+   BTN_EQ_COMMITRDY = 42; // Apply the chanes of all columns in READY-Mode; is blinking as long as some colums are in Ready/Wait mode
+   BTN_SEND_OOPS = 43; // Undo the commit of show file or column updates (whichever was last)
    BTN_PLUGIN_PATCH = 44; // Open the patching menu and review current transmitted values
    BTN_INST_UNIVERSES = 45; // Edit the connected universes
 
@@ -78,6 +81,92 @@ option optimize_for = LITE_RUNTIME;
    BTN_PLAY_RUNCUE = 90; // (⏵) Play/Pause execution of current Cue (blinking if paused)
    BTN_REC_RECFRAME = 91; // (⏺) Insert keyframe at current cursor position with current scene settings
 
+   BTN_FADERBANKPREV_FADERBANKPREV = 92; // Go to the previous fader bank (when in quick console mode: touchscreen should also scroll with faders)
+   BTN_FADERBANKNEXT_FADERBANKNEXT = 93; // Go to the next fader bank
+   BTN_CHPREV_UNIVERSEPREV = 94; // When in quick console mode: jump to previous universe; when in Show (edit) mode: jump to previous UI page on primary display
+   BTN_CHNEXT_UNIVERSENEXT = 95; // When in quick console mode: jump to next universe; when in Show (edit) mode: jump to next UI page on primary display
+
+   BTN_SCRUB = 101;
+   BTN_CROSSENTER = 100;
+   BTN_UP_UP = 96; // Key up; or when MH advanced edit selected: Zoom+
+   BTN_DOWN_DOWN = 97; // Key down; or when MH advanced edit selected: Zoom-
+   BTN_RIGHT_RIGHT = 99; // Key right; or when MH advanced edit selected: Focus+
+   BTN_LEFT_LEFT = 98; // Key left; or when MH advanced edit selected: Focus-
+
+   FADERTOUCH_CH1 = 110; // These cannot be used as led ids but can be used for event decoding
+   FADERTOUCH_CH2 = 111;
+   FADERTOUCH_CH3 = 112;
+   FADERTOUCH_CH4 = 113;
+   FADERTOUCH_CH5 = 114;
+   FADERTOUCH_CH6 = 115;
+   FADERTOUCH_CH7 = 116;
+   FADERTOUCH_CH8 = 117;
+   FADERTOUCH_MAIN = 118;
+   // End of block of internally handled buttons
+   BTN_TRACK_EDITSHOW = 40; // Open the show file editor
+   BTN_PAN_COMMITSHOW = 41; // Apply the changes of the edited show
+   BTN_EQ_COMMITRDY = 42; // Apply the chanes of all columns in READY-Mode; is blinking as long as some colums are in Ready/Wait mode; internally handled
+   BTN_SEND_OOPS = 43; // Undo the commit of show file or column updates (whichever was last); internally handled
+   BTN_PLUGIN_PATCH = 44; // Open the patching menu and review current transmitted values
+   BTN_INST_UNIVERSES = 45; // Edit the connected universes
+
+   BTN_NAMEVALUE = 46;
+   BTN_BEATS = 47;
+   BTN_GLOBALVIEW = 48;
+   BTN_MIDITRACKS = 49;
+   BTN_INPUTS = 50;
+   BTN_AUDIOTRACKS = 51;
+   BTN_AUDIOINST = 52;
+   BTN_AUX = 53;
+   BTN_BUSSES = 54;
+   BTN_OUTPUTS = 55;
+   BTN_USER = 56;
+
+   BTN_FLIP_MAINDARK = 57; // If enabled: makes the brightness of all attached fixtures 0; button led should be blinking if enabled
+
+   BTN_F1_F1 = 58; // Assignable macro keys
+   BTN_F2_F2 = 59;
+   BTN_F3_F3 = 60;
+   BTN_F4_F4 = 61;
+   BTN_F5_F5 = 62;
+   BTN_F6_F6 = 63;
+   BTN_F7_F7 = 64;
+   BTN_F8_F8 = 65;
+
+   BTN_SHIFT = 66;
+   BTN_OPTION = 67;
+   BTN_CONTROL = 73;
+   BTN_ALT = 74;
+
+   BTN_READOFF = 68;
+   BTN_WRITE = 69;
+   BTN_TOUCH = 75;
+   BTN_LATCH = 76;
+   BTN_TRIM = 70;
+   BTN_GROUP = 77;
+
+   BTN_SAVE_SAVE = 71; // Save show file; when in editor; save universe values when in quick console mode
+   BTN_UNDO_UNDO = 72; // Undo the changes made in the editor or quick console
+   BTN_CANCEL_CANCEL = 78; // Cancle the setting of a filter configuration
+   BTN_ENTER_ENTER = 79; // Submit the change of a filter configuration
+
+   BTN_MARKER_GOBO = 80; // When channel selected edit gobo of channel; when no channel selected edit default/global gobo; when continiously pressed: use jogwheel to change gobo
+   BTN_NUDGE_STROBO = 81; // When channel selected edit strobe of connected fixture; when no channel selected edit global strobe frequency; when continiously pressed: use jogwheel to change strobe settings
+   BTN_CYCLE_SHUTTER = 82; // When channel selected edit shutter of connected fixture; when no channel selected edit global shutter value; continiously pressed: use jogwheel
+   BTN_DROP_COLOR = 83; // Use color picker to edit color of fixture (if input selected) or global color. Jogwheel might be used for precise editing if button is continiously pressed
+   BTN_REPLACE_TEMPERATURE = 84; // Edit color temperature of single or global color; jogwheel might be used as well
+   BTN_CLICK_IMAGE = 85; // Select image send to shader or pixel mapper of selected column
+   BTN_SOLO_SPEED = 86; // Select speed pattern of corresponding fixture
+
+   // These buttons are useful for editing / playing Cues ans well as MIDI sequencing; button leds shall be lit; when the functionality is avaiable
+   BTN_REV_LASTCUE = 87; // (⏪) Go to previous Cue
+   BTN_FF_NEXTCUE = 88; // (⏩) Go to next Cue
+   BTN_STOP_STOPCUE = 89; // (⏹) Stop (pause and goto start) execution of current Cue
+   BTN_PLAY_RUNCUE = 90; // (⏵) Play/Pause execution of current Cue (blinking if paused)
+   BTN_REC_RECFRAME = 91; // (⏺) Insert keyframe at current cursor position with current scene settings
+
+   BTN_FADERBANKPREV_FADERBANKPREV = 92; // Go to the previous fader bank (when in quick console mode: touchscreen should also scroll with faders); internally handled
+   BTN_FADERBANKNEXT_FADERBANKNEXT = 93; // Go to the next fader bank; internally handled
    BTN_CHPREV_UNIVERSEPREV = 94; // When in quick console mode: jump to previous universe; when in Show (edit) mode: jump to previous UI page on primary display
    BTN_CHNEXT_UNIVERSENEXT = 95; // When in quick console mode: jump to next universe; when in Show (edit) mode: jump to next UI page on primary display
 
