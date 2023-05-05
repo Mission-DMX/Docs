@@ -187,9 +187,10 @@ option optimize_for = LITE_RUNTIME;
  message desk_update {
      string selected_column_id = 1;
      string find_active_on_column_id = 2;
-     sint32 jogwheel_change_since_last_update = 3;
+     sint32 jogwheel_change_since_last_update = 3; // only Fish -> UI
      string selected_bank_set = 4;
      uint32 selected_bank = 5;
+     string seven_seg_display_data = 6; // only UI -> Fish
  }
 
  message fader_column {
@@ -224,6 +225,9 @@ option optimize_for = LITE_RUNTIME;
        hsi_u_color color_with_uv = 7;
        raw_fader_data raw_data = 8;
      }
+
+     bool top_lcd_row_inverted = 9;
+     bool bottom_lcd_row_inverted = 10;
    }
  
  message add_fader_bank_set {
