@@ -127,7 +127,7 @@ option optimize_for = LITE_RUNTIME;
    BTN_CHPREV_UNIVERSEPREV = 94; // When in quick console mode: jump to previous universe; when in Show (edit) mode: jump to previous UI page on primary display
    BTN_CHNEXT_UNIVERSENEXT = 95; // When in quick console mode: jump to next universe; when in Show (edit) mode: jump to next UI page on primary display
 
-   BTN_SCRUB = 101;
+   BTN_SCRUB_JOGWHEELMODESWITCH = 101; // If this button is pressed, the jog wheel isn't used for navigation but changing the navigation speed (zoom in timelines)
    BTN_CROSSENTER = 100;
    BTN_UP_UP = 96; // Key up; or when MH advanced edit selected: Zoom+
    BTN_DOWN_DOWN = 97; // Key down; or when MH advanced edit selected: Zoom-
