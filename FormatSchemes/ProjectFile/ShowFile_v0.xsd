@@ -71,6 +71,11 @@ They can be used to implement UI controls on the touch screens besides scene swi
     			<documentation>The ID is used to query this filter during scene construction (to the filters output to the inputs of other filters). It must not contain colons.</documentation>
             </annotation>
         </attribute>
+		<attribute name="pos" type="string" use="required">
+    		<annotation>
+    			<documentation>Filter node position inside the editor ui.</documentation>
+            </annotation>
+        </attribute>
     </complexType>
 
     <complexType name="Scene">
