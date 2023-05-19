@@ -242,8 +242,3 @@ option optimize_for = LITE_RUNTIME;
    uint32 default_active_fader_bank = 2;
    repeated fader_bank banks = 3;
  }
-
- message select_state {
-   string column_id = 1;
-   bool active = 2;
- }
