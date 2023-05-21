@@ -25,4 +25,5 @@ enum MsgType {
  MSGT_ADD_FADER_BANK_SET = 17;
  MSGT_DESK_UPDATE = 18;
  MSGT_UPDATE_COLUMN = 19; // Console.fader_column
+ MSGT_BUTTON_CHANGE = 20; // Console.button_state_change
 }
