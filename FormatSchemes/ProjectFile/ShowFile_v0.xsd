@@ -44,8 +44,8 @@
         			channels to this filters input channels.
         		</documentation>
         	</annotation>
-        	<element name="channellink" maxOccurs="unbounded" type="tns:ChannelLink"></element>
-        	<element name="filterConfiguration"
+        	<element name="channellink" minOccurs="0" maxOccurs="unbounded" type="tns:ChannelLink"></element>
+        	<element name="filterConfiguration" minOccurs="0"
         		maxOccurs="unbounded" type="tns:KeyValuePair">
         		<annotation>
         			<documentation>
@@ -54,7 +54,7 @@
         			</documentation>
         		</annotation>
         	</element>
-        	<element name="initialParameters" maxOccurs="unbounded" type="tns:KeyValuePair">
+        	<element name="initialParameters" minOccurs="0" maxOccurs="unbounded" type="tns:KeyValuePair">
         		<annotation>
         			<documentation>The initial filter parameters. Parameters can be used to set data from the non real time application.
 These should only be used if strictly nessessary as updating them is very expensive.
