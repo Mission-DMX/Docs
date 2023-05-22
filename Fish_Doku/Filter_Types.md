@@ -567,7 +567,7 @@ The following filters can be used to fetch fader input.
 ## Cue-List
 ### cue_list_filter
  - Type name: `cue_list_filter`
- - Type id: `44
+ - Type id: `44`
 - Input channels: 
   * `time` of type of type `double`
  - Output channels:
