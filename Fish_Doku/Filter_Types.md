@@ -514,10 +514,10 @@ The following filters can be used to fetch fader input.
 
 ### filter_fader_column_hsi
  - Type name: `filter_fader_column_hsi`
- - Type id: `40
+ - Type id: `40`
  - Input channels: None
  - Output channels:
-   * `color type `hsv_pixel`
+   * `color` type `hsv_pixel`
  - Configuration parameters:
    * `set_id` The set to use for column lookup
    * `column_id` The column to look up
@@ -526,7 +526,7 @@ The following filters can be used to fetch fader input.
 
 ### filter_fader_column_hsia
  - Type name: `filter_fader_column_hsia`
- - Type id: `41
+ - Type id: `41`
  - Input channels: None
  - Output channels:
    * `color` type `hsv_pixel`
@@ -539,7 +539,7 @@ The following filters can be used to fetch fader input.
 
 ### filter_fader_column_hsiu
  - Type name: `filter_fader_column_hsiu`
- - Type id: `42
+ - Type id: `42`
  - Input channels: None
  - Output channels:
    * `color` of type `hsv_pixel`
@@ -552,7 +552,7 @@ The following filters can be used to fetch fader input.
 
 ### filter_fader_column_hsiau
  - Type name: `filter_fader_column_hsiau`
- - Type id: `43
+ - Type id: `43`
  - Input channels: None
  - Output channels:
    * `color` of type `hsv_pixel`
