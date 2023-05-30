@@ -564,6 +564,70 @@ The following filters can be used to fetch fader input.
  - initial parameters: None
  - GUI update keys: None
 
+### filter_shift_8bit
+ - Type name: `filter_shift_8bit`
+ - Type id: `45`
+ - Input channels: 
+   * `input` of type `8bit`
+   * `switch_time` of type `double` (in ms)
+   * `time` of type `double`
+ - Output channels:
+   * `output_1` of type `8bit`
+   * `output_2` of type `8bit`
+   * as many as in `nr_outputs` declared
+ - Configuration parameters:
+   * `nr_outputs` The number of shifted outputs
+ - initial parameters: None
+ - GUI update keys: None
+
+### filter_shift_16bit
+ - Type name: `filter_shift_16bit`
+ - Type id: `46`
+ - Input channels: 
+   * `input` of type `16bit`
+   * `switch_time` of type `double` (in ms)
+   * `time` of type `double`
+ - Output channels:
+   * `output_1` of type `16bit`
+   * `output_2` of type `16bit`
+   * as many as in `nr_outputs` declared
+ - Configuration parameters:
+   * `nr_outputs` The number of shifted outputs
+ - initial parameters: None
+ - GUI update keys: None
+
+### filter_shift_float
+ - Type name: `filter_shift_float`
+ - Type id: `47`
+ - Input channels: 
+   * `input` of type `float`
+   * `switch_time` of type `double` (in ms)
+   * `time` of type `double`
+ - Output channels:
+   * `output_1` of type `float`
+   * `output_2` of type `   * `output_1` of type `float``
+   * as many as in `nr_outputs` declared
+ - Configuration parameters:
+   * `nr_outputs` The number of shifted outputs
+ - initial parameters: None
+ - GUI update keys: None
+
+### filter_shift_color
+ - Type name: `filter_shift_color`
+ - Type id: `48`
+ - Input channels: 
+   * `input` of type `color`
+   * `switch_time` of type `double` (in ms)
+   * `time` of type `double`
+ - Output channels:
+   * `output_1` of type `color`
+   * `output_2` of type `color`
+   * as many as in `nr_outputs` declared
+ - Configuration parameters:
+   * `nr_outputs` The number of shifted outputs
+ - initial parameters: None
+ - GUI update keys: None
+
 ## Cue-List
 ### cue_list_filter
  - Type name: `cue_list_filter`
@@ -584,7 +648,7 @@ The following filters can be used to fetch fader input.
       * `start_again` starting the cue again
    * `cuelist`: The cues and their frames:
       * Each cue is divided by `$` and has a list of timestamp_configurations (divided by `|`) with its frames and then a handling for the end and a setting for the repeated play event (each seperated by `#`)
-        * `timestamp_configuration`: beginning with the `timestamp` of type `double` a seperator `:` and a list of frames for each channel divided by `&`
+        * `timestamp_configuration`: beginning with the `timestamp` of type `double` (given in seconds) a seperator `:` and a list of frames for each channel divided by `&`
           * `frame`: string and transition type (how to get to this frame) separated by `@`
             * `color`: hue, saturation,iluminance as `double` divided by `,`
             * `transition_type`:
