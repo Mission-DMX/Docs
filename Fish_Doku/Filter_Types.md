@@ -108,7 +108,7 @@ post them to the debug table of the GUI.
 ### Convert 16 bit to ngn
 - Type name: `adapter:16bit_to_bool`
 - Type id: `9`
-- Input channels: `value` of type `16bit`
+- Input channels: `value_in` of type `16bit`
 - Output channels: `value` (0 if input was 0, 1 if input was greater than zero)
 - Configuration parameters: None
 - initial parameters: None
@@ -142,7 +142,7 @@ Note: While technically possible, it is advised to use one output filter per uni
 ### float to 16bit
 - Type name: `arith:round_to_16bit`
 - Type id: `12`
-- Input channels: `value` of type `double`
+- Input channels: `value_in` of type `double`
 - Output channels: `value` of type `16bit` (= rounded and then cut value of input channel)
 - Configuration parameters: None
 - initial parameters: None
@@ -151,7 +151,7 @@ Note: While technically possible, it is advised to use one output filter per uni
 ### float to 8bit
 - Type name: `arith:round_to_8bit`
 - Type id: `13`
-- Input channels: `value` of type `double`
+- Input channels: `value_in` of type `double`
 - Output channels: `value` of type `8bit` (= rounded and then cut value of input channel)
 - Configuration parameters: None
 - initial parameters: None
@@ -160,7 +160,7 @@ Note: While technically possible, it is advised to use one output filter per uni
 ### round float
 - Type name: `arith:round`
 - Type id: `14`
-- Input channels: `value` of type `double`
+- Input channels: `value_in` of type `double`
 - Output channels: `value` of type `double` (= rounded value of input channel)
 - Configuration parameters: None
 - initial parameters: None
@@ -221,13 +221,13 @@ Note: While technically possible, it is advised to use one output filter per uni
 - Type name: `sine`
 - Type id: `19`
 - Input channels: 
-  * `value` of type `double`
+  * `value_in` of type `double`
   * `factor_outer` of type `double` (default `1`)
   * `factor_inner` of type `double` (default `1`)
   * `phase` of type `double` (default `0`)
   * `offset` of type `double` (default `0`)
 - Output channels: `value` of type `double`
-  * = `factor_outer*(sin((value+phase)*factor_inner)) + offset`
+  * = `factor_outer*(sin((value_in+phase)*factor_inner)) + offset`
 - Configuration parameters: None
 - initial parameters: None
 - GUI update keys: None
@@ -239,13 +239,13 @@ Note: While technically possible, it is advised to use one output filter per uni
 - Type name: `cosine`
 - Type id: `20`
 - Input channels: 
-  * `value` of type `double`
+  * `value_in` of type `double`
   * `factor_outer` of type `double` (default `1`)
   * `factor_inner` of type `double` (default `1`)
   * `phase` of type `double` (default `0`)
   * `offset` of type `double` (default `0`)
 - Output channels: `value` of type `double`
-  * = `factor_outer*(cos((value+phase)*factor_inner)) + offset`
+  * = `factor_outer*(cos((value_in+phase)*factor_inner)) + offset`
 - Configuration parameters: None
 - initial parameters: None
 - GUI update keys: None
@@ -257,13 +257,13 @@ Note: While technically possible, it is advised to use one output filter per uni
 - Type name: `tangent`
 - Type id: `21`
 - Input channels: 
-  * `value` of type `double`
+  * `value_in` of type `double`
   * `factor_outer` of type `double` (default `1`)
   * `factor_inner` of type `double` (default `1`)
   * `phase` of type `double` (default `0`)
   * `offset` of type `double` (default `0`)
 - Output channels: `value` of type `double`
-  * = `factor_outer*(tan((value+phase)*factor_inner)) + offset`
+  * = `factor_outer*(tan((value_in+phase)*factor_inner)) + offset`
 - Configuration parameters: None
 - initial parameters: None
 - GUI update keys: None
@@ -275,9 +275,9 @@ Note: While technically possible, it is advised to use one output filter per uni
 - Type name: `arcsine`
 - Type id: `22`
 - Input channels: 
-  * `value` of type `double`
+  * `value_in` of type `double`
 - Output channels: `value` of type `double`
-  * = `arcsin(value)`
+  * = `arcsin(value_in)`
 - Configuration parameters: None
 - initial parameters: None
 - GUI update keys: None
@@ -288,9 +288,9 @@ Note: While technically possible, it is advised to use one output filter per uni
 - Type name: `arccosine`
 - Type id: `23`
 - Input channels: 
-  * `value` of type `double`
+  * `value_in` of type `double`
 - Output channels: `value` of type `double`
-  * = `arccos(value)`
+  * = `arccos(value_in)`
 - Configuration parameters: None
 - initial parameters: None
 - GUI update keys: None
@@ -301,9 +301,9 @@ Note: While technically possible, it is advised to use one output filter per uni
 - Type name: `arctangent`
 - Type id: `24`
 - Input channels: 
-  * `value` of type `double`
+  * `value_in` of type `double`
 - Output channels: `value` of type `double`
-  * = `arctan(value)`
+  * = `arctan(value_in)`
 - Configuration parameters: None
 - initial parameters: None
 - GUI update keys: None
@@ -314,7 +314,7 @@ Note: While technically possible, it is advised to use one output filter per uni
 - Type name: `square_wave`
 - Type id: `25`
 - Input channels: 
-  * `value` of type `double`
+  * `value_in` of type `double`
   * `factor_outer` of type `double` (default `1`)
   * `factor_inner` of type `double` (default `1`)
   * `phase` of type `double` (default `0`)
@@ -336,12 +336,12 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `triangle_wave`
 - Type id: `26`
 - Input channels: 
-  * `value` of type `double`
+  * `value_in` of type `double`
   * `factor_outer` of type `double` (default `1`)
   * `factor_inner` of type `double` (default `1`)
   * `phase` of type `double` (default `0`)
   * `offset` of type `double` (default `0`)
-- Output channels: `value` of type `double`
+- Output channels: `value_in` of type `double`
 - Configuration parameters: None
 - initial parameters: None
 - GUI update keys: None
@@ -353,7 +353,7 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `sawtooth_wave`
 - Type id: `27`
 - Input channels: 
-  * `value` of type `double`
+  * `value_in` of type `double`
   * `factor_outer` of type `double` (default `1`)
   * `factor_inner` of type `double` (default `1`)
   * `phase` of type `double` (default `0`)
@@ -370,7 +370,7 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `logarithm`
 - Type id: `28`
 - Input channels: 
-  * `value` of type `double`
+  * `value_in` of type `double`
 - Output channels: `value` of type `double`
   * = `ln(value)`
 - Configuration parameters: None
@@ -381,7 +381,7 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `exponential`
 - Type id: `29`
 - Input channels: 
-  * `value` of type `double`
+  * `value_in` of type `double`
 - Output channels: `value` of type `double`
   * = `e(value)`
 - Configuration parameters: None
@@ -428,7 +428,7 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `switch_on_delay_8bit`
 - Type id: `33`
 - Input channels: 
-  * `value` of type of type `8bit`
+  * `value_in` of type of type `8bit`
   * `time` of type of type `double`
 - Output channels: `value` of type of type `8bit`
 - Configuration parameters: 
@@ -440,7 +440,7 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `switch_on_delay_16bit`
 - Type id: `34`
 - Input channels: 
-  * `value` of type of type `16bit`
+  * `value_in` of type of type `16bit`
   * `time` of type of type `double`
 - Output channels: `value` of type of type `16bit`
 - Configuration parameters: 
@@ -452,7 +452,7 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `switch_on_delay_double`
 - Type id: `35`
 - Input channels: 
-  * `value` of type `double`
+  * `value_in` of type `double`
   * `time` of type of type `double`
 - Output channels: `value` of type `double`
 - Configuration parameters: 
@@ -464,7 +464,7 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `switch_off_delay_8bit`
 - Type id: `36`
 - Input channels: 
-  * `value` of type of type `8bit`
+  * `value_in` of type of type `8bit`
   * `time` of type of type `double`
 - Output channels: `value` of type of type `8bit`
 - Configuration parameters: 
@@ -476,7 +476,7 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `switch_off_delay_16bit`
 - Type id: `37`
 - Input channels: 
-  * `value` of type of type `16bit`
+  * `value_in` of type of type `16bit`
   * `time` of type of type `double`
 - Output channels: `value` of type of type `16bit`
 - Configuration parameters: 
@@ -488,7 +488,7 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `switch_off_delay_double`
 - Type id: `38`
 - Input channels: 
-  * `value` of type `double`
+  * `value_in` of type `double`
   * `time` of type of type `double`
 - Output channels: `value` of type `double`
 - Configuration parameters: 
