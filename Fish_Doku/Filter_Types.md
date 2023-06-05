@@ -640,7 +640,8 @@ The following filters can be used to fetch fader input.
       * `wash_y_pos` of type `float`
       * `wash_dimmer` of type `8bit`
       * `wash_color` of type `color`
- - Configuration parameters:
+ - Configuration parameters: None
+ - initial parameters:
    * `mapping`: The type as `8bit`, `16bit`,`float` or `color` of the channels behind the name of the channel and `:` divided by `;`
       * Example: `wash_x_pos:float;wash_y_pos:float;wash_dimmer:8bit;wash_color:color`
    * `end_handling`: The handling at the end of the cuelist
@@ -666,7 +667,6 @@ The following filters can be used to fetch fader input.
           * `restart` starting the cue again
       * Example: 2 cues in the cuelist, with 2 frames in each cue.
       `0:0.5@edg&0.5@edg&0@edg&0,1,1@edg|3:0.5@edg&0.5@edg&240@e_i&0,1,1@edg#hold#restart$1:0.6@lin&0.45@lin&255@lin&120,1,1@e_o|4:0.6@edg&0.45@edg&0@lin&240,1,0@sig#next_cue#do_nothing`
- - initial parameters: None
  - GUI update keys:
    * `run_mode` of type `string`:
       * `play` : starts / restarts / continue the first or actual cue
