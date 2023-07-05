@@ -499,6 +499,16 @@ I took this picture as reference, so the waves are also defined like the sine wi
 ## Fader input
 The following filters can be used to fetch fader input.
 
+### filter_main_brightness_fader
+ - Type name: `filter_main_brightness_fader`
+ - Type id: `49`
+ - Input channels: None
+ - Output channels:
+    * `brightness` of type `16bit`
+ - Configuration parameters: None
+ - initial parameters: None
+ - GUI update keys: None
+
 ### filter_fader_column_raw
  - Type name: `filter_fader_column_raw`
  - Type id: `39`
