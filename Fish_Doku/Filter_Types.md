@@ -521,6 +521,7 @@ The following filters can be used to fetch fader input.
  - Configuration parameters:
    * `set_id` The set to use for column lookup
    * `column_id` The column to look up
+   * optional: `ignore_main_brightness_control` If it is set to `true`, the main brightness fader is ignored.
  - initial parameters: None
  - GUI update keys: None
 
@@ -534,6 +535,7 @@ The following filters can be used to fetch fader input.
  - Configuration parameters:
    * `set_id` The set to use for column lookup
    * `column_id` The column to look up
+   * optional: `ignore_main_brightness_control` If it is set to `true`, the main brightness fader is ignored.
  - initial parameters: None
  - GUI update keys: None
 
@@ -547,6 +549,7 @@ The following filters can be used to fetch fader input.
  - Configuration parameters:
    * `set_id` The set to use for column lookup
    * `column_id` The column to look up
+   * optional: `ignore_main_brightness_control` If it is set to `true`, the main brightness fader is ignored.
  - initial parameters: None
  - GUI update keys: None
 
@@ -561,8 +564,11 @@ The following filters can be used to fetch fader input.
  - Configuration parameters:
    * `set_id` The set to use for column lookup
    * `column_id` The column to look up
+   * optional: `ignore_main_brightness_control` If it is set to `true`, the main brightness fader is ignored.
  - initial parameters: None
  - GUI update keys: None
+
+## Shift Filters
 
 ### filter_shift_8bit
  - Type name: `filter_shift_8bit`
