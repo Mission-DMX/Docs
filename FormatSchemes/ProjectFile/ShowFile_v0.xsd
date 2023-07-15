@@ -124,7 +124,7 @@ They can be used to implement UI controls on the touch screens besides scene swi
 							<attribute name="top_line_inverted" type="bool" use="optional"></attribute>
 							<attribute name="bottom_line_inverted" type="bool" use="optional"></attribute>
 							<attribute name="lcd_color" type="string" use="optional"><!-- TODO use choice type--></attribute>
-							<attribute name="color" type="string" use="required"><!-- TODO introduce format regex for syntax check--></attributw>
+							<attribute name="color" type="string" use="required"><!-- TODO introduce format regex for syntax check--></attribute>
 						</complexType>
 					</element>
 					<element name="rawcolumn" maxOccurs="unbounded" minOccurs="0">
@@ -138,7 +138,7 @@ They can be used to implement UI controls on the touch screens besides scene swi
 							<attribute name="encoder_position" type="int" use="required"><!-- TODO use simple type with minInclusive and maxInclusive --></attribute>
 						</complexType>
 					</element>
-				</secuence>
+				</sequence>
 			</complexType>
 		</element>
 	</sequence>
