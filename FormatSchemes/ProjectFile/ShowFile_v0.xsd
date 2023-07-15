@@ -109,7 +109,7 @@ They can be used to implement UI controls on the touch screens besides scene swi
 			GUI as the GUI will also manage additional temporary bank sets.
 		</documentation>
 	</annotation>
-	<attribute name="linked_by_default" type="bool" use="optional">
+	<attribute name="linked_by_default" type="boolean" use="optional">
 		<annotation>
 			<documentation>If this attribute is obmitted or set to true, the bank set will be linked with fish by default.</documentation>
 		</annotation>
@@ -121,8 +121,8 @@ They can be used to implement UI controls on the touch screens besides scene swi
 					<element name="hslcolumn" maxOccurs="unbounded" minOccurs="0">
 						<complexType>
 							<attribute name="display_name" type="string" use="required"></attribute>
-							<attribute name="top_line_inverted" type="bool" use="optional"></attribute>
-							<attribute name="bottom_line_inverted" type="bool" use="optional"></attribute>
+							<attribute name="top_line_inverted" type="boolean" use="optional"></attribute>
+							<attribute name="bottom_line_inverted" type="boolean" use="optional"></attribute>
 							<attribute name="lcd_color" type="string" use="optional"><!-- TODO use choice type--></attribute>
 							<attribute name="color" type="string" use="required"><!-- TODO introduce format regex for syntax check--></attribute>
 						</complexType>
@@ -131,8 +131,8 @@ They can be used to implement UI controls on the touch screens besides scene swi
 						<complexType>
 							<attribute name="display_name" type="string" use="required"></attribute>
 							<attribute name="secondary_text_line" type="string" use="required"></attribute>
-							<attribute name="top_line_inverted" type="bool" use="optional"></attribute>
-							<attribute name="bottom_line_inverted" type="bool" use="optional"></attribute>
+							<attribute name="top_line_inverted" type="boolean" use="optional"></attribute>
+							<attribute name="bottom_line_inverted" type="boolean" use="optional"></attribute>
 							<attribute name="lcd_color" type="string" use="optional"><!-- TODO use choice type--></attribute>
 							<attribute name="fader_position" type="int" use="required"><!-- TODO use simple type with minInclusive and maxInclusive --></attribute>
 							<attribute name="encoder_position" type="int" use="required"><!-- TODO use simple type with minInclusive and maxInclusive --></attribute>
