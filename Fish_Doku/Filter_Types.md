@@ -693,6 +693,16 @@ The following filters can be used to fetch fader input.
  - initial parameters: None
  - GUI update keys: None
 
+### filter_main_brightness_fader
+ - Type name: `filter_main_brightness_fader`
+ - Type id: `49`
+ - Input channels: None
+ - Output channels:
+   * `brightness` of type `16bit`
+ - Configuration parameters: None
+ - initial parameters: None
+ - GUI update keys: None
+
 ## Lua-List
 ### lua_script_filter
  - Type name: `filter_lua_script`
@@ -714,5 +724,10 @@ The following filters can be used to fetch fader input.
     * `out_mapping`: The type as `8bit`, `16bit`,`float` or `color` of the channels behind the name of the channel and `:` divided by `;`
       * Example: `wash_x_pos:float;wash_y_pos:float;wash_dimmer:8bit;wash_color:color`
  - initial parameters:
-    * `script`
+    * `script`: the lua script to run with the given values
+      - Example:
+`wash_color = {h = (in_color["h"] + 180 ) % 360, s = in_color["s"], i = in_color["i"]}
+wash_dimmer = dimmer_1 / 256
+wash_x_pos = math.sin(my_time *0.001) * 260
+wash_y_pos = math.cos(my_time *0.001) * 135`
  - GUI update keys: None
