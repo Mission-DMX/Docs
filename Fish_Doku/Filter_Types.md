@@ -709,25 +709,32 @@ The following filters can be used to fetch fader input.
  - Type id: `50`
 - Input channels:
     The name of the channel  with its type, Example:
-     * `dimmer_1` of type `16bit`
-     * `my_time` of type `float`
-     * `in_color` of type `color`
+    * `in_dimmer` of type `8bit`
+    * `in_color` of type `color`
  - Output channels:
     The name of the channel  with its type, Example:
-      * `wash_x_pos` of type `float`
-      * `wash_y_pos` of type `float`
-      * `wash_dimmer` of type `8bit`
-      * `wash_color` of type `color`
+      * `out_dimmer` of type `8bit`
+      * `out_color` of type `color`
  - Configuration parameters:
     * `in_mapping`: The type as `8bit`, `16bit`,`float` or `color` of the channels behind the name of the channel and `:` divided by `;`
-      * Example: `dimmer_1:16bit;my_time:float;in_color:color`
+      * Example: `in_dimmer:8bit;in_color:color`
     * `out_mapping`: The type as `8bit`, `16bit`,`float` or `color` of the channels behind the name of the channel and `:` divided by `;`
-      * Example: `wash_x_pos:float;wash_y_pos:float;wash_dimmer:8bit;wash_color:color`
+      * Example: `out_dimmer:8bit;out_color:color`
  - initial parameters:
     * `script`: the lua script to run with the given values
       - Example:
-`wash_color = {h = (in_color["h"] + 180 ) % 360, s = in_color["s"], i = in_color["i"]}
-wash_dimmer = dimmer_1 / 256
-wash_x_pos = math.sin(my_time *0.001) * 260
-wash_y_pos = math.cos(my_time *0.001) * 135`
+```
+function update()
+    -- This method will be called once per DMX output cycle
+    -- Put your effect here
+    out_color = {
+        h = in_color[\"h\"]*8,
+        s = in_color[\"s\"]*3,
+        i = in_color[\"i\"]*2}
+    out_dimmer = in_dimmer/2
+end
+function scene_activated()
+    -- This method will be called every time the show is switched to this scene
+end
+```
  - GUI update keys: None
