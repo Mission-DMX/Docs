@@ -141,18 +141,22 @@
                 devices.
             </documentation>
         </annotation>
-        <choice>
-            <element name="physical_location" type="int">
-                <annotation>
-                    <documentation>
-                        Route the universe to one of the physical
-                        outputs of the desk
-                    </documentation>
-                </annotation>
-            </element>
-            <element name="artnet_location" type="tns:ArtnetLocation"></element>
-            <element name="ftdi_location" type="tns:FTDILocation"></element>
-        </choice>
+        <sequence>
+            <choice>
+                <element name="physical_location" type="int">
+                    <annotation>
+                        <documentation>
+                            Route the universe to one of the physical
+                            outputs of the desk
+                        </documentation>
+                    </annotation>
+                </element>
+                <element name="artnet_location" type="tns:ArtnetLocation"></element>
+                <element name="ftdi_location" type="tns:FTDILocation"></element>
+            </choice>
+            <element name="patching" type="tns:Patching"></element>
+        </sequence>
+
         <attribute name="name" type="string">
             <annotation>
                 <documentation>
@@ -168,13 +172,6 @@
                     A human-readable description of the universe. It is
                     only relevant to the operator but not to the real
                     time application.
-                </documentation>
-            </annotation>
-        </attribute>
-        <attribute name="patching" type="tns:Patching">
-            <annotation>
-                <documentation>
-                    The patching Information of the Universe.
                 </documentation>
             </annotation>
         </attribute>
