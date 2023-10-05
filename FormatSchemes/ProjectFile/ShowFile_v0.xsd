@@ -143,17 +143,6 @@
     </complexType>
 
 <complexType name="BankSet">
-	<annotation>
-		<documentation>
-			A bank set that should be available with the show file. This won't be loaded by fish but needs to be managed by the
-			GUI as the GUI will also manage additional temporary bank sets.
-		</documentation>
-	</annotation>
-	<attribute name="linked_by_default" type="boolean" use="optional">
-		<annotation>
-			<documentation>If this attribute is obmitted or set to true, the bank set will be linked with fish by default.</documentation>
-		</annotation>
-	</attribute>
 	<sequence>
 		<element name="bank" maxOccurs="unbounded">
 			<complexType>
@@ -182,6 +171,17 @@
 			</complexType>
 		</element>
 	</sequence>
+	<annotation>
+		<documentation>
+			A bank set that should be available with the show file. This won't be loaded by fish but needs to be managed by the
+			GUI as the GUI will also manage additional temporary bank sets.
+		</documentation>
+	</annotation>
+	<attribute name="linked_by_default" type="boolean" use="optional">
+		<annotation>
+			<documentation>If this attribute is obmitted or set to true, the bank set will be linked with fish by default.</documentation>
+		</annotation>
+	</attribute>
 </complexType>
 
     <complexType name="ChannelLink">
