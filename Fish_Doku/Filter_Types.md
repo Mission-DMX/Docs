@@ -578,71 +578,6 @@ The following filters can be used to fetch fader input.
  - initial parameters: None
  - GUI update keys: None
 
-## Shift Filters
-
-### filter_shift_8bit
- - Type name: `filter_shift_8bit`
- - Type id: `45`
- - Input channels: 
-   * `input` of type `8bit`
-   * `switch_time` of type `double` (in ms)
-   * `time` of type `double`
- - Output channels:
-   * `output_1` of type `8bit`
-   * `output_2` of type `8bit`
-   * as many as in `nr_outputs` declared
- - Configuration parameters:
-   * `nr_outputs` The number of shifted outputs
- - initial parameters: None
- - GUI update keys: None
-
-### filter_shift_16bit
- - Type name: `filter_shift_16bit`
- - Type id: `46`
- - Input channels: 
-   * `input` of type `16bit`
-   * `switch_time` of type `double` (in ms)
-   * `time` of type `double`
- - Output channels:
-   * `output_1` of type `16bit`
-   * `output_2` of type `16bit`
-   * as many as in `nr_outputs` declared
- - Configuration parameters:
-   * `nr_outputs` The number of shifted outputs
- - initial parameters: None
- - GUI update keys: None
-
-### filter_shift_float
- - Type name: `filter_shift_float`
- - Type id: `47`
- - Input channels: 
-   * `input` of type `float`
-   * `switch_time` of type `double` (in ms)
-   * `time` of type `double`
- - Output channels:
-   * `output_1` of type `float`
-   * `output_2` of type `   * `output_1` of type `float``
-   * as many as in `nr_outputs` declared
- - Configuration parameters:
-   * `nr_outputs` The number of shifted outputs
- - initial parameters: None
- - GUI update keys: None
-
-### filter_shift_color
- - Type name: `filter_shift_color`
- - Type id: `48`
- - Input channels: 
-   * `input` of type `color`
-   * `switch_time` of type `double` (in ms)
-   * `time` of type `double`
- - Output channels:
-   * `output_1` of type `color`
-   * `output_2` of type `color`
-   * as many as in `nr_outputs` declared
- - Configuration parameters:
-   * `nr_outputs` The number of shifted outputs
- - initial parameters: None
- - GUI update keys: None
 
 ## Cue-List
 ### cue_list_filter
@@ -691,3 +626,122 @@ The following filters can be used to fetch fader input.
       * `stop` : stops the cuelist
    * `run_cue` of type `16bit` : starts the cue with given number
    * `next_cue` of type `16bit` : runs the cue with given number when the actual cue has finished (and `next_cue` is set)
+
+## Shift Filters
+
+### filter_shift_8bit
+ - Type name: `filter_shift_8bit`
+ - Type id: `45`
+ - Input channels: 
+   * `input` of type `8bit`
+   * `switch_time` of type `double` (in ms)
+   * `time` of type `double`
+ - Output channels:
+   * `output_1` of type `8bit`
+   * `output_2` of type `8bit`
+   * as many as in `nr_outputs` declared
+ - Configuration parameters:
+   * `nr_outputs` The number of shifted outputs
+ - initial parameters: None
+ - GUI update keys: None
+
+### filter_shift_16bit
+ - Type name: `filter_shift_16bit`
+ - Type id: `46`
+ - Input channels: 
+   * `input` of type `16bit`
+   * `switch_time` of type `double` (in ms)
+   * `time` of type `double`
+ - Output channels:
+   * `output_1` of type `16bit`
+   * `output_2` of type `16bit`
+   * as many as in `nr_outputs` declared
+ - Configuration parameters:
+   * `nr_outputs` The number of shifted outputs
+ - initial parameters: None
+ - GUI update keys: None
+
+### filter_shift_float
+ - Type name: `filter_shift_float`
+ - Type id: `47`
+ - Input channels: 
+   * `input` of type `float`
+   * `switch_time` of type `double` (in ms)
+   * `time` of type `double`
+ - Output channels:
+   * `output_1` of type `float`
+   * `output_2` of type `float`
+   * as many as in `nr_outputs` declared
+ - Configuration parameters:
+   * `nr_outputs` The number of shifted outputs
+ - initial parameters: None
+ - GUI update keys: None
+
+### filter_shift_color
+ - Type name: `filter_shift_color`
+ - Type id: `48`
+ - Input channels: 
+   * `input` of type `color`
+   * `switch_time` of type `double` (in ms)
+   * `time` of type `double`
+ - Output channels:
+   * `output_1` of type `color`
+   * `output_2` of type `color`
+   * as many as in `nr_outputs` declared
+ - Configuration parameters:
+   * `nr_outputs` The number of shifted outputs
+ - initial parameters: None
+ - GUI update keys: None
+
+### filter_main_brightness_fader
+ - Type name: `filter_main_brightness_fader`
+ - Type id: `49`
+ - Input channels: None
+ - Output channels:
+   * `brightness` of type `16bit`
+ - Configuration parameters: None
+ - initial parameters: None
+ - GUI update keys: None
+
+## Lua-List
+### lua_script_filter
+ - Type name: `filter_lua_script`
+ - Type id: `50`
+- Input channels:
+    The name of the channel  with its type, Example:
+    * `in_dimmer` of type `8bit`
+    * `in_color` of type `color`
+ - Output channels:
+    The name of the channel  with its type, Example:
+      * `out_dimmer` of type `8bit`
+      * `out_color` of type `color`
+      * `out_color2` of type `color`
+ - Configuration parameters:
+    * `in_mapping`: The type as `8bit`, `16bit`,`float` or `color` of the channels behind the name of the channel and `:` divided by `;`
+      * Example: `in_dimmer:8bit;in_color:color`
+    * `out_mapping`: The type as `8bit`, `16bit`,`float` or `color` of the channels behind the name of the channel and `:` divided by `;`
+      * Example: `out_dimmer:8bit;out_color:color;out_color2:color`
+ - initial parameters:
+    * `script`: the lua script to run with the given values
+      - Example:
+```
+function update()
+    -- This method will be called once per DMX output cycle
+    -- Put your effect here
+    out_color = {
+        h = in_color[\"h\"]*8,
+        s = in_color[\"s\"]*3,
+        i = in_color[\"i\"]*2}
+    out_dimmer = in_dimmer/2
+    out_color2 = in_color
+    out_color2.h = in_color.h/10
+    out_color2.s = in_color.s/2
+end
+function scene_activated()
+    -- This method will be called every time the show is switched to this scene
+end
+```
+ - GUI update keys: None
+ - Notice: you can access these functions in lua:
+    - `hsi_to_rgb(color)`
+    - `hsi_to_rgbw(color)`
