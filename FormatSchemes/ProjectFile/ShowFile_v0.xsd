@@ -192,7 +192,7 @@
                 <documentation>The ID of the filter to map to.</documentation>
             </annotation>
         </attribute>
-        <attribute name="varainte" type="string">
+        <attribute name="variante" type="string">
             <annotation>
                 <documentation>In case there are multiple possible widgets for the provided filter type, this hint will be used.</documentation>
             </annotation>
