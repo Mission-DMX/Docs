@@ -222,6 +222,7 @@
 				<sequence>
 					<element name="hslcolumn" maxOccurs="unbounded" minOccurs="0">
 						<complexType>
+							<attribute name="id" type="string" use="required"></attribute>
 							<attribute name="display_name" type="string" use="required"></attribute>
 							<attribute name="top_line_inverted" type="boolean" use="optional"></attribute>
 							<attribute name="bottom_line_inverted" type="boolean" use="optional"></attribute>
@@ -231,6 +232,7 @@
 					</element>
 					<element name="rawcolumn" maxOccurs="unbounded" minOccurs="0">
 						<complexType>
+							<attribute name="id" type="string" use="required"></attribute>
 							<attribute name="display_name" type="string" use="required"></attribute>
 							<attribute name="secondary_text_line" type="string" use="required"></attribute>
 							<attribute name="top_line_inverted" type="boolean" use="optional"></attribute>
