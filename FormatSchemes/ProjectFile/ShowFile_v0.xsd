@@ -249,6 +249,11 @@
 			<documentation>If this attribute is obmitted or set to true, the bank set will be linked with fish by default.</documentation>
 		</annotation>
 	</attribute>
+	<attribute name="id" type="string" use="optional">
+		<annotation>
+			<documentation>If provided the bank set will be created with this id.</documentation>
+		</annotation>
+	</attribute>
 </complexType>
 
     <complexType name="ChannelLink">
