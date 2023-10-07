@@ -102,7 +102,7 @@
             <documentation>A scene contains the filter chain description.</documentation>
         </annotation>
         <sequence>
-            <element name="filter" maxOccurs="unbounded" type="tns:Filter"></element>
+            <element name="filter" minOccurs="0" maxOccurs="unbounded" type="tns:Filter"></element>
             <element name="filterpage" minOccurs="0" maxOccurs="unbounded" type="tns:FilterPage"></element>
             <element name="uipage" minOccurs="0" maxOccurs="unbounded" type="tns:UIPage"></element>
         </sequence>
