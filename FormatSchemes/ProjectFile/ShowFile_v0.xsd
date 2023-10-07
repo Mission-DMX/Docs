@@ -4,7 +4,7 @@
 >
 
     <complexType name="BordConfiguration">
-        <choice choice maxOccurs="unbounded" minOccurs="0">
+        <choice maxOccurs="unbounded" minOccurs="0">
             <element name="scene" type="tns:Scene" maxOccurs="unbounded" minOccurs="1"></element>
             <element name="device" maxOccurs="unbounded" type="tns:Device" minOccurs="0"></element>
             <element name="universe" maxOccurs="unbounded" type="tns:Universe" minOccurs="0">
@@ -50,7 +50,7 @@
                 input filter, a processing filter or an output filter.
             </documentation>
         </annotation>
-        <choice choice maxOccurs="unbounded" minOccurs="0">
+        <choice maxOccurs="unbounded" minOccurs="0">
             <annotation>
                 <documentation>
                     This sequence specifies the linking of output
@@ -219,7 +219,7 @@
 	<sequence>
 		<element name="bank" minOccurs="0" maxOccurs="unbounded">
 			<complexType>
-				<choice choice maxOccurs="unbounded" minOccurs="0">
+				<choice maxOccurs="unbounded" minOccurs="0">
 					<element name="hslcolumn" maxOccurs="unbounded" minOccurs="0">
 						<complexType>
 							<attribute name="id" type="string" use="required"></attribute>
@@ -286,7 +286,7 @@
                 devices.
             </documentation>
         </annotation>
-        <choice choice maxOccurs="unbounded" minOccurs="0">
+        <choice maxOccurs="unbounded" minOccurs="0">
             <choice>
                 <element name="physical_location" type="int">
                     <annotation>
