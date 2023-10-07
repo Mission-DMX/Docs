@@ -118,7 +118,7 @@
                 </documentation>
             </annotation>
         </attribute>
-	<attribute name="linkedBankset" type="string">
+	<attribute name="linkedBankset" type="string" use="optional">
 	    <annotation>
                 <documentation>The ID of a previously registered bank set</documentation>
             </annotation>
