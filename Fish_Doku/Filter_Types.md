@@ -166,6 +166,24 @@ Note: While technically possible, it is advised to use one output filter per uni
 - initial parameters: None
 - GUI update keys: None
 
+### 8bit to float
+- Type name: `filter_8bit_to_float`
+- Type id: `51`
+- Input channels: `value_in` of type `8bit`
+- Output channels: `value` of type `double`
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+
+### 16bit to float
+- Type name: `filter_16bit_to_float`
+- Type id: `52`
+- Input channels: `value_in` of type `16bit`
+- Output channels: `value` of type `double`
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+
 ### color to RGB
 - Type name: `hsi_to_rgb`
 - Type id: `15`
