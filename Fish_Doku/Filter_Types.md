@@ -135,7 +135,7 @@ Note: While technically possible, it is advised to use one output filter per uni
 - Output channels: None
 - Configuration parameters:
   * `universe`: The id of the universe to output to
-  * every other supplied parameter will be parsed in the format `<universe channel>`:`<filter input channel id>` and registered with the output module, where `<universe channel>` is the key and `<filter input channel id>` the value of the parameter. Every supplied input channel id needs to pe avaiable as an 8 bit input channel within the filter mapping.
+  * every other supplied parameter will be parsed in the format `<filter input channel id>`:`<universe channel>` and registered with the output module, where `<universe channel>` is the value and `<filter input channel id>` the key of the parameter. Every supplied input channel id needs to pe avaiable as an 8 bit input channel within the filter mapping.
 - initial parameters: None
 - GUI update keys: None
 
