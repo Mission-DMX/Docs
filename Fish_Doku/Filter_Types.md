@@ -450,7 +450,7 @@ I took this picture as reference, so the waves are also defined like the sine wi
   * `time` of type of type `double` in milliseconds
 - Output channels: `value` of type of type `8bit`
 - Configuration parameters: 
-  * `delay` should be parseable as `double` in milliseconds
+  * `delay` should be parseable as `double` in seconds
 - initial parameters: None
 - GUI update keys: None
 
@@ -462,7 +462,7 @@ I took this picture as reference, so the waves are also defined like the sine wi
   * `time` of type of type `double` in milliseconds
 - Output channels: `value` of type of type `16bit`
 - Configuration parameters: 
-  * `delay` should be parseable as `double` in milliseconds
+  * `delay` should be parseable as `double` in seconds
 - initial parameters: None
 - GUI update keys: None
 
@@ -474,7 +474,7 @@ I took this picture as reference, so the waves are also defined like the sine wi
   * `time` of type of type `double` in milliseconds
 - Output channels: `value` of type `double`
 - Configuration parameters: 
-  * `delay` should be parseable as `double` in milliseconds
+  * `delay` should be parseable as `double` in seconds
 - initial parameters: None
 - GUI update keys: None
 
@@ -486,7 +486,7 @@ I took this picture as reference, so the waves are also defined like the sine wi
   * `time` of type of type `double` in milliseconds
 - Output channels: `value` of type of type `8bit`
 - Configuration parameters: 
-  * `delay` should be parseable as `double` in milliseconds
+  * `delay` should be parseable as `double` in seconds
 - initial parameters: None
 - GUI update keys: None
 
@@ -498,7 +498,7 @@ I took this picture as reference, so the waves are also defined like the sine wi
   * `time` of type of type `double` in milliseconds
 - Output channels: `value` of type of type `16bit`
 - Configuration parameters: 
-  * `delay` should be parseable as `double` in milliseconds
+  * `delay` should be parseable as `double` in seconds
 - initial parameters: None
 - GUI update keys: None
 
@@ -510,7 +510,7 @@ I took this picture as reference, so the waves are also defined like the sine wi
   * `time` of type of type `double` in milliseconds
 - Output channels: `value` of type `double`
 - Configuration parameters: 
-  * `delay` should be parseable as `double` in milliseconds
+  * `delay` should be parseable as `double` in seconds
 - initial parameters: None
 - GUI update keys: None
 
