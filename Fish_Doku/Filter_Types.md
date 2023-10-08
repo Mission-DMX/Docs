@@ -416,7 +416,7 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `time`
 - Type id: `32`
 - Input channels: None
-- Output channels: `value` of type `double`
+- Output channels: `value` of type `double` in milliseconds
 - Configuration parameters: None
 - initial parameters: None
 - GUI update keys: None
@@ -429,10 +429,10 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type id: `33`
 - Input channels: 
   * `value_in` of type of type `8bit`
-  * `time` of type of type `double`
+  * `time` of type of type `double` in milliseconds
 - Output channels: `value` of type of type `8bit`
 - Configuration parameters: 
-  * `delay` should be parseable as `double`
+  * `delay` should be parseable as `double` in milliseconds
 - initial parameters: None
 - GUI update keys: None
 
@@ -441,10 +441,10 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type id: `34`
 - Input channels: 
   * `value_in` of type of type `16bit`
-  * `time` of type of type `double`
+  * `time` of type of type `double` in milliseconds
 - Output channels: `value` of type of type `16bit`
 - Configuration parameters: 
-  * `delay` should be parseable as `double`
+  * `delay` should be parseable as `double` in milliseconds
 - initial parameters: None
 - GUI update keys: None
 
@@ -453,10 +453,10 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type id: `35`
 - Input channels: 
   * `value_in` of type `double`
-  * `time` of type of type `double`
+  * `time` of type of type `double` in milliseconds
 - Output channels: `value` of type `double`
 - Configuration parameters: 
-  * `delay` should be parseable as `double`
+  * `delay` should be parseable as `double` in milliseconds
 - initial parameters: None
 - GUI update keys: None
 
@@ -465,10 +465,10 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type id: `36`
 - Input channels: 
   * `value_in` of type of type `8bit`
-  * `time` of type of type `double`
+  * `time` of type of type `double` in milliseconds
 - Output channels: `value` of type of type `8bit`
 - Configuration parameters: 
-  * `delay` should be parseable as `double`
+  * `delay` should be parseable as `double` in milliseconds
 - initial parameters: None
 - GUI update keys: None
 
@@ -477,10 +477,10 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type id: `37`
 - Input channels: 
   * `value_in` of type of type `16bit`
-  * `time` of type of type `double`
+  * `time` of type of type `double` in milliseconds
 - Output channels: `value` of type of type `16bit`
 - Configuration parameters: 
-  * `delay` should be parseable as `double`
+  * `delay` should be parseable as `double` in milliseconds
 - initial parameters: None
 - GUI update keys: None
 
@@ -489,10 +489,10 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type id: `38`
 - Input channels: 
   * `value_in` of type `double`
-  * `time` of type of type `double`
+  * `time` of type of type `double` in milliseconds
 - Output channels: `value` of type `double`
 - Configuration parameters: 
-  * `delay` should be parseable as `double`
+  * `delay` should be parseable as `double` in milliseconds
 - initial parameters: None
 - GUI update keys: None
 
