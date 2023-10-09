@@ -538,7 +538,9 @@ The following filters can be used to fetch fader input.
    * `set_id` The set to use for column lookup
    * `column_id` The column to look up
  - initial parameters: None
- - GUI update keys: None
+ - GUI update keys:
+   * `set` A new set UUID to follow
+   * `column` A new column UUID to follow
 
 ### filter_fader_column_hsi
  - Type name: `filter_fader_column_hsi`
@@ -551,7 +553,9 @@ The following filters can be used to fetch fader input.
    * `column_id` The column to look up
    * optional: `ignore_main_brightness_control` If it is set to `true`, the main brightness fader is ignored.
  - initial parameters: None
- - GUI update keys: None
+ - GUI update keys:
+   * `set` A new set UUID to follow
+   * `column` A new column UUID to follow
 
 ### filter_fader_column_hsia
  - Type name: `filter_fader_column_hsia`
@@ -565,7 +569,9 @@ The following filters can be used to fetch fader input.
    * `column_id` The column to look up
    * optional: `ignore_main_brightness_control` If it is set to `true`, the main brightness fader is ignored.
  - initial parameters: None
- - GUI update keys: None
+ - GUI update keys:
+   * `set` A new set UUID to follow
+   * `column` A new column UUID to follow
 
 ### filter_fader_column_hsiu
  - Type name: `filter_fader_column_hsiu`
@@ -579,7 +585,9 @@ The following filters can be used to fetch fader input.
    * `column_id` The column to look up
    * optional: `ignore_main_brightness_control` If it is set to `true`, the main brightness fader is ignored.
  - initial parameters: None
- - GUI update keys: None
+ - GUI update keys:
+   * `set` A new set UUID to follow
+   * `column` A new column UUID to follow
 
 ### filter_fader_column_hsiau
  - Type name: `filter_fader_column_hsiau`
@@ -594,7 +602,9 @@ The following filters can be used to fetch fader input.
    * `column_id` The column to look up
    * optional: `ignore_main_brightness_control` If it is set to `true`, the main brightness fader is ignored.
  - initial parameters: None
- - GUI update keys: None
+ - GUI update keys:
+   * `set` A new set UUID to follow
+   * `column` A new column UUID to follow
 
 
 ## Cue-List
