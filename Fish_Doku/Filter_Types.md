@@ -235,6 +235,19 @@ Note: While technically possible, it is advised to use one output filter per uni
 - initial parameters: None
 - GUI update keys: None
 
+### color to floats
+- Type name: `pixel_to_floats`
+- Type id: `53`
+- Input channels:
+  * `input` of type `color`
+- Output channels:
+  * `h` of type `double`
+  * `s` of type `double`
+  * `i` of type `double`
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+
 ### sine
 - Type name: `sine`
 - Type id: `19`
