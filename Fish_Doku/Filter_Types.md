@@ -60,16 +60,16 @@ post them to the debug table of the GUI.
 ### 8 bit output
 - Type name: `dbg:8bit`
 - Type id: `4`
-- Input channels: `value` of type `8bit`
+- Input channels: `value` of type `8bit` (default 0)
 - Output channels: None
 - Configuration parameters: None (Later: method to be used for gui communication)
 - initial parameters: None
 - GUI update keys: None
 
 ### 16 bit output
-- Type name: `dbg:16bit`
+- Type name: `dbg:`
 - Type id: `5`
-- Input channels: `value` of type `16bit`
+- Input channels: `value` of type `16bit` (default 0)
 - Output channels: None
 - Configuration parameters: None (Later: method to be used for gui communication)
 - initial parameters: None
@@ -78,7 +78,7 @@ post them to the debug table of the GUI.
 ### float output
 - Type name: `dbg:float`
 - Type id: `6`
-- Input channels: `value` of type `double`
+- Input channels: `value` of type `double` (default 0)
 - Output channels: None
 - Configuration parameters: None (Later: method to be used for gui communication)
 - initial parameters: None
@@ -87,7 +87,7 @@ post them to the debug table of the GUI.
 ### color output
 - Type name: `dbg:pixel`
 - Type id: `7`
-- Input channels: `value` of type `hsv_pixel`
+- Input channels: `value` of type `hsv_pixel` (default white)
 - Output channels: None
 - Configuration parameters: None (Later: method to be used for gui communication)
 - initial parameters: None
@@ -95,9 +95,9 @@ post them to the debug table of the GUI.
 
 ## Adapters and Arithmetics
 ### Split 16 bit unsigned ints to two 8 bit unsigned ints
-- Type name: `adapter:16bit_to_dual_byte`
+- Type name: `adapter:_to_dual_byte`
 - Type id: `8`
-- Input channels: `value` of type `16bit`
+- Input channels: `value` of type `16bit` (default 0)
 - Output channels:
   * `value_lower`: The lower part of the original variable
   * `value_upper`: The upper part of the original variable
@@ -108,7 +108,7 @@ post them to the debug table of the GUI.
 ### Convert 16 bit to ngn
 - Type name: `adapter:16bit_to_bool`
 - Type id: `9`
-- Input channels: `value_in` of type `16bit`
+- Input channels: `value_in` of type `16bit` (default 0)
 - Output channels: `value` (0 if input was 0, 1 if input was greater than zero)
 - Configuration parameters: None
 - initial parameters: None
@@ -118,9 +118,9 @@ post them to the debug table of the GUI.
 - Type name: `arith:mac`
 - Type id: `10`
 - Input channels:
-  * `factor1`: double
-  * `factor2`: double
-  * `summand`: double
+  * `factor1`: double (default 1)
+  * `factor2`: double (default 1)
+  * `summand`: double (default 0)
 - Output channels: `value` (:= `(factor1 * factor2) + summand`)
 - Configuration parameters: None
 - initial parameters: None
@@ -142,7 +142,7 @@ Note: While technically possible, it is advised to use one output filter per uni
 ### float to 16bit
 - Type name: `arith:round_to_16bit`
 - Type id: `12`
-- Input channels: `value_in` of type `double`
+- Input channels: `value_in` of type `double` (default 0)
 - Output channels: `value` of type `16bit` (= rounded and then cut value of input channel)
 - Configuration parameters: None
 - initial parameters: None
@@ -151,7 +151,7 @@ Note: While technically possible, it is advised to use one output filter per uni
 ### float to 8bit
 - Type name: `arith:round_to_8bit`
 - Type id: `13`
-- Input channels: `value_in` of type `double`
+- Input channels: `value_in` of type `double` (default 0)
 - Output channels: `value` of type `8bit` (= rounded and then cut value of input channel)
 - Configuration parameters: None
 - initial parameters: None
@@ -160,7 +160,7 @@ Note: While technically possible, it is advised to use one output filter per uni
 ### round float
 - Type name: `arith:round`
 - Type id: `14`
-- Input channels: `value_in` of type `double`
+- Input channels: `value_in` of type `double` (default 0)
 - Output channels: `value` of type `double` (= rounded value of input channel)
 - Configuration parameters: None
 - initial parameters: None
@@ -169,7 +169,7 @@ Note: While technically possible, it is advised to use one output filter per uni
 ### 8bit to float
 - Type name: `filter_8bit_to_float`
 - Type id: `51`
-- Input channels: `value_in` of type `8bit`
+- Input channels: `value_in` of type `8bit` (default 0)
 - Output channels: `value` of type `double`
 - Configuration parameters: None
 - initial parameters: None
@@ -178,7 +178,7 @@ Note: While technically possible, it is advised to use one output filter per uni
 ### 16bit to float
 - Type name: `filter_16bit_to_float`
 - Type id: `52`
-- Input channels: `value_in` of type `16bit`
+- Input channels: `value_in` of type `16bit` (default 0)
 - Output channels: `value` of type `double`
 - Configuration parameters: None
 - initial parameters: None
@@ -187,7 +187,7 @@ Note: While technically possible, it is advised to use one output filter per uni
 ### color to RGB
 - Type name: `hsi_to_rgb`
 - Type id: `15`
-- Input channels: `value` of type `color`
+- Input channels: `value` of type `color` (default white)
 - Output channels:
   * `r` of type `8bit`
   * `g` of type `8bit`
@@ -199,7 +199,7 @@ Note: While technically possible, it is advised to use one output filter per uni
 ### color to RGBW
 - Type name: `hsi_to_rgbw`
 - Type id: `16`
-- Input channels: `value` of type `color`
+- Input channels: `value` of type `color` (default white)
 - Output channels:
   * `r` of type `8bit`
   * `g` of type `8bit`
@@ -226,9 +226,9 @@ Note: While technically possible, it is advised to use one output filter per uni
 - Type name: `float_to_pixel`
 - Type id: `18`
 - Input channels:
-  * `h` of type `double`
-  * `s` of type `double`
-  * `i` of type `double`
+  * `h` of type `double` (default 0)
+  * `s` of type `double` (default 0)
+  * `i` of type `double` (default 1)
 - Output channels:
   * `value` of type `color`
 - Configuration parameters: None
@@ -239,7 +239,7 @@ Note: While technically possible, it is advised to use one output filter per uni
 - Type name: `pixel_to_floats`
 - Type id: `53`
 - Input channels:
-  * `input` of type `color`
+  * `input` of type `color` (default white)
 - Output channels:
   * `h` of type `double`
   * `s` of type `double`
@@ -252,11 +252,11 @@ Note: While technically possible, it is advised to use one output filter per uni
 - Type name: `sine`
 - Type id: `19`
 - Input channels: 
-  * `value_in` of type `double`
-  * `factor_outer` of type `double` (default `1`)
-  * `factor_inner` of type `double` (default `1`)
-  * `phase` of type `double` (default `0`)
-  * `offset` of type `double` (default `0`)
+  * `value_in` of type `double` (default 0)
+  * `factor_outer` of type `double` (default 1)
+  * `factor_inner` of type `double` (default 1)
+  * `phase` of type `double` (default 0)
+  * `offset` of type `double` (default 0)
 - Output channels: `value` of type `double`
   * = `factor_outer*(sin((value_in+phase)*factor_inner)) + offset`
 - Configuration parameters: None
@@ -270,11 +270,11 @@ Note: While technically possible, it is advised to use one output filter per uni
 - Type name: `cosine`
 - Type id: `20`
 - Input channels: 
-  * `value_in` of type `double`
-  * `factor_outer` of type `double` (default `1`)
-  * `factor_inner` of type `double` (default `1`)
-  * `phase` of type `double` (default `0`)
-  * `offset` of type `double` (default `0`)
+  * `value_in` of type `double` (default 0)
+  * `factor_outer` of type `double` (default 1)
+  * `factor_inner` of type `double` (default 1)
+  * `phase` of type `double` (default 0)
+  * `offset` of type `double` (default 0)
 - Output channels: `value` of type `double`
   * = `factor_outer*(cos((value_in+phase)*factor_inner)) + offset`
 - Configuration parameters: None
@@ -288,11 +288,11 @@ Note: While technically possible, it is advised to use one output filter per uni
 - Type name: `tangent`
 - Type id: `21`
 - Input channels: 
-  * `value_in` of type `double`
-  * `factor_outer` of type `double` (default `1`)
-  * `factor_inner` of type `double` (default `1`)
-  * `phase` of type `double` (default `0`)
-  * `offset` of type `double` (default `0`)
+  * `value_in` of type `double` (default 0)
+  * `factor_outer` of type `double` (default 1)
+  * `factor_inner` of type `double` (default 1)
+  * `phase` of type `double` (default 0)
+  * `offset` of type `double` (default 0)
 - Output channels: `value` of type `double`
   * = `factor_outer*(tan((value_in+phase)*factor_inner)) + offset`
 - Configuration parameters: None
@@ -306,7 +306,7 @@ Note: While technically possible, it is advised to use one output filter per uni
 - Type name: `arcsine`
 - Type id: `22`
 - Input channels: 
-  * `value_in` of type `double`
+  * `value_in` of type `double` (default 1)
 - Output channels: `value` of type `double`
   * = `arcsin(value_in)`
 - Configuration parameters: None
@@ -319,7 +319,7 @@ Note: While technically possible, it is advised to use one output filter per uni
 - Type name: `arccosine`
 - Type id: `23`
 - Input channels: 
-  * `value_in` of type `double`
+  * `value_in` of type `double` (default 1)
 - Output channels: `value` of type `double`
   * = `arccos(value_in)`
 - Configuration parameters: None
@@ -332,7 +332,7 @@ Note: While technically possible, it is advised to use one output filter per uni
 - Type name: `arctangent`
 - Type id: `24`
 - Input channels: 
-  * `value_in` of type `double`
+  * `value_in` of type `double` (default 1)
 - Output channels: `value` of type `double`
   * = `arctan(value_in)`
 - Configuration parameters: None
@@ -345,12 +345,12 @@ Note: While technically possible, it is advised to use one output filter per uni
 - Type name: `square_wave`
 - Type id: `25`
 - Input channels: 
-  * `value_in` of type `double`
-  * `factor_outer` of type `double` (default `1`)
-  * `factor_inner` of type `double` (default `1`)
-  * `phase` of type `double` (default `0`)
-  * `offset` of type `double` (default `0`)
-  * `length` of type `double` (default `180`)
+  * `value_in` of type `double` (default 0)
+  * `factor_outer` of type `double` (default 1)
+  * `factor_inner` of type `double` (default 1)
+  * `phase` of type `double` (default 0)
+  * `offset` of type `double` (default 0)
+  * `length` of type `double` (default 180)
 - Output channels: `value` of type `double`
 - Configuration parameters: None
 - initial parameters: None
@@ -367,11 +367,11 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `triangle_wave`
 - Type id: `26`
 - Input channels: 
-  * `value_in` of type `double`
-  * `factor_outer` of type `double` (default `1`)
-  * `factor_inner` of type `double` (default `1`)
-  * `phase` of type `double` (default `0`)
-  * `offset` of type `double` (default `0`)
+  * `value_in` of type `double` (default 0)
+  * `factor_outer` of type `double` (default 1)
+  * `factor_inner` of type `double` (default 1)
+  * `phase` of type `double` (default 0)
+  * `offset` of type `double` (default 0)
 - Output channels: `value_in` of type `double`
 - Configuration parameters: None
 - initial parameters: None
@@ -384,11 +384,11 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `sawtooth_wave`
 - Type id: `27`
 - Input channels: 
-  * `value_in` of type `double`
-  * `factor_outer` of type `double` (default `1`)
-  * `factor_inner` of type `double` (default `1`)
-  * `phase` of type `double` (default `0`)
-  * `offset` of type `double` (default `0`)
+  * `value_in` of type `double` (default 0)
+  * `factor_outer` of type `double` (default 1)
+  * `factor_inner` of type `double` (default 1)
+  * `phase` of type `double` (default 0)
+  * `offset` of type `double` (default 0)
 - Output channels: `value` of type `double`
 - Configuration parameters: None
 - initial parameters: None
@@ -401,7 +401,7 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `logarithm`
 - Type id: `28`
 - Input channels: 
-  * `value_in` of type `double`
+  * `value_in` of type `double` (default 1)
 - Output channels: `value` of type `double`
   * = `ln(value)`
 - Configuration parameters: None
@@ -412,7 +412,7 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `exponential`
 - Type id: `29`
 - Input channels: 
-  * `value_in` of type `double`
+  * `value_in` of type `double` (default 1)
 - Output channels: `value` of type `double`
   * = `e(value)`
 - Configuration parameters: None
@@ -423,8 +423,8 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `minimum`
 - Type id: `30`
 - Input channels: 
-  * `param1` of type `double`
-  * `param2` of type `double`
+  * `param1` of type `double` (default 1)
+  * `param2` of type `double` (default 1)
 - Output channels: `value` of type `double`
   * = `min(param1, param2)`
 - Configuration parameters: None
@@ -435,8 +435,8 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `maximum`
 - Type id: `31`
 - Input channels: 
-  * `param1` of type `double`
-  * `param2` of type `double`
+  * `param1` of type `double` (default 1)
+  * `param2` of type `double` (default 1)
 - Output channels: `value` of type `double`
   * = `max(param1, param2)`
 - Configuration parameters: None
@@ -459,8 +459,8 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `switch_on_delay_8bit`
 - Type id: `33`
 - Input channels: 
-  * `value_in` of type of type `8bit`
-  * `time` of type of type `double` in milliseconds
+  * `value_in` of type of type `8bit` (default 0)
+  * `time` of type of type `double` in milliseconds (default 0 with warning)
 - Output channels: `value` of type of type `8bit`
 - Configuration parameters: 
   * `delay` should be parseable as `double` in seconds
@@ -471,8 +471,8 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `switch_on_delay_16bit`
 - Type id: `34`
 - Input channels: 
-  * `value_in` of type of type `16bit`
-  * `time` of type of type `double` in milliseconds
+  * `value_in` of type of type `16bit` (default 0)
+  * `time` of type of type `double` in milliseconds (default 0 with warning)
 - Output channels: `value` of type of type `16bit`
 - Configuration parameters: 
   * `delay` should be parseable as `double` in seconds
@@ -483,8 +483,8 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `switch_on_delay_double`
 - Type id: `35`
 - Input channels: 
-  * `value_in` of type `double`
-  * `time` of type of type `double` in milliseconds
+  * `value_in` of type `double` (default 0)
+  * `time` of type of type `double` in milliseconds (default 0 with warning)
 - Output channels: `value` of type `double`
 - Configuration parameters: 
   * `delay` should be parseable as `double` in seconds
@@ -495,8 +495,8 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `switch_off_delay_8bit`
 - Type id: `36`
 - Input channels: 
-  * `value_in` of type of type `8bit`
-  * `time` of type of type `double` in milliseconds
+  * `value_in` of type of type `8bit` (default 0)
+  * `time` of type of type `double` in milliseconds (default 0 with warning)
 - Output channels: `value` of type of type `8bit`
 - Configuration parameters: 
   * `delay` should be parseable as `double` in seconds
@@ -507,8 +507,8 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `switch_off_delay_16bit`
 - Type id: `37`
 - Input channels: 
-  * `value_in` of type of type `16bit`
-  * `time` of type of type `double` in milliseconds
+  * `value_in` of type of type `16bit` (default 0)
+  * `time` of type of type `double` in milliseconds (default 0 with warning)
 - Output channels: `value` of type of type `16bit`
 - Configuration parameters: 
   * `delay` should be parseable as `double` in seconds
@@ -519,8 +519,8 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `switch_off_delay_double`
 - Type id: `38`
 - Input channels: 
-  * `value_in` of type `double`
-  * `time` of type of type `double` in milliseconds
+  * `value_in` of type `double` (default 0)
+  * `time` of type of type `double` in milliseconds (default 0 with warning)
 - Output channels: `value` of type `double`
 - Configuration parameters: 
   * `delay` should be parseable as `double` in seconds
@@ -625,7 +625,7 @@ The following filters can be used to fetch fader input.
  - Type name: `cue_list_filter`
  - Type id: `44`
 - Input channels: 
-  * `time` of type of type `double`
+  * `time` of type of type `double` (default 0 with warning)
  - Output channels:
     The name of the channel  with its type, Example:
       * `wash_x_pos` of type `float`
@@ -674,9 +674,9 @@ The following filters can be used to fetch fader input.
  - Type name: `filter_shift_8bit`
  - Type id: `45`
  - Input channels: 
-   * `input` of type `8bit`
-   * `switch_time` of type `double` (in ms)
-   * `time` of type `double`
+   * `input` of type `8bit` (default 0)
+   * `switch_time` of type `double` (in ms) (default 1000)
+   * `time` of type `double` (default 0 with warning)
  - Output channels:
    * `output_1` of type `8bit`
    * `output_2` of type `8bit`
@@ -690,9 +690,9 @@ The following filters can be used to fetch fader input.
  - Type name: `filter_shift_16bit`
  - Type id: `46`
  - Input channels: 
-   * `input` of type `16bit`
-   * `switch_time` of type `double` (in ms)
-   * `time` of type `double`
+   * `input` of type `16bit` (default 0)
+   * `switch_time` of type `double` (in ms) (default 1000)
+   * `time` of type `double` (default 0 with warning)
  - Output channels:
    * `output_1` of type `16bit`
    * `output_2` of type `16bit`
@@ -706,9 +706,9 @@ The following filters can be used to fetch fader input.
  - Type name: `filter_shift_float`
  - Type id: `47`
  - Input channels: 
-   * `input` of type `float`
-   * `switch_time` of type `double` (in ms)
-   * `time` of type `double`
+   * `input` of type `float` (default 0)
+   * `switch_time` of type `double` (in ms) (default 1000)
+   * `time` of type `double` (default 0 with warning)
  - Output channels:
    * `output_1` of type `float`
    * `output_2` of type `float`
@@ -722,9 +722,9 @@ The following filters can be used to fetch fader input.
  - Type name: `filter_shift_color`
  - Type id: `48`
  - Input channels: 
-   * `input` of type `color`
-   * `switch_time` of type `double` (in ms)
-   * `time` of type `double`
+   * `input` of type `color` (default white)
+   * `switch_time` of type `double` (in ms) (default 1000)
+   * `time` of type `double` (default 0 with warning)
  - Output channels:
    * `output_1` of type `color`
    * `output_2` of type `color`
@@ -750,8 +750,8 @@ The following filters can be used to fetch fader input.
  - Type id: `50`
 - Input channels:
     The name of the channel  with its type, Example:
-    * `in_dimmer` of type `8bit`
-    * `in_color` of type `color`
+    * `in_dimmer` of type `8bit` (default 0)
+    * `in_color` of type `color` (default white)
  - Output channels:
     The name of the channel  with its type, Example:
       * `out_dimmer` of type `8bit`
