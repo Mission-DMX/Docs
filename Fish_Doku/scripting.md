@@ -11,3 +11,8 @@ Every configured input and output port is mapped as a global variable of the sam
 Besides that, the following global variables have a special meaning:
  * `output`: This global variable is a two dimensional array. The first dimension is interpreted as the universe id to output to.
    The second one defines the channel. For example `output[1][3] = 255` would set channel `4` of universe `1` to `255`.
+
+## Additional Functions
+Besides the Lua standard library, the following functions are avaiable:
+ * `hsi_to_rgb(color)` Converts pixel data type to three dimensional array of color values. Ussage: `r, g, b = hsi_to_rgb(my_color)`
+ * `hsi_to_rgbw(color)` Converts pixel data type to four dimensional array of color values. Ussage: `r, g, b, w = hsi_to_rgbw(my_color)`
