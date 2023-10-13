@@ -634,6 +634,7 @@ The following filters can be used to fetch fader input.
       * `wash_color` of type `color`
  - initial parameters: None
  - Configuration parameters:
+   * `default_cue`: The cue to play at scene enter or -1
    * `mapping`: The type as `8bit`, `16bit`,`float` or `color` of the channels behind the name of the channel and `:` divided by `;`
       * Example: `wash_x_pos:float;wash_y_pos:float;wash_dimmer:8bit;wash_color:color`
    * `end_handling`: The handling at the end of the cuelist
