@@ -668,6 +668,7 @@ The following filters can be used to fetch fader input.
       * `stop` : stops the cuelist
    * `run_cue` of type `16bit` : starts the cue with given number
    * `next_cue` of type `16bit` : runs the cue with given number when the actual cue has finished (and `next_cue` is set)
+   * `set_default_cue` of type `16bit` : sets default (autostart) cue, a value greater equal cuelist-size (for example `0xFFFF`) disables autostart
 
 ## Shift Filters
 
