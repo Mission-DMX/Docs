@@ -105,6 +105,80 @@ post them to the debug table of the GUI.
 - initial parameters: None
 - GUI update keys: None
 
+### Merge two 8 bit unsigned ints to 16 bit unsigned int
+- Type name: `adapter:dual_byte_to_16bit`
+- Type id: `57`
+- Input channels:
+  * `lower` of type `8bit`
+  * `upper` of type `8bit`
+- Output channels:
+  * `value` of type `16bit` The merged value of the two 8bit ones
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+
+### Map one 8 bit unsigned int to 16 bit unsigned int
+- Type name: `adapter:one_byte_to_16bit`
+- Type id: `58`
+- Input channels:
+  * `value_in` of type `8bit`
+- Output channels:
+  * `value` of type `16bit` maps the range of 8bit to the range of 16bit
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+
+### Map a float to an 8 bit value
+- Type name: `map_float_to_8bit`
+- Type id: `54`
+- Input channels:
+  * `value_in` of type `float`
+- Output channels:
+  * `value` of type `8bit` maps a specific range of float to another range of 8bit
+- Configuration parameters:
+  * `lower_bound_in`: parseable as float, default: `0`
+  * `upper_bound_in`: parseable as float, default: `1`
+  * `lower_bound_out`: parseable as float, default: `0`
+  * `upper_bound_out`: parseable as float, default: `255`
+
+  The bounds are not really boundaries, so you could exceed the input range for getting values exceeding the output range (if the output range is less then 8bit can handle)
+- initial parameters: None
+- GUI update keys: None
+
+### Map a float to an 16 bit value
+- Type name: `map_float_to_16bit`
+- Type id: `55`
+- Input channels:
+  * `value_in` of type `float`
+- Output channels:
+  * `value` of type `16bit` maps a specific range of float to another range of 16bit
+- Configuration parameters:
+  * `lower_bound_in`: parseable as float, default: `0`
+  * `upper_bound_in`: parseable as float, default: `1`
+  * `lower_bound_out`: parseable as float, default: `0`
+  * `upper_bound_out`: parseable as float, default: `65535`
+
+  The bounds are not really boundaries, so you could exceed the input range for getting values exceeding the output range (if the output range is less then 16bit can handle)
+- initial parameters: None
+- GUI update keys: None
+
+### Map a float range to another float range
+- Type name: `map_float_to_float`
+- Type id: `56`
+- Input channels:
+  * `value_in` of type `float`
+- Output channels:
+  * `value` of type `float` maps a specific range of float to another range of float
+- Configuration parameters:
+  * `lower_bound_in`: parseable as float, default: `0`
+  * `upper_bound_in`: parseable as float, default: `1`
+  * `lower_bound_out`: parseable as float, default: `0`
+  * `upper_bound_out`: parseable as float, default: `1`
+
+  The bounds are not really boundaries, so you could exceed the input range for getting values exceeding the output range.
+- initial parameters: None
+- GUI update keys: None
+
 ### Convert 16 bit to ngn
 - Type name: `adapter:16bit_to_bool`
 - Type id: `9`
