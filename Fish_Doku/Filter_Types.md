@@ -106,7 +106,7 @@ post them to the debug table of the GUI.
 - GUI update keys: None
 
 ### Merge two 8 bit unsigned ints to 16 bit unsigned int
-- Type name: `adapter:dual_byte_to_16bit`
+- Type name: `adapter:combine_bytes_to_16bit`
 - Type id: `57`
 - Input channels:
   * `lower` of type `8bit`
@@ -118,7 +118,7 @@ post them to the debug table of the GUI.
 - GUI update keys: None
 
 ### Map one 8 bit unsigned int to 16 bit unsigned int
-- Type name: `adapter:one_byte_to_16bit`
+- Type name: `adapter:map_8bit_to_16bit`
 - Type id: `58`
 - Input channels:
   * `value_in` of type `8bit`
@@ -140,10 +140,10 @@ post them to the debug table of the GUI.
   * `upper_bound_in`: parseable as float, default: `1`
   * `lower_bound_out`: parseable as float, default: `0`
   * `upper_bound_out`: parseable as float, default: `255`
-
-  The bounds are not really boundaries, so you could exceed the input range for getting values exceeding the output range (if the output range is less then 8bit can handle)
+  * `limit_range`: `1` when the boundaries should be hard, otherwise the output could exceed the range if the input does as well
 - initial parameters: None
-- GUI update keys: None
+- GUI update keys: same as configuration parameters
+- Note: `lower_bound_in` and `upper_bound_in` cant be the same value
 
 ### Map a float to an 16 bit value
 - Type name: `map_float_to_16bit`
@@ -157,10 +157,12 @@ post them to the debug table of the GUI.
   * `upper_bound_in`: parseable as float, default: `1`
   * `lower_bound_out`: parseable as float, default: `0`
   * `upper_bound_out`: parseable as float, default: `65535`
+  * `limit_range`: `1` when the boundaries should be hard, otherwise the output could exceed the range if the input does as well
 
   The bounds are not really boundaries, so you could exceed the input range for getting values exceeding the output range (if the output range is less then 16bit can handle)
 - initial parameters: None
-- GUI update keys: None
+- GUI update keys: same as configuration parameters
+- Note: `lower_bound_in` and `upper_bound_in` cant be the same value
 
 ### Map a float range to another float range
 - Type name: `map_float_to_float`
@@ -174,10 +176,12 @@ post them to the debug table of the GUI.
   * `upper_bound_in`: parseable as float, default: `1`
   * `lower_bound_out`: parseable as float, default: `0`
   * `upper_bound_out`: parseable as float, default: `1`
+  * `limit_range`: `1` when the boundaries should be hard, otherwise the output could exceed the range if the input does as well
 
   The bounds are not really boundaries, so you could exceed the input range for getting values exceeding the output range.
 - initial parameters: None
-- GUI update keys: None
+- GUI update keys: same as configuration parameters
+- Note: `lower_bound_in` and `upper_bound_in` cant be the same value
 
 ### Convert 16 bit to ngn
 - Type name: `adapter:16bit_to_bool`
