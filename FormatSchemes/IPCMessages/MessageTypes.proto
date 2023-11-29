@@ -19,7 +19,7 @@ enum MsgType {
  MSGT_REQUEST_DMX_DATA = 11;
  MSGT_ENTER_SCENE = 12;
  MSGT_LOAD_SHOW_FILE = 13;
- MSGT_UPDATE_PARAMETER = 14;
+ MSGT_UPDATE_PARAMETER = 14; // This message updates parameters of running filters when sent to fish, and notifies the GUI about state changes by running filters, when sent to the GUI
  MSGT_LOG_MESSAGE = 15;
  MSGT_REMOVE_FADER_BANK_SET = 16;
  MSGT_ADD_FADER_BANK_SET = 17;
