@@ -94,13 +94,11 @@ option optimize_for = LITE_RUNTIME;
    BTN_OPTION = 67;
    BTN_CONTROL = 73;
    BTN_ALT = 74;
-
-   BTN_READOFF_MOVEWINDOW = 68; // If the button is pressed together with the buttons described next, it will move the selected window, using the F-Keys
+   BTN_READOFF_GOTO = 68; // Switch to a specific GUI page based on the input typed into the keypad.
+   BTN_WRITE_MOVEWINDOW = 69; // If the button is pressed together with the buttons described next, it will move the selected window, using the F-Keys
    // to the selected workspace(F1 = Workspace 1 etc.) and using the Arrow keys to move it across the current Workspace. If it is pressed without these
    // buttons it enters window selection mode (where the button is blinking) and the arrow keys can be used for window selection. In Window selection
    // mode a floating window should show up for selection of vertical or horizontal tiling mode.
-   
-   BTN_WRITE = 69;
    BTN_TOUCH = 75;
    BTN_LATCH = 76;
    BTN_TRIM = 70;
