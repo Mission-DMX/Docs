@@ -135,14 +135,14 @@ post them to the debug table of the GUI.
   * `value_in` of type `float`
 - Output channels:
   * `value` of type `8bit` maps a specific range of float to another range of 8bit
-- Configuration parameters:
+- Configuration parameters: None
+- initial parameters:
   * `lower_bound_in`: parseable as float, default: `0`
   * `upper_bound_in`: parseable as float, default: `1`
   * `lower_bound_out`: parseable as float, default: `0`
   * `upper_bound_out`: parseable as float, default: `255`
   * `limit_range`: `1` when the boundaries should be hard, otherwise the output could exceed the range if the input does as well
-- initial parameters: None
-- GUI update keys: same as configuration parameters
+- GUI update keys: same as initial parameters
 - Note: `lower_bound_in` and `upper_bound_in` cant be the same value
 
 ### Map a float to an 16 bit value
@@ -152,7 +152,8 @@ post them to the debug table of the GUI.
   * `value_in` of type `float`
 - Output channels:
   * `value` of type `16bit` maps a specific range of float to another range of 16bit
-- Configuration parameters:
+- Configuration parameters: None
+- initial parameters:
   * `lower_bound_in`: parseable as float, default: `0`
   * `upper_bound_in`: parseable as float, default: `1`
   * `lower_bound_out`: parseable as float, default: `0`
@@ -161,7 +162,7 @@ post them to the debug table of the GUI.
 
   The bounds are not really boundaries, so you could exceed the input range for getting values exceeding the output range (if the output range is less then 16bit can handle)
 - initial parameters: None
-- GUI update keys: same as configuration parameters
+- GUI update keys: same as initial parameters
 - Note: `lower_bound_in` and `upper_bound_in` cant be the same value
 
 ### Map a float range to another float range
@@ -171,7 +172,8 @@ post them to the debug table of the GUI.
   * `value_in` of type `float`
 - Output channels:
   * `value` of type `float` maps a specific range of float to another range of float
-- Configuration parameters:
+- Configuration parameters: None
+- initial parameters:
   * `lower_bound_in`: parseable as float, default: `0`
   * `upper_bound_in`: parseable as float, default: `1`
   * `lower_bound_out`: parseable as float, default: `0`
@@ -180,7 +182,7 @@ post them to the debug table of the GUI.
 
   The bounds are not really boundaries, so you could exceed the input range for getting values exceeding the output range.
 - initial parameters: None
-- GUI update keys: same as configuration parameters
+- GUI update keys: same as initial parameters
 - Note: `lower_bound_in` and `upper_bound_in` cant be the same value
 
 ### Convert 16 bit to ngn
