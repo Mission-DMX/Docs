@@ -4,11 +4,11 @@
 - Type name: `sine`
 - Type id: `19`
 - Input channels: 
-  * `value_in` of type `double`
-  * `factor_outer` of type `double` (default `1`)
-  * `factor_inner` of type `double` (default `1`)
-  * `phase` of type `double` (default `0`)
-  * `offset` of type `double` (default `0`)
+  * `value_in` of type `double` (default 0)
+  * `factor_outer` of type `double` (default 1)
+  * `factor_inner` of type `double` (default 0.1)
+  * `phase` of type `double` (default 0)
+  * `offset` of type `double` (default 0)
 - Output channels: `value` of type `double`
   * = `factor_outer*(sin((value_in+phase)*factor_inner)) + offset`
 - Configuration parameters: None
@@ -22,11 +22,11 @@
 - Type name: `cosine`
 - Type id: `20`
 - Input channels: 
-  * `value_in` of type `double`
-  * `factor_outer` of type `double` (default `1`)
-  * `factor_inner` of type `double` (default `1`)
-  * `phase` of type `double` (default `0`)
-  * `offset` of type `double` (default `0`)
+  * `value_in` of type `double` (default 0)
+  * `factor_outer` of type `double` (default 1)
+  * `factor_inner` of type `double` (default 0.1)
+  * `phase` of type `double` (default 0)
+  * `offset` of type `double` (default 0)
 - Output channels: `value` of type `double`
   * = `factor_outer*(cos((value_in+phase)*factor_inner)) + offset`
 - Configuration parameters: None
@@ -40,11 +40,11 @@
 - Type name: `tangent`
 - Type id: `21`
 - Input channels: 
-  * `value_in` of type `double`
-  * `factor_outer` of type `double` (default `1`)
-  * `factor_inner` of type `double` (default `1`)
-  * `phase` of type `double` (default `0`)
-  * `offset` of type `double` (default `0`)
+  * `value_in` of type `double` (default 0)
+  * `factor_outer` of type `double` (default 1)
+  * `factor_inner` of type `double` (default 0.1)
+  * `phase` of type `double` (default 0)
+  * `offset` of type `double` (default 0)
 - Output channels: `value` of type `double`
   * = `factor_outer*(tan((value_in+phase)*factor_inner)) + offset`
 - Configuration parameters: None
@@ -58,7 +58,7 @@
 - Type name: `arcsine`
 - Type id: `22`
 - Input channels: 
-  * `value_in` of type `double`
+  * `value_in` of type `double` (default 0)
 - Output channels: `value` of type `double`
   * = `arcsin(value_in)`
 - Configuration parameters: None
@@ -71,7 +71,7 @@
 - Type name: `arccosine`
 - Type id: `23`
 - Input channels: 
-  * `value_in` of type `double`
+  * `value_in` of type `double` (default 0)
 - Output channels: `value` of type `double`
   * = `arccos(value_in)`
 - Configuration parameters: None
@@ -84,7 +84,7 @@
 - Type name: `arctangent`
 - Type id: `24`
 - Input channels: 
-  * `value_in` of type `double`
+  * `value_in` of type `double` (default 0)
 - Output channels: `value` of type `double`
   * = `arctan(value_in)`
 - Configuration parameters: None

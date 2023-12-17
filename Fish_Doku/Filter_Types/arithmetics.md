@@ -4,9 +4,9 @@
 - Type name: `mac`
 - Type id: `10`
 - Input channels:
-  * `factor1`: double
-  * `factor2`: double
-  * `summand`: double
+  * `factor1`: double (default 1)
+  * `factor2`: double (default 1)
+  * `summand`: double (default 0)
 - Output channels: `value` (:= `(factor1 * factor2) + summand`)
 - Configuration parameters: None
 - initial parameters: None
@@ -15,7 +15,7 @@
 ## float to 16bit
 - Type name: `round_to_16bit`
 - Type id: `12`
-- Input channels: `value_in` of type `double`
+- Input channels: `value_in` of type `double` (default 0)
 - Output channels: `value` of type `16bit` (= rounded and then cut value of input channel)
 - Configuration parameters: None
 - initial parameters: None
@@ -24,7 +24,7 @@
 ## float to 8bit
 - Type name: `round_to_8bit`
 - Type id: `13`
-- Input channels: `value_in` of type `double`
+- Input channels: `value_in` of type `double` (default 0)
 - Output channels: `value` of type `8bit` (= rounded and then cut value of input channel)
 - Configuration parameters: None
 - initial parameters: None
@@ -33,7 +33,7 @@
 ## round float
 - Type name: `round`
 - Type id: `14`
-- Input channels: `value_in` of type `double`
+- Input channels: `value_in` of type `double` (default 0)
 - Output channels: `value` of type `double` (= rounded value of input channel)
 - Configuration parameters: None
 - initial parameters: None
@@ -43,7 +43,7 @@
 - Type name: `logarithm`
 - Type id: `28`
 - Input channels: 
-  * `value_in` of type `double`
+  * `value_in` of type `double` (default 1)
 - Output channels: `value` of type `double`
   * = `ln(value)`
 - Configuration parameters: None
@@ -54,7 +54,7 @@
 - Type name: `exponential`
 - Type id: `29`
 - Input channels: 
-  * `value_in` of type `double`
+  * `value_in` of type `double` (default 0)
 - Output channels: `value` of type `double`
   * = `e(value)`
 - Configuration parameters: None
@@ -65,8 +65,8 @@
 - Type name: `minimum`
 - Type id: `30`
 - Input channels: 
-  * `param1` of type `double`
-  * `param2` of type `double`
+  * `param1` of type `double` (default 0)
+  * `param2` of type `double` (default 0)
 - Output channels: `value` of type `double`
   * = `min(param1, param2)`
 - Configuration parameters: None
@@ -77,8 +77,8 @@
 - Type name: `maximum`
 - Type id: `31`
 - Input channels: 
-  * `param1` of type `double`
-  * `param2` of type `double`
+  * `param1` of type `double` (default 0)
+  * `param2` of type `double` (default 0)
 - Output channels: `value` of type `double`
   * = `max(param1, param2)`
 - Configuration parameters: None

@@ -3,10 +3,10 @@
 ## lua_script_filter
  - Type name: `filter_lua_script`
  - Type id: `50`
-- Input channels:
+ - Input channels:
     The name of the channel  with its type, Example:
-    * `in_dimmer` of type `8bit`
-    * `in_color` of type `color`
+    * `in_dimmer` of type `8bit` (default 0)
+    * `in_color` of type `color` (default white)
  - Output channels:
     The name of the channel  with its type, Example:
       * `out_dimmer` of type `8bit`

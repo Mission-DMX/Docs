@@ -4,12 +4,12 @@
 - Type name: `square_wave`
 - Type id: `25`
 - Input channels: 
-  * `value_in` of type `double`
-  * `factor_outer` of type `double` (default `1`)
-  * `factor_inner` of type `double` (default `1`)
-  * `phase` of type `double` (default `0`)
-  * `offset` of type `double` (default `0`)
-  * `length` of type `double` (default `180`)
+  * `value_in` of type `double` (default 0)
+  * `factor_outer` of type `double` (default 1)
+  * `factor_inner` of type `double` (default 0.1)
+  * `phase` of type `double` (default 0)
+  * `offset` of type `double` (default 0)
+  * `length` of type `double` (default 180)
 - Output channels: `value` of type `double`
 - Configuration parameters: None
 - initial parameters: None
@@ -26,11 +26,11 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `triangle_wave`
 - Type id: `26`
 - Input channels: 
-  * `value_in` of type `double`
-  * `factor_outer` of type `double` (default `1`)
-  * `factor_inner` of type `double` (default `1`)
-  * `phase` of type `double` (default `0`)
-  * `offset` of type `double` (default `0`)
+  * `value_in` of type `double` (default 0)
+  * `factor_outer` of type `double` (default 1)
+  * `factor_inner` of type `double` (default 0.1)
+  * `phase` of type `double` (default 0)
+  * `offset` of type `double` (default 0)
 - Output channels: `value_in` of type `double`
 - Configuration parameters: None
 - initial parameters: None
@@ -43,11 +43,11 @@ I took this picture as reference, so the waves are also defined like the sine wi
 - Type name: `sawtooth_wave`
 - Type id: `27`
 - Input channels: 
-  * `value_in` of type `double`
-  * `factor_outer` of type `double` (default `1`)
-  * `factor_inner` of type `double` (default `1`)
-  * `phase` of type `double` (default `0`)
-  * `offset` of type `double` (default `0`)
+  * `value_in` of type `double` (default 0)
+  * `factor_outer` of type `double` (default 1)
+  * `factor_inner` of type `double` (default 0.1)
+  * `phase` of type `double` (default 0)
+  * `offset` of type `double` (default 0)
 - Output channels: `value` of type `double`
 - Configuration parameters: None
 - initial parameters: None
