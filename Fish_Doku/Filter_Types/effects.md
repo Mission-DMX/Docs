@@ -1,5 +1,3 @@
-
-
 # Effect filters
 
 ## cue_list_filter

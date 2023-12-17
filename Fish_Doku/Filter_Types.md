@@ -78,5 +78,5 @@ The following file links to files specify the type identifiers as well as the ch
 - [filter_shift_float](./Filter_Types/effects.md#filter_shift_float)
 - [filter_shift_color](./Filter_Types/effects.md#filter_shift_color)
 
-## [Lua List](./Filter_Types/lua.md#Lua-List)
-- [lua_script_filter](./Filter_Types/lua.md#lua_script_filter)
+## [Script filters](./Filter_Types/script.md#Lua-List)
+- [lua_script_filter](./Filter_Types/script.md#lua_script_filter)
