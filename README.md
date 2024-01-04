@@ -11,3 +11,6 @@ Fish is the real time translation engine.
 	- data structure of filter execution engine
 	- data structure of direct execution engine
 	- behaviour of I/O engine
+
+## Filter documentation
+Fish receives a list of filters per scene. The preprocessing done by the GUI will be documented [here](Editor/internal/preprocessing.md). Documentation about the non-virtual filters can be found [here](Fish_Doku/Filter_Types.md).
