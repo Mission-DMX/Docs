@@ -14,7 +14,7 @@ The GUI carries out these operations in the following order:
 TODO explain how virtual filter resolution works.
 
 ## Placement of constants
-The GUI iterates over all left empty inputs of filters and creates constant filters for these ports. It does so by creating one constant per data type and value and reuses them for each occurance.
+The GUI iterates over all left empty inputs of filters and creates constant filters for these ports. It does so by creating one constant per tuple of data type and value, then reuses them for each occurance.
 
 ## Filter optimizations
 The following optimizations are performed:
