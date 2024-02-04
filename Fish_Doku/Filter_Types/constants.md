@@ -51,7 +51,7 @@ These filters provide constant inputs and their values can be updated from the G
 The following format can be parsed: `<hue as a double>,<saturation as a double>,<iluminance as a double>`.
 For example: `180.0,1.0,1.0` is a cyan like color.
 
-## Position constant
+## position constant
 - Type name: `PanTiltConstant`
 - Type id: `-5`
 - Input channels: None

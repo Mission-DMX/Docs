@@ -7,6 +7,7 @@ The following file links to files specify the type identifiers as well as the ch
 - [16 bit constant](./Filter_Types/constants.md#16-bit-constant)
 - [float constant](./Filter_Types/constants.md#float-constant)
 - [color constant](./Filter_Types/constants.md#color-constant)
+- [position constant](./Filter_Types/constants.md#position-constant)
 
 ## [Debug](./Filter_Types/debug.md#Debug-Filters)
 - [8 bit output](./Filter_Types/debug.md#8-bit-output)
