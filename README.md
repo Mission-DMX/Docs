@@ -1,6 +1,7 @@
 # Mission DMX
 
 This repository contains documentation about the Mission DMX project.
+A user manual can be found inside the [Editor folder](Editor).
 
 ## Fish
 Fish is the real time translation engine.
