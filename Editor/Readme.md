@@ -7,3 +7,5 @@ Basically, there are two ways to use the control desk. The first option is to qu
 TODO introduce advanced views such as debug view and settings
 
 TODO write a table of contents for each manual entry
+
+TODO write manual about CLI (socket and in-editor terminal)
