@@ -17,8 +17,8 @@ The following filters can be used to fetch fader input.
  - Type id: `39`
  - Input channels: None
  - Output channels:
-   * `fader` of type `16bit`
-   * `encoder` of type `16bit`
+   * `primary` of type `16bit`
+   * `secondary` of type `16bit`
  - Configuration parameters:
    * `set_id` The set to use for column lookup
    * `column_id` The column to look up
