@@ -14,4 +14,4 @@ Fish is the real time translation engine.
 	- behaviour of I/O engine
 
 ## Filter documentation
-Fish receives a list of filters per scene. The preprocessing done by the GUI will be documented [here](Editor/internal/preprocessing.md). Documentation about the non-virtual filters can be found [here](Fish_Doku/Filter_Types/Filter_Types.md). The virtual filters can be found [here](Editor/Filters/VirtualFilter/VirtualFilterTech.md). Hopefully all filters are listed [here](Editor/Filters/FilterUsage.md), so you can also get some information about how to use them.
+Fish receives a list of filters per scene. The preprocessing done by the GUI will be documented [here](Editor/internal/preprocessing.md). Documentation about the non-virtual filters can be found [here](Fish_Doku/Filter_Types/README.md). The virtual filters can be found [here](Editor/Filters/VirtualFilter/VirtualFilterTech.md). Hopefully all filters are listed [here](Editor/Filters/FilterUsage.md), so you can also get some information about how to use them.
