@@ -4,7 +4,8 @@
  - Type name: `cue_list_filter`
  - Type id: `44`
 - Input channels: 
-  * `time` of type of type `double`(default 0 with warning)
+  * `time` of type of type `double`(default time node)
+  * `time_scale` of type of type `double`(default 1)
  - Output channels:
     The name of the channel  with its type, Example:
       * `wash_x_pos` of type `float`
@@ -48,6 +49,18 @@
    * `run_cue` of type `16bit` : starts the cue with given number
    * `next_cue` of type `16bit` : runs the cue with given number when the actual cue has finished (and `next_cue` is set)
    * `set_default_cue` of type `int` : sets default (autostart) cue, a negative value or a value greater equal cuelist-size (for example `0xFFFF`) disables autostart
+  - update Message for GUI:
+    * Messagetype: `update_parameter`
+    * filter_id: id of the cue filter
+    * parameter_key: `actual_state`
+    * parameter_value: following values seperated with `;`
+      * running_state: `stop`, `play`, `pause` or `error`
+      * active_cue: the number (zero indexed) of the current cue running
+      * time: the time already passed of the current cue
+      * end_time (if the current cue has at least one frame) the duration of the whole cue
+      * scale factor: the factor 
+    * scene_id: the id of the current (hopefully the one of the cue_filter) scene
+    
 
 ## filter_shift_8bit
  - Type name: `filter_shift_8bit`
@@ -55,7 +68,7 @@
  - Input channels: 
    * `input` of type `8bit` (default 0)
    * `switch_time` of type `double` (in ms) /(default 1000)
-   * `time` of type `double` (default 0 with warning)
+   * `time` of type `double` (default time node)
  - Output channels:
    * `output_1` of type `8bit`
    * `output_2` of type `8bit`
@@ -71,7 +84,7 @@
  - Input channels: 
    * `input` of type `16bit` (default 0)
    * `switch_time` of type `double` (in ms) (default 1000)
-   * `time` of type `double` (default 0 with warning)
+   * `time` of type `double` (default time node)
  - Output channels:
    * `output_1` of type `16bit`
    * `output_2` of type `16bit`
@@ -87,7 +100,7 @@
  - Input channels: 
    * `input` of type `float` (default 0)
    * `switch_time` of type `double` (in ms) (default 1000)
-   * `time` of type `double` (default 0 with warning)
+   * `time` of type `double` (default time node)
  - Output channels:
    * `output_1` of type `float`
    * `output_2` of type `float`
@@ -103,7 +116,7 @@
  - Input channels: 
    * `input` of type `color` (default white)
    * `switch_time` of type `double` (in ms) (default 1000)
-   * `time` of type `double` (default 0 with warning)
+   * `time` of type `double` (default time node)
  - Output channels:
    * `output_1` of type `color`
    * `output_2` of type `color`
