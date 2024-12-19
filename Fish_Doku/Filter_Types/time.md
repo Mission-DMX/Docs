@@ -10,7 +10,7 @@
 - GUI update keys: None
 - Notes
   * time is the number of millisecons since start of the program
-  * it is recommended to use for each scene only one time node, because the calculation takes long
+  * it is recommended to use for each scene only one time node, because the calculation is done each time. Consequence of multiple time sources would be longer computational times as well as inconsistent timing in animations.
 
 ## switch_on_delay_8bit
 - Type name: `switch_on_delay_8bit`
