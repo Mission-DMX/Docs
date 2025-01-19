@@ -47,3 +47,13 @@ message long_log_update {
   uint64 time_stamp = 2; // Unix time stamp of event
   string what = 3; // Content of the log entry
 }
+
+message state_list {
+  message kvs {
+    required string k = 1;
+    required string v = 2;
+    required uint64 scene_id = 3;
+  }
+  map<string, string> unspecific_states = 1;
+  repeated kvs specific_states = 2;
+}
