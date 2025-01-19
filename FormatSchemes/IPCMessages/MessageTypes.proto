@@ -25,4 +25,5 @@ enum MsgType {
  MSGT_ADD_FADER_BANK_SET = 17;
  MSGT_DESK_UPDATE = 18;
  MSGT_UPDATE_COLUMN = 19; // Console.fader_column
+ MSGT_STATE_LIST = 20; // If fish receives this message empty: it will reply with the same message type, filled in with all states. Otherwise this triggers an update of all specified states
 }
