@@ -50,9 +50,9 @@ message long_log_update {
 
 message state_list {
   message kvs {
-    required string k = 1;
-    required string v = 2;
-    required uint64 scene_id = 3;
+    string k = 1;
+    string v = 2;
+    uint64 scene_id = 3;
   }
   map<string, string> unspecific_states = 1;
   repeated kvs specific_states = 2;
