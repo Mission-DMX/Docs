@@ -20,6 +20,7 @@
    * `end_handling`: The handling at the end of the cuelist
       * `hold` for holding the values of the last frame
       * `start_again` starting the cue again
+   * `persistence`: If this is set to `true`, the filter will remember his state between scene switches or show file updates.
    * `cuelist`: The cues and their frames:
       * Each cue is divided by `$` and has a list of timestamp_configurations (divided by `|`) with its frames and then a handling for the end and a setting for the repeated play event (each seperated by `#`)
         * `timestamp_configuration`: beginning with the `timestamp` of type `double` (given in seconds) a seperator `:` and a list of frames for each channel divided by `&`
