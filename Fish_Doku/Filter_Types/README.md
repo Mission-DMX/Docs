@@ -49,6 +49,9 @@ The following file links to files specify the type identifiers as well as the ch
 - [arccosine](./trigonometrics.md#arccosine)
 - [arctangent](./trigonometrics.md#arctangent)
 
+## [Color Manipulation](color_manipulation.md)
+- [Color Mixer](color_manipulation.md#color-mixer)
+
 ## [Waves](./wave.md#Waves)
 - [square](./wave.md#square)
 - [triangle](./wave.md#triangle)
