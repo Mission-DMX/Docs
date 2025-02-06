@@ -9,7 +9,8 @@ This filter mixes colors based on their individual color properties.
   * `value` of type `color`
 - Configuration parameters:
   * `input_count`: Number of inputs, default: 0
-- initial parameters: None
+- initial parameters:
+  * `reduce_saturation_on_far_angles`: If set to `true`, the filter will decrease the saruration of colors if they're far apart.
 - GUI update keys: None
 
 ## Color Mixer Additive RGB
