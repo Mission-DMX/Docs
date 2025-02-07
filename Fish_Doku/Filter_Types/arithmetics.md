@@ -84,3 +84,33 @@
 - Configuration parameters: None
 - initial parameters: None
 - GUI update keys: None
+
+## 8bit Auto Sum
+- Type name: `filter_sum_8bit`
+- Type id: `62`
+- Input channels: For every configured input, there is an input channel of type `8bit` with the channel name being the number (starting at 0)
+- Output channel: `value` of type `8bit`
+- Configuration parameters:
+  * `input_count`: Number of inputs
+- initial parameters: None
+- GUI update keys: None
+
+## 16bit Auto Sum
+- Type name: `filter_sum_16bit`
+- Type id: `63`
+- Input channels: For every configured input, there is an input channel of type `16bit` with the channel name being the number (starting at 0)
+- Output channel: `value` of type `16bit`
+- Configuration parameters:
+  * `input_count`: Number of inputs
+- initial parameters: None
+- GUI update keys: None
+
+## float Auto Sum
+- Type name: `filter_sum_float`
+- Type id: `64`
+- Input channels: For every configured input, there is an input channel of type `double` with the channel name being the number (starting at 0)
+- Output channel: `value` of type `double`
+- Configuration parameters:
+  * `input_count`: Number of inputs
+- initial parameters: None
+- GUI update keys: None
