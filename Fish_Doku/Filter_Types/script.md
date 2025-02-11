@@ -60,3 +60,6 @@ Besides that, the following global variables have a special meaning:
 Besides the Lua standard library, the following functions are avaiable:
  * `hsi_to_rgb(color)` Converts pixel data type to three dimensional array of color values. Ussage: `r, g, b = hsi_to_rgb(my_color)`
  * `hsi_to_rgbw(color)` Converts pixel data type to four dimensional array of color values. Ussage: `r, g, b, w = hsi_to_rgbw(my_color)`
+ * `mix_color_rgb_additive(color1, color2)` Mix two colors together using the additive rgb algorithm. Ussage: `new_color = mix_color_rgb_additive(color1, color2)`
+ * `mix_color_rgb_normative(color1, color2)` Mix two colors together using the normative rgb algorithm. Ussage: `new_color = mix_color_rgb_normative(color1, color2)`
+ * `mix_color_hsi(color1, color2, distance_obediance=true)` Mix two colors together using the HSI avarage algorithm. The thirs parameter is optional (defaulting to true) and indicates if distant colors should get their brightness reduced once they're mixed. Ussage: `new_color = mix_color_hsi(color1, color2)`
