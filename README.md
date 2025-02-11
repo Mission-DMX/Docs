@@ -3,6 +3,9 @@
 This repository contains documentation about the Mission DMX project.
 A user manual can be found inside the [Editor folder](Editor).
 
+> [!WARNING]  
+> Show files are executable code. Do not apply show files or execute scripts from sources that you do not trust.
+
 ## Fish
 Fish is the real time translation engine.
  * IPC protocol for communication with the user interface can be found [here](FormatSchemes/IPCMessages).
