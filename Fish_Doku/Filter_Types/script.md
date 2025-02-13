@@ -58,9 +58,18 @@ Besides that, the following global variables have a special meaning:
 
 #### Additional Functions
 Besides the Lua standard library, the following functions are avaiable:
+
+##### Color Manipulation
  * `hsi_to_rgb(color)` Converts pixel data type to three dimensional array of color values. Ussage: `r, g, b = hsi_to_rgb(my_color)`
  * `hsi_to_rgbw(color)` Converts pixel data type to four dimensional array of color values. Ussage: `r, g, b, w = hsi_to_rgbw(my_color)`
  * `mix_color_rgb_additive(color1, color2)` Mix two colors together using the additive rgb algorithm. Ussage: `new_color = mix_color_rgb_additive(color1, color2)`
  * `mix_color_rgb_normative(color1, color2)` Mix two colors together using the normative rgb algorithm. Ussage: `new_color = mix_color_rgb_normative(color1, color2)`
  * `mix_color_hsi(color1, color2, distance_obediance=true)` Mix two colors together using the HSI avarage algorithm. The thirs parameter is optional (defaulting to true) and indicates if distant colors should get their brightness reduced once they're mixed. Ussage: `new_color = mix_color_hsi(color1, color2)`
  * `mix_color_interleaving` Mix to colors based on a given range from `0.0` to `1.0`. If 0 is provided the first color will be returned, if 0.5 is given an even mixture of both and in case of 1 the second color. Usage: `new_color = mix_color_interleaving(color1, color2, range)`
+
+##### Event Management
+ * `get_events` Returns a list of events currently active. Usage: `events = get_events()`
+ * `has_event` Returns true if an event with the provided event sender is currently active. Usage: `if has_event(target_sender) then`
+ * `insert_event` Inserts an event constructed from the supplied parameters.
+ * `get_event_sender`
+ * `get_all_senders`
