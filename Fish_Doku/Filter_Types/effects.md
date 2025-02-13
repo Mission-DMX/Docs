@@ -126,3 +126,18 @@
    * `nr_outputs` The number of shifted outputs
  - initial parameters: None
  - GUI update keys: None
+
+## Sequencer
+A sequencer is a filter that (much like the Cue filter) is capable of executing predefined transitions on a fixed set of channels.
+Unlike the Cue filter, it overlaps all currently running transitions and starts them based on events instead of fixed orders.
+- Type name: `sequencer_filter`
+- Type id: TBD
+- Input channels: 
+  * `time` of type of type `double`(default time node)
+  * `time_scale` of type of type `double`(default 1)
+- Output channels:
+    The name of the channel  with its type, for Example:
+      * `wash_x_pos` of type `float`
+      * `wash_y_pos` of type `float`
+      * `wash_dimmer` of type `8bit`
+      * `wash_color` of type `color`
