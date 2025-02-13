@@ -76,4 +76,4 @@ The API provides an enum `event_type` with content `SINGLE_TRIGGER`, `START`, `R
    - `insert_event(sender_id, args)`: The selected event type defaults to `event_type.SINGLE_TRIGGER` in this case.
    - `insert_event(sender_id)`: The argument string is left empty in this case.
  * `get_event_sender` Get the event sender ID. The specification of the function is optional and defaults to 0. Usage: `get_event_sender(function)` or `get_event_sender()`
- * `get_all_senders` Returns a list of all available event senders. Usage: `senders = get_all_senders()`
+ * `get_all_event_senders` Returns a list of all available event senders. Usage: `senders = get_all_event_senders()`
