@@ -68,11 +68,12 @@ Besides the Lua standard library, the following functions are avaiable:
  * `mix_color_interleaving` Mix to colors based on a given range from `0.0` to `1.0`. If 0 is provided the first color will be returned, if 0.5 is given an even mixture of both and in case of 1 the second color. Usage: `new_color = mix_color_interleaving(color1, color2, range)`
 
 ##### Event Management
+The API provides an enum `event_type` with content `SINGLE_TRIGGER`, `START`, `RELEASE`, `ONGOING_EVENT` and `INVALID`.
  * `get_events` Returns a list of events currently active. Usage: `events = get_events()`
  * `has_event` Returns true if an event with the provided event sender is currently active. Usage: `if has_event(target_sender) then`
  * `insert_event` Inserts an event constructed from the supplied parameters. Usage:
    - `insert_event(sender_id, event_type, args)`: Insert a new event. Sender should be optained using the `get_event_sender` method.
-   - `insert_event(sender_id, args)`
-   - `insert_event(sender_id)`
+   - `insert_event(sender_id, args)`: The selected event type defaults to `event_type.SINGLE_TRIGGER` in this case.
+   - `insert_event(sender_id)`: The argument string is left empty in this case.
  * `get_event_sender` Get the event sender ID. The specification of the function is optional and defaults to 0. Usage: `get_event_sender(function)` or `get_event_sender()`
  * `get_all_senders` Returns a list of all available event senders. Usage: `senders = get_all_senders()`
