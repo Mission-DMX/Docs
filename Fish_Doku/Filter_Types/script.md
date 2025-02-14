@@ -78,3 +78,4 @@ The API provides an enum `event_type` with content `SINGLE_TRIGGER`, `START`, `R
    - `insert_event()`: The sender is the default lua sender with function = 0.
  * `get_event_sender` Get the event sender ID. The specification of the function is optional and defaults to 0. Usage: `get_event_sender(function)` or `get_event_sender()`
  * `get_all_event_senders` Returns a list of all available event senders. Usage: `senders = get_all_event_senders()`
+ * `find_event_sender(id: str, function: int = 0)` Get the id of the required event sender (optionally with specified function). This will raise an exception if the name was not found.
