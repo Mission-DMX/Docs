@@ -150,4 +150,4 @@ Unlike the Cue filter, it overlaps all currently running transitions and starts 
       4. Should the default value be applied on empty transitions? (`true` or `false`)
       5. Should the default value be applied after scene switches? (`true` or `false`)
       6. Interleaving method. (`average`, `min` or `max`)
-  * `transitions`: Transition definitions, separated by `;`. Each transition consists out of the following: `<encoded trigger event>#<keyframe_0>#<keyframe_1>#...#<keyframe_n>`. The event is a number (sender ID and function) encoded as a string. A keyframe is encoded as `<target channel name [string]>:<target value[default encoded]>:<transition[edge, linear, sigmoidal, ease_in or ease_out]>:<duration [double ms]>`.
+  * `transitions`: Transition definitions, separated by `;`. Each transition consists out of the following: `<encoded trigger event>#<keyframe_0>#<keyframe_1>#...#<keyframe_n>`. The event is a number (sender ID and function) encoded as a string. A keyframe is encoded as `<target channel name [string]>:<target value[default encoded]>:<transition[edg, lin, sig, e_i or e_o]>:<duration [double ms]>`.
