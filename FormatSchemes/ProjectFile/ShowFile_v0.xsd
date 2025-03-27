@@ -135,6 +135,16 @@
                     <documentation>The filters in this page, identified by their id.</documentation>
                 </annotation>
             </element>
+            <element name="comment" minOccurs="0" maxOccurs="unbounded">
+                <complexType>
+                    <simpleContent>
+                        <extension base="string">
+                            <attribute name="posX" type="int" />
+                            <attribute name="posY" type="int" />
+                        </extension>
+                    </simpleContent>
+                </complexType>
+            </element>
         </sequence>
         <attribute name="name" type="string">
             <annotation>
