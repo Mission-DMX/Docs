@@ -126,3 +126,28 @@
    * `nr_outputs` The number of shifted outputs
  - initial parameters: None
  - GUI update keys: None
+
+## Sequencer
+A sequencer is a filter that (much like the Cue filter) is capable of executing predefined transitions on a fixed set of channels.
+Unlike the Cue filter, it overlaps all currently running transitions and starts them based on events instead of fixed orders.
+- Type name: `sequencer_filter`
+- Type id: `69`
+- Input channels: 
+  * `time` of type of type `double`(default time node)
+  * `time_scale` of type of type `double`(default 1)
+- Output channels:
+    The name of the channel  with its type, for Example:
+      * `wash_x_pos` of type `float`
+      * `wash_y_pos` of type `float`
+      * `wash_dimmer` of type `8bit`
+      * `wash_color` of type `color`
+- Configuration parameters:
+  * `channels`: channel definitions, separated by `;`. A channel definition itself, is a list of values separated
+    by `:`. The values are the following:
+      1. The name of the channel (as it is also referenced by the transitions and the output channels).
+      2. The data type of the channel (`8bit`, `16bit`, `float` or `color`)
+      3. The default value of the channel (default encoded)
+      4. Should the default value be applied on empty transitions? (`true` or `false`)
+      5. Should the default value be applied after scene switches? (`true` or `false`)
+      6. Interleaving method. (`average`, `min` or `max`)
+  * `transitions`: Transition definitions, separated by `;`. Each transition consists out of the following: `<encoded trigger event>#<keyframe_0>#<keyframe_1>#...#<keyframe_n>`. The event is a number (sender ID and function) encoded as a string. A keyframe is encoded as `<target channel name [string]>:<target value[default encoded]>:<transition[edg, lin, sig, e_i or e_o]>:<duration [double ms]>`.
