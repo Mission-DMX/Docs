@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package missiondmx.fish.ipcmessages;
+
+option optimize_for = LITE_RUNTIME;
+
+enum event_type {
+    SINGLE_TRIGGER = 0;
+    START = 1;
+    RELEASE = 2;
+    ONGOING_EVENT = 3;
+    INVALID = 255;
+}
+
+message event {
+    event_type type = 1;
+    uint32 sender_id = 2;
+    uint32 sender_function = 3;
+    uint64 event_id = 4;
+    repeated uint32 arguments = 5;
+}
+
+/*
+ * GUI -> Fish:
+ *  - If the sender_id does not yet exist, a new event_sender will be instantiated. Otherwise it will be updated.
+ *  - Type is used to instantiate the correct event_sender type. On updates it will be ignored.
+ *  - Name is used to name the new event_sender. On updates it will be ignored.
+ *  - gui_debug_enabled sets or disabled the sending of incomming events to the GUI.
+ *  - configuration is used to update the settings of the event_sender.
+ *
+ * Fish -> GUI:
+ *  - All fields will be populated with the current configuration
+ */
+message event_sender {
+    uint32 sender_id = 1;
+    string type = 2;
+    string name = 3;
+    bool gui_debug_enabled = 4;
+    map<string, string> configuration = 5;
+}
