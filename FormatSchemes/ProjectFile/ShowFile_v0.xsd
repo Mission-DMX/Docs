@@ -20,6 +20,7 @@
                 <documentation>This field defines the non temporary bank sets</documentation>
               </annotation>
             </element>
+            <element name="eventsource" type="tns:EventSourceConfig" maxOccurs="unbounded" minOccurs="0"></element>
         </choice>
         <attribute name="show_name" type="string">
             <annotation>
@@ -134,6 +135,16 @@
                 <annotation>
                     <documentation>The filters in this page, identified by their id.</documentation>
                 </annotation>
+            </element>
+            <element name="comment" minOccurs="0" maxOccurs="unbounded">
+                <complexType>
+                    <simpleContent>
+                        <extension base="string">
+                            <attribute name="posX" type="int" />
+                            <attribute name="posY" type="int" />
+                        </extension>
+                    </simpleContent>
+                </complexType>
             </element>
         </sequence>
         <attribute name="name" type="string">
@@ -455,6 +466,11 @@
                 </documentation>
             </annotation>
         </attribute>
+        <attribute name="nameOnStage" type="string">
+            <annotation>
+                <documentation>A name that can be given to the instance. For example 'Blinder stage right'. If set, it needs to be unique across all universes. This will be referenced by virtual universe output filters.</documentation>
+            </annotation>
+        </attribute>
         <attribute name="fixture_file" type="string">
             <annotation>
                 <documentation>The file in /var/.../fixture directory.
@@ -467,6 +483,27 @@
                 </documentation>
             </annotation>
         </attribute>
+    </complexType>
+
+    <complexType name="EventSourceConfig">
+	<annotation><documentation>Configuration of lasting event sources</documentation></annotation>
+	<attribute name="id" type="string"><annotation><documentation>This id is used to reference this sender inside the show file. The sender_id provided by fish will be matched after loading.</documentation></annotation></attribute>
+	<attribute name="type" type="string"><annotation><documentation>The type of the event sender that should be used during construction.</documentation></annotation></attribute>
+	<attribute name="name" type="string"></attribute>
+	<choice>
+		<element name="configuration" minOccurs="0" maxOccurs="unbounded" type="tns:KeyValuePair"></element>
+		<element name="eventRename" minOccurs="0" maxOccurs="unbounded">
+		    <complexType>
+			<simpleContent>
+			    <extension base="string">
+                                <attribute name="eventType" type="int"></attribute>
+			        <attribute name="senderFunction" type="int"></attribute>
+			        <attribute name="arguments" type="string"></attribute>
+			    </extension>
+		        </simpleContent>
+		    </complexType>
+		</element>
+	</choice>
     </complexType>
 
     <element name="bord_configuration" type="tns:BordConfiguration"></element>
