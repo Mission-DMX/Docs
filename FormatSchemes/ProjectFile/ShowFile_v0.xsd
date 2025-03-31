@@ -487,10 +487,7 @@
 
     <complexType name="EventSourceConfig">
 	<annotation><documentation>Configuration of lasting event sources</documentation></annotation>
-	<attribute name="id" type="string"><annotation><documentation>This id is used to reference this sender inside the show file. The sender_id provided by fish will be matched after loading.</documentation></annotation></attribute>
-	<attribute name="type" type="string"><annotation><documentation>The type of the event sender that should be used during construction.</documentation></annotation></attribute>
-	<attribute name="name" type="string"></attribute>
-	<choice>
+	<sequence><choice>
 		<element name="configuration" minOccurs="0" maxOccurs="unbounded" type="tns:KeyValuePair"></element>
 		<element name="eventRename" minOccurs="0" maxOccurs="unbounded">
 		    <complexType>
@@ -503,7 +500,10 @@
 		        </simpleContent>
 		    </complexType>
 		</element>
-	</choice>
+	</choice></sequence>
+    <attribute name="id" type="string"><annotation><documentation>This id is used to reference this sender inside the show file. The sender_id provided by fish will be matched after loading.</documentation></annotation></attribute>
+	<attribute name="type" type="string"><annotation><documentation>The type of the event sender that should be used during construction.</documentation></annotation></attribute>
+	<attribute name="name" type="string"></attribute>
     </complexType>
 
     <element name="bord_configuration" type="tns:BordConfiguration"></element>
