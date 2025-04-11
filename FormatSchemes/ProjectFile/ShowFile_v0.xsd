@@ -21,6 +21,7 @@
               </annotation>
             </element>
             <element name="eventsource" type="tns:EventSourceConfig" maxOccurs="unbounded" minOccurs="0"></element>
+            <element name="macro" type="tns:Macro" maxOccurs="unbounded" minOccurs="0"></element>
         </choice>
         <attribute name="show_name" type="string">
             <annotation>
@@ -506,5 +507,16 @@
 	<attribute name="name" type="string"></attribute>
     </complexType>
 
+    <complexType name="Macro">
+        <annotation><documentation>Macro is a set of CLI commands that will be executed on actions occuring in the editor. While they may be triggered on keypad updated from fish, they are not triggered on fish events, as they are only transferred for debugging purposes.</documentation></annotation>
+        <element name="content" type="string"><annotation><documentation>The commands of the macro</documentation></annotation></element>
+        <sequence>
+            <element name="trigger" minOccurs="0" maxOccurs="unbounded" type="tns:KeyValuePair">
+                <annotation><documentation>Keys indicate the configured trigger and the values indicate if they're temporarily disabled or not.</documentation></annotation>
+            </element>
+        </sequence>
+        <attribute name="name" type="string"><annotation><documentation>Human readable, non-unique name</documentation></annotation></attribute>
+    </complexType>
+    
     <element name="bord_configuration" type="tns:BordConfiguration"></element>
 </schema>
