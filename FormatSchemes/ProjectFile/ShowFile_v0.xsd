@@ -511,8 +511,15 @@
         <annotation><documentation>Macro is a set of CLI commands that will be executed on actions occuring in the editor. While they may be triggered on keypad updated from fish, they are not triggered on fish events, as they are only transferred for debugging purposes.</documentation></annotation>
         <element name="content" type="string"><annotation><documentation>The commands of the macro</documentation></annotation></element>
         <sequence>
-            <element name="trigger" minOccurs="0" maxOccurs="unbounded" type="tns:KeyValuePair">
-                <annotation><documentation>Keys indicate the configured trigger and the values indicate if they're temporarily disabled or not.</documentation></annotation>
+            <element name="trigger" minOccurs="0" maxOccurs="unbounded">
+                <complexType>
+                    <sequence>
+                        <element name="configuration" minOccurs="0" maxOccurs="unbounded" type="tns:KeyValuePair"></element>
+                    </sequence>
+                    <attribute name="name" type="string"></attribute>
+                    <attribute name="type" type="string"></attribute>
+                    <attribute name="enabled" type="boolean"></attribute>
+                </complexType>
             </element>
         </sequence>
         <attribute name="name" type="string"><annotation><documentation>Human readable, non-unique name</documentation></annotation></attribute>
