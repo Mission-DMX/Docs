@@ -513,11 +513,11 @@
 	<attribute name="name" type="string"></attribute>
     </complexType>
 
-    <complexType name="Macro">
+        <complexType name="Macro">
         <annotation>
-            <documentation>Macro is a set of CLI commands that will be executed on actions occuring in the editor. While
-                they may be triggered on keypad updated from fish, they are not triggered on fish events, as they are
-                only transferred for debugging purposes.
+            <documentation>Macro is a set of CLI commands that will be executed on actions occuring in the editor.
+                While they may be triggered on keypad updated from fish, they are not triggered on fish events, as they
+                are only transferred for debugging purposes.
             </documentation>
         </annotation>
         <sequence>
@@ -529,7 +529,8 @@
             <element name="trigger" minOccurs="0" maxOccurs="unbounded">
                 <complexType>
                     <sequence>
-                        <element name="configuration" minOccurs="0" maxOccurs="unbounded" type="tns:KeyValuePair"></element>
+                        <element name="configuration" minOccurs="0" maxOccurs="unbounded"
+                                 type="tns:KeyValuePair"></element>
                     </sequence>
                     <attribute name="name" type="string"></attribute>
                     <attribute name="type" type="string"></attribute>
