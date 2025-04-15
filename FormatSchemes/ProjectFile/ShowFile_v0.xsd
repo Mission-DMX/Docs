@@ -461,6 +461,11 @@
                 Fixtures for Patching.
             </documentation>
         </annotation>
+	<attribute name="id" type="string">
+            <annotation>
+                <documentation>The UUID(v4) of the fixture used for reference in virtual universe output filters.</documentation>
+            </annotation>
+        </attribute>
         <attribute name="start" type="int">
             <annotation>
                 <documentation>The start channel of the Fixture.
@@ -469,7 +474,7 @@
         </attribute>
         <attribute name="nameOnStage" type="string">
             <annotation>
-                <documentation>A name that can be given to the instance. For example 'Blinder stage right'. If set, it needs to be unique across all universes. This will be referenced by virtual universe output filters.</documentation>
+                <documentation>A name that can be given to the instance. For example 'Blinder stage right'.</documentation>
             </annotation>
         </attribute>
         <attribute name="fixture_file" type="string">
