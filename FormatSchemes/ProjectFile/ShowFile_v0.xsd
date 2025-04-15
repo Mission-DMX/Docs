@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema targetNamespace="http://www.asta.uni-luebeck.de/MissionDMX/ShowFile" elementFormDefault="qualified"
-        xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.asta.uni-luebeck.de/MissionDMX/ShowFile"
->
+        xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.asta.uni-luebeck.de/MissionDMX/ShowFile">
 
     <complexType name="BordConfiguration">
         <choice maxOccurs="unbounded" minOccurs="0">
@@ -126,7 +125,7 @@
             </annotation>
 	</attribute>
     </complexType>
-    
+
     <complexType name="FilterPage">
         <annotation>
             <documentation>A filter page provides a view to the filters of a scene.</documentation>
@@ -159,7 +158,7 @@
             </annotation>
         </attribute>
     </complexType>
-    
+
     <complexType name="UIPage">
         <annotation>
             <documentation>A UI page contains the widgets that are used to perform advanced control while the show is running.</documentation>
@@ -177,7 +176,7 @@
             </annotation>
         </attribute>
     </complexType>
-    
+
     <complexType name="UIWidget">
         <annotation>
             <documentation>A UI page contains the widgets that are used to perform advanced control while the show is running.</documentation>
@@ -461,9 +460,10 @@
                 Fixtures for Patching.
             </documentation>
         </annotation>
-	<attribute name="id" type="string">
+        <attribute name="id" type="string">
             <annotation>
-                <documentation>The UUID(v4) of the fixture used for reference in virtual universe output filters.</documentation>
+                <documentation>The UUID(v4) of the fixture used for reference in virtual universe output filters.
+                </documentation>
             </annotation>
         </attribute>
         <attribute name="start" type="int">
@@ -474,7 +474,8 @@
         </attribute>
         <attribute name="nameOnStage" type="string">
             <annotation>
-                <documentation>A name that can be given to the instance. For example 'Blinder stage right'.</documentation>
+                <documentation>A name that can be given to the instance. For example 'Blinder stage right'.
+                </documentation>
             </annotation>
         </attribute>
         <attribute name="fixture_file" type="string">
@@ -513,9 +514,18 @@
     </complexType>
 
     <complexType name="Macro">
-        <annotation><documentation>Macro is a set of CLI commands that will be executed on actions occuring in the editor. While they may be triggered on keypad updated from fish, they are not triggered on fish events, as they are only transferred for debugging purposes.</documentation></annotation>
-        <element name="content" type="string"><annotation><documentation>The commands of the macro</documentation></annotation></element>
+        <annotation>
+            <documentation>Macro is a set of CLI commands that will be executed on actions occuring in the editor. While
+                they may be triggered on keypad updated from fish, they are not triggered on fish events, as they are
+                only transferred for debugging purposes.
+            </documentation>
+        </annotation>
         <sequence>
+            <element name="content" type="string" minOccurs="1" maxOccurs="1">
+                <annotation>
+                    <documentation>The commands of the macro</documentation>
+                </annotation>
+            </element>
             <element name="trigger" minOccurs="0" maxOccurs="unbounded">
                 <complexType>
                     <sequence>
@@ -527,8 +537,12 @@
                 </complexType>
             </element>
         </sequence>
-        <attribute name="name" type="string"><annotation><documentation>Human readable, non-unique name</documentation></annotation></attribute>
+        <attribute name="name" type="string">
+            <annotation>
+                <documentation>Human readable, non-unique name</documentation>
+            </annotation>
+        </attribute>
     </complexType>
-    
+
     <element name="bord_configuration" type="tns:BordConfiguration"></element>
 </schema>
