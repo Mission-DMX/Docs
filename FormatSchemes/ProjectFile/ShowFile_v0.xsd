@@ -474,7 +474,7 @@
         </attribute>
         <attribute name="nameOnStage" type="string">
             <annotation>
-                <documentation>A name that can be given to the instance. For example 'Blinder stage right'.  This will be referenced by virtual universe output filters.</documentation>
+                <documentation>A name that can be given to the instance. For example 'Blinder stage right'.</documentation>
             </annotation>
         </attribute>
         <attribute name="fixture_file" type="string">
