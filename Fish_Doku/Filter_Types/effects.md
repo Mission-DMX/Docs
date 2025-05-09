@@ -68,7 +68,7 @@
  - Type id: `45`
  - Input channels: 
    * `input` of type `8bit` (default 0)
-   * `switch_time` of type `double` (in ms) /(default 1000)
+   * `switch_time` of type `double` (in ms) /(default 1000), neagtive values indicate reverse operation
    * `time` of type `double` (default time node)
  - Output channels:
    * `output_1` of type `8bit`
@@ -84,7 +84,7 @@
  - Type id: `46`
  - Input channels: 
    * `input` of type `16bit` (default 0)
-   * `switch_time` of type `double` (in ms) (default 1000)
+   * `switch_time` of type `double` (in ms) (default 1000), neagtive values indicate reverse operation
    * `time` of type `double` (default time node)
  - Output channels:
    * `output_1` of type `16bit`
@@ -100,7 +100,7 @@
  - Type id: `47`
  - Input channels: 
    * `input` of type `float` (default 0)
-   * `switch_time` of type `double` (in ms) (default 1000)
+   * `switch_time` of type `double` (in ms) (default 1000), neagtive values indicate reverse operation
    * `time` of type `double` (default time node)
  - Output channels:
    * `output_1` of type `float`
@@ -116,7 +116,7 @@
  - Type id: `48`
  - Input channels: 
    * `input` of type `color` (default white)
-   * `switch_time` of type `double` (in ms) (default 1000)
+   * `switch_time` of type `double` (in ms) (default 1000), neagtive values indicate reverse operation
    * `time` of type `double` (default time node)
  - Output channels:
    * `output_1` of type `color`
