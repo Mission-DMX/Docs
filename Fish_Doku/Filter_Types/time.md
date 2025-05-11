@@ -12,6 +12,17 @@
   * time is the number of millisecons since start of the program
   * it is recommended to use for each scene only one time node, because the calculation is done each time. Consequence of multiple time sources would be longer computational times as well as inconsistent timing in animations.
 
+## event counter
+- Type name: `filter_event_counter`
+- Type id: `70`
+- Input channels: None
+- Output channels:
+    * `bpm` of type `16bit`: Current event count in bpm
+    * `freq` of type `16bit` in Hertz: Current event count expressed as events per second
+- Configuration parameters: None
+- initial parameters: None
+- GUI update keys: None
+
 ## switch_on_delay_8bit
 - Type name: `switch_on_delay_8bit`
 - Type id: `33`
