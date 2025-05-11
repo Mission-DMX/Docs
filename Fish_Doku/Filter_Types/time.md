@@ -19,7 +19,7 @@
 - Output channels:
     * `bpm` of type `16bit`: Current event count in bpm
     * `freq` of type `16bit` in Hertz: Current event count expressed as events per second
-- Configuration parameters: `event`: a defintion of the event to listen for ([As defined for the sequencer](../effects.md#sequencer))
+- Configuration parameters: `event`: a defintion of the event to listen for ([As defined for the sequencer](effects.md#sequencer))
 - initial parameters: None
 - GUI update keys: None
 
