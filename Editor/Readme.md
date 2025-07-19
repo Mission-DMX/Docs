@@ -9,3 +9,19 @@ TODO introduce advanced views such as debug view and settings
 TODO write a table of contents for each manual entry
 
 TODO write manual about CLI (socket and in-editor terminal)
+
+## Quick Start
+1. [Show File Basics](ShowfileWorkflow.md)
+1.1 [Patching](Patching.md)
+1.2 Quick Console
+1.3 Editor + Apply
+1.4 The Debug View
+
+2. Advanced Topics of the Editor
+2.1 Filter Pages and Imports
+2.2 Faders
+
+3. Using ShowUI Tab
+4. Using the visualizer
+5. Events
+6. Macros and the Command Line
