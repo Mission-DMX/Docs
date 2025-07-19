@@ -12,14 +12,14 @@ TODO write manual about CLI (socket and in-editor terminal)
 
 ## Quick Start
 1. [Show File Basics](ShowfileWorkflow.md)
-1.1 [Patching](Patching.md)
-1.2 Quick Console
-1.3 Editor + Apply
-1.4 The Debug View
+    1. [Patching](Patching.md)
+    2. [Quick Console](Console.md)
+    3. Editor + Apply
+    4. The Debug View
 
 2. Advanced Topics of the Editor
-2.1 Filter Pages and Imports
-2.2 Faders
+    1. Filter Pages and Imports
+    2. Faders
 
 3. Using ShowUI Tab
 4. Using the visualizer
