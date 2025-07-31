@@ -478,31 +478,43 @@
         </annotation>
         <attribute name="id" type="string">
             <annotation>
-                <documentation>The UUID(v4) of the fixture used for reference in virtual universe output filters.
+                <documentation>
+                    The UUID(v4) of the fixture used for reference in virtual universe output filters.
                 </documentation>
             </annotation>
         </attribute>
         <attribute name="start" type="int">
             <annotation>
-                <documentation>The start channel of the Fixture.
+                <documentation>
+                    The start channel of the Fixture.
                 </documentation>
             </annotation>
         </attribute>
         <attribute name="nameOnStage" type="string">
             <annotation>
-                <documentation>A name that can be given to the instance. For example 'Blinder stage right'.
+                <documentation>
+                    A name that can be given to the instance. For example 'Blinder stage right'.
                 </documentation>
             </annotation>
         </attribute>
         <attribute name="fixture_file" type="string">
             <annotation>
-                <documentation>The file in /var/.../fixture directory.
+                <documentation>
+                    The file in /var/.../fixture directory.
                 </documentation>
             </annotation>
         </attribute>
         <attribute name="mode" type="int">
             <annotation>
-                <documentation>The Mode of the fixture.
+                <documentation>
+                    The Mode of the fixture.
+                </documentation>
+            </annotation>
+        </attribute>
+        <attribute name="color" type="string">
+            <annotation>
+                <documentation>
+                    The color of the fixture in UI.
                 </documentation>
             </annotation>
         </attribute>
