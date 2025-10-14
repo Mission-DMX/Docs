@@ -1,0 +1,9 @@
+site_name: MissionDMX
+docs_dir: build/docs
+site_dir: build/site
+theme:
+  name: mkdocs
+  color_mode: dark
+nav:
+  - Home: README.md
+  - Editor: Editor/Readme.md
