@@ -17,9 +17,9 @@ TODO write manual about CLI (socket and in-editor terminal)
     3. [Editor + Apply](EditorView.md)
     4. The Debug View
 
-2. Advanced Topics of the Editor
+2. Advanced Topics
     1. Filter Pages and Imports
-    2. Faders
+    2. [Using the Control Desk](Desk.md)
 
 3. Using ShowUI Tab
 4. Using the visualizer
