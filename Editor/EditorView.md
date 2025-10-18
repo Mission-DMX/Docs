@@ -72,6 +72,25 @@ Links between filters can be removed by selecting them and pressing the delete b
 
 ### UI Editor
 
+<img src="pictures/editor-ui-edit-view.png" alt="UI Editor View" />
+
+The UI editor allows configuration of the show UI pages of the scene. Widgets can be added using the context menu of the cursor or using the command line.
+A widget can be dragged to position it and provides an edit button to configure it. Usually a widget allows editing of its size as well as other properties.
+if a widget needs to be linked to certain filters for operation, they need to be selected upon creation.
+
+As time of this writing, the following widgets can be used:
+
+ * _Auto Tracker_ A widget to control the auto tracker virtual filter. It allows selecting the persons to be tracked on stage.
+ * _Button Array_ An array of buttons that displays configured buttons. Clicking a button allows updating a constant based on the configured content.
+ * _Button Array with Submit_ Basically, this provides the same functionality as the one above. However it only applys the selected values once the user issues submit or the commit action from an attached X-Touch.
+ * _Color Picker_ Provides a color picker to input colors for various use cases.
+ * _Cue Control_ Provides a widget to control a cue filter.
+ * _Sequence Listing_ Provides a widget to inspect and control a sequencer filter.
+ * _Pan/Tilt Control_ Provides a widget to override pan tilt settings of an associated filter.
+ * _Text Label_ Displays the configured text.
+ * _BF Clock_ Displays the current time.
+ * 
+
 ### Fader Editor
 
 ### Media Management Editor
