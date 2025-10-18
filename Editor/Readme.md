@@ -14,7 +14,7 @@ TODO write manual about CLI (socket and in-editor terminal)
 1. [Show File Basics](ShowfileWorkflow.md)
     1. [Patching](Patching.md)
     2. [Quick Console](Console.md)
-    3. Editor + Apply
+    3. [Editor + Apply](EditorView.md)
     4. The Debug View
 
 2. Advanced Topics of the Editor
