@@ -41,7 +41,7 @@ filters to use a fixture in the current open filter page by double clicking it.
 
 ### Scene view
 
-THe scene view displays content and additional information of the current scene.
+The scene view displays content and additional information of the current scene.
 
 ## Editors
 
