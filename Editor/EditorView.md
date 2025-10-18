@@ -89,13 +89,41 @@ As time of this writing, the following widgets can be used:
  * _Pan/Tilt Control_ Provides a widget to override pan tilt settings of an associated filter.
  * _Text Label_ Displays the configured text.
  * _BF Clock_ Displays the current time.
- * 
+ * _Macro Buttons_ Allow macros or individual commands to be run when the user clicks on them. They are optimized for touch screens and allow displaying of icons.
+ * _Color Visualizer_ Display the color that gets input into color debug filters.
+ * _Number Output_ Display the values fed into number based debug filters.
 
 ### Fader Editor
 
+<img src="pictures/editor-fader-bank-set.png" alt="Bank Set Editor View" />
+
+If one wishes to use the Faders of the X-TOuch within a scene as input, one needs to instantiate corresponding input filters as well as configuring the bank set itself.
+The latter is done using this view.
+First, a new bank needs to be added to the set using button (2). Existing banks and their columns are listed in the view below (6).
+A column of the specified type (4) can be added using the `Add Column to Bank` button (3).
+The description of the bank set (which is useful for human reference) can be edited using the text box to the right (5).
+
+Columns are listed and available for editing in the bottom view (7).
+Each column has a header displaying its type (8) and allows editing of the text displayed on the X-Touch (9).
+In order to identify important columns quickly during the show, the display style of the columns can be inverted (10).
+
+If a column is of type number, using the corresponding text boxes, the primary (11) and secondary (12) values can be entered.
+During a show, pressing the rotary encoder button of the column changes between editing of secondary and primary values.
+The rotary encoder can be used to make fine adjustments to the current value.
+A number column represents a 16 bit value.
+
+If a column is of type color, defaults for hue (13), saturation (14) and intensity (15) of the column can be entered.
+Below, there is a preview of the default color (16).
+
+Finally, if changes are made to the bank set, they need to be applied using the corresponding button (1).
+
 ### Media Management Editor
 
+TODO
+
 ### Scene Default editor
-A scene has default values for the universe that are applied upon switching to the scene.
+A scene has default DMX values for the universe that are applied upon switching to the scene.
+They can be edited using this editor page, simmilar to the live console.
+
 This editor allows you to set them.
 Basically, this is editor page behaves like the quick console mode, except that it does not allow you to map channels to faders in order to prevent accidents and confusion.
