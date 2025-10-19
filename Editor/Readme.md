@@ -21,7 +21,7 @@ TODO write manual about CLI (socket and in-editor terminal)
     1. Filter Pages and Imports
     2. [Using the Control Desk](Desk.md)
 
-3. Using ShowUI Tab
+3. [Using ShowUI Tab](ShowGUI.md)
 4. Using the visualizer
 5. Events
 6. Macros and the Command Line
