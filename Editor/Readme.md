@@ -23,7 +23,7 @@ TODO write manual about CLI (socket and in-editor terminal)
 
 3. [Using ShowUI Tab](ShowGUI.md)
 4. Using the visualizer
-5. Events
+5. [Events](Events.md)
 6. Macros and the Command Line
 
 ## Filter reference
