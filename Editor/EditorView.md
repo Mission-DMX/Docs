@@ -2,7 +2,7 @@
 
 The editor consists out of four primary widgets.
 
-<img width="1690" height="903" alt="image" src="https://github.com/user-attachments/assets/631f357a-31dd-4802-b157-b0accea080b9" />
+<img width="1690" height="903" alt="image" src="pictures/editor-view.png" />
 
 1. An action bar giving access to
     * Adding new scenes
@@ -24,11 +24,11 @@ The show file is structured by global items, such as scenes, macros, event mappi
 Within global objects a hirachy exists.
 Most notably, scenes are structured by their contained filter pages, UI pages as well as their fader banks.
 
-<img width="423" height="182" alt="image" src="https://github.com/user-attachments/assets/bea1812c-038f-40d0-b989-179849779325" />
+<img width="423" height="182" alt="image" src="pictures/editor-view-show-browser.png" />
 
 Right clicking any items opens up a context menu providing appropriate options. Nesting filter pages is possible.
 
-<img width="1920" height="1080" alt="20250721_09h54m31s_grim" src="https://github.com/user-attachments/assets/425e10d5-4c3e-41ae-867c-1f7405e8ca05" />
+<img width="1920" height="1080" alt="20250721_09h54m31s_grim" src="editor-view-show-browser-context-menu.png" />
 
 Usage of each element is described below.
 
