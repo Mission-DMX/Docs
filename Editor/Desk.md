@@ -26,6 +26,8 @@ The current saturation is displayed using the led meter bar of the column and hu
 In addition, the display outpouts approximate names for the current hue setting while changing it.
 Pressing the `Black` button makes the color output an intensity of zero while it is active, whereas `Flash` outputs maximum intensity.
 
+The bank switching buttons glow if there are multiple fader banks available in the current set and allow switching between those.
+
 ### Main Brightness Fader
 
 The main brightness fader can (as in optional usage) be used to control global illumination.
@@ -52,6 +54,5 @@ The F-Keys (F1 to F8) can be mapped to various shortcurs or macros.
 ## TODOs
 
 * TODO explain media buttons or do so in sequencer and cue editor pages of manual
-* TODO explain fader bank switching buttons
 * TODO explain universe switching buttons (for quick console and and patching)
 * TODO explain the ussage of the numpad, joystick and general edit buttons
