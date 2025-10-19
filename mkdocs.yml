@@ -5,5 +5,19 @@ theme:
   name: mkdocs
   color_mode: dark
 nav:
-  - Home: README.md
-  - Editor: Editor/Readme.md
+  - Home: index.md
+  - Editor:
+    - Getting Started: Editor/index.md
+    - Quick Console: Editor/Console.md
+    - General Workflow: Editor/ShowfileWorkflow.md
+    - Debugging: Editor/Debugging.md
+    - Control Desk: Editor/Desk.md
+    - Show File Editor: Editor/EditorView.md
+    - Events: Editor/Events.md
+    - Patching: Editor/Patching.md
+    - Show UI: Editor/ShowGUI.md
+  - Filters:
+    - Overview: Editor/Filters/Readme.md
+    - Constants: Editor/Filters/Constants.md
+    - Cues: Editor/Filters/Cues.md
+  - Fish: Fish_Doku/index.md
