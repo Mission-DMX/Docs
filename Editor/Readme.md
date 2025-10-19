@@ -25,3 +25,6 @@ TODO write manual about CLI (socket and in-editor terminal)
 4. Using the visualizer
 5. Events
 6. Macros and the Command Line
+
+## Filter reference
+A user guide about filters can be found [here](Filters/).
