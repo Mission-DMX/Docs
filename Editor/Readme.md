@@ -1,3 +1,5 @@
+---
+---
 # Mission DMX user guide
 
 This document describes how to use the Mission DMX lighting control desk.

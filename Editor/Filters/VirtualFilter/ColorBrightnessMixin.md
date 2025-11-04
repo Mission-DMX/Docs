@@ -1,3 +1,5 @@
+---
+---
 # Color Brightness Mixin
 
 This virtual filter accepts a color (`color_in`) and optionally a `brightness` (as a uint8, ranging from 0 to 255, dark to bright)

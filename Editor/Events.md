@@ -1,3 +1,5 @@
+---
+---
 # Events
 
 The event routing is accessable through the `Actions` View.

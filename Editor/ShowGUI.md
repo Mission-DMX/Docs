@@ -1,3 +1,5 @@
+---
+---
 # Using the Show Controls
 
 <img src="pictures/show-ui.png" alt="Show UI" />

@@ -1,3 +1,5 @@
+---
+---
 # Building a show file
 
 This document explains basic show file administration.

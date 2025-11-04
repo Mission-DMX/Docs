@@ -1,3 +1,5 @@
+---
+---
 # Editor View
 
 The editor consists out of four primary widgets.

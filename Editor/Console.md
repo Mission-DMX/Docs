@@ -1,3 +1,5 @@
+---
+---
 # Console View
 
 The quick console view can be reached by pressing *Console Mode* button in the navigation bar or by pressing *Console* on the XTouch. Once you patched in some fixtures, this view allows you to set their channels manually. This is helpful if you like to quickly enable some light on the stage or debug / test your setup.

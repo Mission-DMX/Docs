@@ -1,3 +1,5 @@
+---
+---
 # Connect Command
 
 The connect command can be used to connect multiple filter channels with each other.

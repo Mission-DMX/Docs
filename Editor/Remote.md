@@ -1,3 +1,5 @@
+---
+---
 # Remote Control
 
 A show file can be remotely controlled using two primary methods: remote desktop connections or using the remote CLI port.
