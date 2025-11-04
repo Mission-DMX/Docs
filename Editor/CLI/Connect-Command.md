@@ -41,10 +41,12 @@ The following checks are available:
 The following code snipped connects a shift filter of type `8bit` and ID `source` with an output filter for RGB Led bars called `dest` in scene with ID `0`.
 Only the red channels are connected.
 
+{% raw %}
 ```
 select scene 0
 connect "source:output_{{si|add(1)}}" "dest:Red_Group{{si|div(3)|add(1)}}" --source-count 24
 ```
+{% endraw %}
 
 <img src="./connected-filters.png" alt="Image displays two filters connected using example above" />
 

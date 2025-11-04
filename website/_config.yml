@@ -31,7 +31,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-readme-index
-
+  - jekyll-relative-links
 
 readme_index:
   enabled:          true
