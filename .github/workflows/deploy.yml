@@ -13,7 +13,7 @@ jobs:
         with:
           submodules: true
       - name: install jekyll gems
-        run: cd website && bundle install --local
+        run: cd website && bundle install --path ./.gem
       - name: build jekyll
         run: make website
       - name: deploy website
