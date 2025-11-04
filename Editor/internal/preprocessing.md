@@ -13,7 +13,10 @@ The GUI carries out these operations in the following order:
 4. Pack the show file for fish
 
 ## Resolving virtual filters
-TODO explain how virtual filter resolution works.
+Virtual filters are not transmitted to fish.
+Instead, each v-filter is tasked to add filters it would like to be placed inside a list.
+If a v-filter would like to use a different v-filter, it is responsible for adding the instantiation list of that child v-filter into its own list.
+Finally, the editor resolves the actual output ports of subsequent filters, based on all items in the output data type dictionary.
 
 ## Placement of constants
 The GUI iterates over all left empty inputs of filters and creates constant filters for these ports. It does so by creating one constant per tuple of data type and value, then reuses them for each occurance.
