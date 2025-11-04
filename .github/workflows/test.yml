@@ -12,5 +12,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: true
+      - name: install bundle
+        run: cd website && bundle install --local
       - name: build jekyll
         run: make website
