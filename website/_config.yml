@@ -18,13 +18,25 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: MissionDmx
+title: Mission-DMX
+meta_image: meta.jpg
 email: doralitze@chaotikum.org
 description: >- # this means to ignore newlines until "baseurl:"
   MissionDMX - A fully featured light control desk in open source
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mission-dmx.org" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  Mission-DMX
+brand_name: Mission-DMX
+brand_logo: logo.png
+header: Making Light more light
+subheader: Documentation and Downloads for Mission-DMX lighting desk
+
+nav_item_one: User Manual
+nav_item_one_link: docs/
+nav_item_two: Fish Developer Documentation
+nav_item_two_link: /docs/fish-dev/docs/html/
+nav_item_three: Editor Developer Documentation
+nav_item_three_link: "about:blank"
 
 # Build settings
 theme: minima
