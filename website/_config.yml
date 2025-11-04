@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   MissionDMX - A fully featured light control desk in open source
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mission-dmx.org" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  MissionDMX
+github_username:  Mission-DMX
 
 # Build settings
 theme: minima
@@ -37,6 +37,11 @@ readme_index:
   enabled:          true
   remove_originals: true
   with_frontmatter: true
+
+sass:
+  sass_dir:          _scss
+  style:            :compressed
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

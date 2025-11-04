@@ -9,7 +9,7 @@ layout: home
 TODO build facy index page
 
 # Important Links
- * [Getting Started](docs/)
+ * [User Manual](docs/)
  * [Fish Developer Documentation](/docs/fish-dev/docs/html/)
  * Editor Developer Documentation
  * [Fish nightly builds](/downloads/fish/nightly)

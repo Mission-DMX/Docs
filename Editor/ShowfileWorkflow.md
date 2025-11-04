@@ -1,4 +1,5 @@
 ---
+layout: default
 ---
 # Building a show file
 

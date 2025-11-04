@@ -1,4 +1,5 @@
 ---
+layout: default
 ---
 # Using the Control Desk
 

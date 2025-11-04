@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Internal Behavior of Editor
 
 The foolowing internal mechanisms of the editor require special explanations:

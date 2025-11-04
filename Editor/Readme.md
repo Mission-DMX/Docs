@@ -1,4 +1,5 @@
 ---
+layout: default
 ---
 # Mission DMX user guide
 
