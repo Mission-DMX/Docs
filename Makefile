@@ -1,7 +1,7 @@
 .PHONY: website clean
 
 clean:
-	cd website && jekyll clean
+	cd website && bundle exec jekyll clean
 
 website:
-	cd website && jekyll build
+	cd website && bundle exec jekyll build

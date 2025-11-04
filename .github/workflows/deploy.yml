@@ -12,6 +12,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: true
+      - name: install jekyll gems
+        run: cd website && bundle install --local
       - name: build jekyll
         run: make website
       - name: deploy website
