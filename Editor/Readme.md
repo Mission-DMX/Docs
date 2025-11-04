@@ -31,3 +31,6 @@ TODO write manual about CLI (socket and in-editor terminal)
 
 ## Filter reference
 A user guide about filters can be found [here](Filters/).
+
+## Internal behavior
+From time to time, it can be helpful to know a bit about the internals of show files. These are documented [here](internal).
