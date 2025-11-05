@@ -7,6 +7,8 @@ The following file links to files specify the type identifiers as well as the ch
 
 ## [Constants](./constants.md#Constant-Virtual)
 - [position constant](./constants.md#position-constant)
+- [color brightness mixin](ColorBrightnessMixin.md)
+- [import vFilter](ImportVFilter.md)
 - TODO document effect stack vFilter
 - TODO document universe output vFilter
 - TODO document cue vFilter

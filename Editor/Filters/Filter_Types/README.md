@@ -1,9 +1,10 @@
 ---
 layout: default
 ---
-# filter types
+# fish filter types
 
 The following file links to files specify the type identifiers as well as the channel names of the filters.
+If you're looking for a reference for filters usable in the editor, consult the [Filter Usage page](../FilterUsage.md).
 
 ## [Constants](./constants.md#Constant)
 - [8 bit constant](./constants.md#8-bit-constant)
