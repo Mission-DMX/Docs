@@ -44,6 +44,7 @@ plugins:
   - jekyll-feed
   - jekyll-readme-index
   - jekyll-relative-links
+  - jekyll-paginate
 
 readme_index:
   enabled:          true
@@ -53,6 +54,13 @@ readme_index:
 sass:
   sass_dir:          _scss
   style:            :compressed
+
+
+collections:
+  posts:
+    title: Posts
+    output: true
+    permalink: /blog/:year/:month/:day/:slug/
 
 # Exclude from processing.
 # The following items will not be processed, by default.

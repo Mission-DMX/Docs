@@ -10,3 +10,10 @@ TODO build facy index page
 
 # Downloads
  * [Fish nightly builds](/downloads/fish/nightly)
+
+# Latests posts
+<ul>
+{% for post in site.posts limit:5 %}
+    <li><a hred="{{post.url}}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
