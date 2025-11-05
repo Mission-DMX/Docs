@@ -1,7 +1,7 @@
 {%- assign sections = "" %}
 {%- assign last_loop_page = false %}
 {%- assign set_next_page = false %}
-{%- assign nav = site.pages | sort:"nav_order" | sort:"dir" %}
+{%- assign nav = site.pages | sort:"nav_order" | reverse | sort:"dir" %}
 {%- assign last_path = "" %}
 
 <div class="card">
