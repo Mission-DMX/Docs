@@ -10,6 +10,11 @@ Fish constists out of the following components:
  * On demand module that loads filter sets from a given project file
 
 ## Update cycle
+
+<center>
+<img src="FishUpdateCycle.png" alt="Fish Update Cycle">
+</center>
+
 ```mermaid
 graph TD;
 	A[Start Cycletimer] --> B;
