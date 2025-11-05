@@ -17,19 +17,19 @@
     {% if site.nav_item_one == null %}
     {% else %}
     <li class="mx-4">
-      <a  class="nav-links" href="{{ site.nav_item_one_link }}">{{ site.nav_item_one }}</a>
+	    <a  class="nav-links" href="{{ site.url }}{{ site.baseurl }}/{{ site.nav_item_one_link }}">{{ site.nav_item_one }}</a>
     </li>
     {% endif %}
     {% if site.nav_item_two == null %}
     {% else %}
     <li class="mx-4">
-      <a  class="nav-links" href="{{ site.nav_item_two_link }}">{{ site.nav_item_two }}</a>
+      <a  class="nav-links" href="{{ site.url }}{{ site.baseurl }}/{{ site.nav_item_two_link }}">{{ site.nav_item_two }}</a>
     </li>
     {% endif %}
     {% if site.nav_item_three == null %}
     {% else %}
     <li class="mx-4">
-      <a  class="nav-links" href="{{ site.nav_item_three_link }}">{{ site.nav_item_three }}</a>
+      <a  class="nav-links" href="{{ site.url }}{{ site.baseurl }}/{{ site.nav_item_three_link }}">{{ site.nav_item_three }}</a>
     </li>
     {% endif %}
     <li>

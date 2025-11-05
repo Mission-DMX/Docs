@@ -19,7 +19,9 @@ Furthermore, each event is classified by its sender and function within. For exa
 This can be used to sieve events using the CLI or within a filter.
 Depending on the event, some of them also carry further arguments to provide additional data.
 
+<center>
 <img src="pictures/events.png" alt="Event Routing Settings" />
+</center>
 
 Event senders can be added using the `Add Sender` button (1).
 For any given event sender, at least its persistence (2), and logging enablement (3) can be configured.
@@ -27,7 +29,9 @@ In case continious events of that should also be logged, the checkbox below (4) 
 
 ## Adding Event Senders
 
+<center>
 <img src="pictures/events-add-sender.png" alt="Event Sender Creation Dialog" />
+</center>
 
 After clicking the `Add Sender` button, a dialog asking for a name and type of event sender pops up.
 It is advisable to give a unique and descriptive name, as event senders can either be queried using their
