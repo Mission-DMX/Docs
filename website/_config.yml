@@ -33,10 +33,10 @@ subheader: Documentation and Downloads for Mission-DMX lighting desk
 
 nav_item_one: User Manual
 nav_item_one_link: docs/
-nav_item_two: Fish Developer Documentation
-nav_item_two_link: /docs/fish-dev/docs/html/
-nav_item_three: Editor Developer Documentation
-nav_item_three_link: "about:blank"
+nav_item_two: Downloads
+nav_item_two_link: /downloads
+nav_item_three: Developer Documentation
+nav_item_three_link: docs/dev
 
 # Build settings
 theme: minima
