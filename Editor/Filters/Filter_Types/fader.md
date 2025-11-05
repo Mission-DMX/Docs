@@ -1,4 +1,6 @@
-
+---
+layout: default
+---
 # Fader input
 The following filters can be used to fetch fader input.
 

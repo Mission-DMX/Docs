@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Color Manipulation
 
 ## Color Mixer CSV

@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # filter types
 
 The following file links to files specify the type identifiers as well as the channel names of the filters.

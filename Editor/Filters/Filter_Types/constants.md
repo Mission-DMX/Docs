@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Constants
 These filters provide constant inputs and their values can be updated from the GUI.
 ## 8 bit constant

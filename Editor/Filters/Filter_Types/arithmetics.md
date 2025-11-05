@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Arithmetics
 
 ## MAC filter

@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Time related filters
 
 ## time

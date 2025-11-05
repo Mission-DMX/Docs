@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Script filters
 
 ## lua_script_filter

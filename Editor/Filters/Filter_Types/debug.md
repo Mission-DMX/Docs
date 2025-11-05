@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Debug Filters
 These filters print out the received values on the command line.
 

@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Adapters
 
 ## Split 16 bit unsigned ints to two 8 bit unsigned ints

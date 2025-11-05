@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Fish real time update cycle
 
 ## Components

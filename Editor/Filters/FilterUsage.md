@@ -7,6 +7,7 @@ All filter are listed here and their usage is linked
 
 
 ## Constants
+
 | Filter | Usage |
 |--------|-------|
 | [8 bit constant](../../Fish_Doku/Filter_Types/constants.md#8-bit-constant)
@@ -16,6 +17,7 @@ All filter are listed here and their usage is linked
 | [position constant](./constants.md#position-constant) | [position constant](./Constants.md#position-constant)
 
 ## Debug
+
 | Filter | Usage |
 |--------|-------|
 | [8 bit output](../../Fish_Doku/Filter_Types/debug.md#8-bit-output)
@@ -24,6 +26,7 @@ All filter are listed here and their usage is linked
 | [color output](../../Fish_Doku/Filter_Types/debug.md#color-constant)
 
 ## Adapter
+
 | Filter | Usage |
 |--------|-------|
 | [Split 16 bit to two 8 bit](../../Fish_Doku/Filter_Types/adapters.md#Split-16-bit-unsigned-ints-to-two-8-bit-unsigned-ints)
@@ -43,6 +46,7 @@ All filter are listed here and their usage is linked
 | [universe output](../../Fish_Doku/Filter_Types/adapters.md#Universe-Output)
 
 ## Arithmetics
+
 | Filter | Usage |
 |--------|-------|
 | [MAC filter](../../Fish_Doku/Filter_Types/arithmetics.md#MAC-filter)
@@ -55,6 +59,7 @@ All filter are listed here and their usage is linked
 | [maximum](../../Fish_Doku/Filter_Types/arithmetics.md#maximum)
 
 ## Trigonometric
+
 | Filter | Usage |
 |--------|-------|
 | [sine](../../Fish_Doku/Filter_Types/trigonometrics.md#sine) | [sine](./Trigonometrics.md)
@@ -65,6 +70,7 @@ All filter are listed here and their usage is linked
 | [arctangent](../../Fish_Doku/Filter_Types/trigonometrics.md#arctangent)
 
 ## Waves
+
 | Filter | Usage |
 |--------|-------|
 | [square](../../Fish_Doku/Filter_Types/wave.md#square)
@@ -72,6 +78,7 @@ All filter are listed here and their usage is linked
 | [sawtooth](../../Fish_Doku/Filter_Types/wave.md#sawtooth)
 
 ## Time related filters
+
 | Filter | Usage |
 |--------|-------|
 | [time](../../Fish_Doku/Filter_Types/time.md#time)
@@ -83,6 +90,7 @@ All filter are listed here and their usage is linked
 | [switch_off_delay_double](../../Fish_Doku/Filter_Types/time.md#switch_off_delay_double)
 
 ## Fader input
+
 | Filter | Usage |
 |--------|-------|
 | [filter_main_brightness_fader](../../Fish_Doku/Filter_Types/fader.md#filter_main_brightness_fader)
@@ -93,6 +101,7 @@ All filter are listed here and their usage is linked
 | [filter_fader_column_hsiau](../../Fish_Doku/Filter_Types/fader.md#filter_fader_column_hsiau)
 
 ## Effect-filters
+
 | Filter | Usage |
 |--------|-------|
 | [cue_list_filter](../../Fish_Doku/Filter_Types/effects.md#cue_list_filter) | [Cue Filter](./Cues.md#cue-filter) |
@@ -102,6 +111,7 @@ All filter are listed here and their usage is linked
 | [filter_shift_color](../../Fish_Doku/Filter_Types/effects.md#filter_shift_color)
 
 ## Script filters
+
 | Filter | Usage |
 |--------|-------|
 | [lua_script_filter](../../Fish_Doku/Filter_Types/script.md#lua_script_filter) | [Lua Filter](./Scripting.md) |

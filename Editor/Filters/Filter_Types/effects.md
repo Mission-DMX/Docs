@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Effect filters
 
 ## cue_list_filter
