@@ -1,4 +1,5 @@
 ---
+title: Filter Index
 layout: default
 ---
 # fish filter types

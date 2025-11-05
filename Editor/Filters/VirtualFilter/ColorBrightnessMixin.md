@@ -1,4 +1,5 @@
 ---
+title: Color Brightness Mixin vFilter
 layout: default
 ---
 # Color Brightness Mixin

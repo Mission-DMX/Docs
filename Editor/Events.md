@@ -1,4 +1,5 @@
 ---
+title: Events
 layout: default
 ---
 # Events

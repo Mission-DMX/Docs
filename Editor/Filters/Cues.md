@@ -1,4 +1,5 @@
 ---
+title: Cue Filter
 layout: default
 ---
 # Cue Filter

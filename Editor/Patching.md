@@ -1,7 +1,8 @@
 ---
+title: Patching View
 layout: default
 ---
-# Patching view
+# Patching View
 
 This document explains how to add universes and fixtures. All patching takes place in the patching view. It can be opened by clicking on the *Patch* button in the GUI or by clicking the patching button on the XTouch.
 

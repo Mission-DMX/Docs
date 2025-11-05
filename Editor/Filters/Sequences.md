@@ -1,4 +1,5 @@
 ---
+title: Sequence Filter
 layout: default
 ---
 # Sequence Replay Filter

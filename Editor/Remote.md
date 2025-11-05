@@ -1,4 +1,5 @@
 ---
+title: Remote Control
 layout: default
 ---
 # Remote Control

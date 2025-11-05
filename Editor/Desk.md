@@ -1,4 +1,5 @@
 ---
+title: Using the Control Desk
 layout: default
 ---
 # Using the Control Desk

@@ -1,4 +1,5 @@
 ---
+title: Building a GUI
 layout: default
 ---
 # Using the Show Controls

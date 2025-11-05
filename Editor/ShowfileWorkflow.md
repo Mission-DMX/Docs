@@ -1,4 +1,5 @@
 ---
+title: Show File Basics
 layout: default
 ---
 # Building a show file

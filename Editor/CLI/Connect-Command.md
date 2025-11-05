@@ -1,4 +1,5 @@
 ---
+title: Connect Command
 layout: default
 ---
 # Connect Command

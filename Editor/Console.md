@@ -1,4 +1,5 @@
 ---
+title: Console View
 layout: default
 ---
 # Console View

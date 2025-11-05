@@ -1,4 +1,5 @@
 ---
+title: Wave Generator Filters
 layout: default
 ---
 # Waves

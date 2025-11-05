@@ -1,4 +1,5 @@
 ---
+title: Arithmetic Filters
 layout: default
 ---
 # Arithmetics

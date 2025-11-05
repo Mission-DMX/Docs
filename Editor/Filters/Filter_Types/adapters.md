@@ -1,4 +1,5 @@
 ---
+title: Adapter Filters
 layout: default
 ---
 # Adapters

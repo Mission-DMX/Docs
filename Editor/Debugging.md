@@ -1,4 +1,5 @@
 ---
+title: Debugging a Showfile
 layout: default
 ---
 # Debugging a Showfile

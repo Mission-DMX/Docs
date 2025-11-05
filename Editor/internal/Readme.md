@@ -1,4 +1,5 @@
 ---
+title: Internals Overview
 layout: default
 ---
 # Internal Behavior of Editor

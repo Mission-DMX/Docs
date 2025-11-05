@@ -1,4 +1,5 @@
 ---
+title: Using Filters
 layout: default
 ---
 # Using filters

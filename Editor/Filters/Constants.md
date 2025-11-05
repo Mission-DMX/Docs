@@ -1,4 +1,5 @@
 ---
+title: Constants
 layout: default
 ---
 # Constants

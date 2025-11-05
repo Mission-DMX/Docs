@@ -1,4 +1,5 @@
 ---
+title: Scene default DMX Values
 layout: default
 ---
 # Default DMX values

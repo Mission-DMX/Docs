@@ -1,4 +1,5 @@
 ---
+title: Update Cycle
 layout: default
 ---
 # Fish real time update cycle

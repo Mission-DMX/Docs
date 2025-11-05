@@ -1,7 +1,8 @@
 ---
+title: Filter Overview
 layout: default
 ---
-# Filter Usage
+# Filter Overview
 
 All filter are listed here and their usage is linked
 
@@ -10,7 +11,7 @@ All filter are listed here and their usage is linked
 
 A general introduction to constants is given [here](Constants.md).
 
-| Filter | Usage |
+| Filter | Description |
 |--------|-------|
 | [8 bit constant](../../Fish_Doku/Filter_Types/constants.md#8-bit-constant)
 | [16 bit constant](../../Fish_Doku/Filter_Types/constants.md#16-bit-constant)
@@ -20,7 +21,7 @@ A general introduction to constants is given [here](Constants.md).
 
 ## Debug
 
-| Filter | Usage |
+| Filter | Description |
 |--------|-------|
 | [8 bit output](../../Fish_Doku/Filter_Types/debug.md#8-bit-output)
 | [16 bit output](../../Fish_Doku/Filter_Types/debug.md#16-bit-constant)
@@ -29,7 +30,7 @@ A general introduction to constants is given [here](Constants.md).
 
 ## Adapter
 
-| Filter | Usage |
+| Filter | Description |
 |--------|-------|
 | [Split 16 bit to two 8 bit](../../Fish_Doku/Filter_Types/adapters.md#Split-16-bit-unsigned-ints-to-two-8-bit-unsigned-ints)
 | [Merge two 8 bit to 16 bit](../../Fish_Doku/Filter_Types/adapters.md#Merge-two-8-bit-unsigned-ints-to-16-bit-unsigned-int)
@@ -49,7 +50,7 @@ A general introduction to constants is given [here](Constants.md).
 
 ## Arithmetics
 
-| Filter | Usage |
+| Filter | Description |
 |--------|-------|
 | [MAC filter](../../Fish_Doku/Filter_Types/arithmetics.md#MAC-filter)
 | [float to 16bit](../../Fish_Doku/Filter_Types/arithmetics.md#float-to-16bit)
@@ -62,7 +63,7 @@ A general introduction to constants is given [here](Constants.md).
 
 ## Trigonometric
 
-| Filter | Usage |
+| Filter | Description |
 |--------|-------|
 | [sine](../../Fish_Doku/Filter_Types/trigonometrics.md#sine) | [sine](./Trigonometrics.md)
 | [cosine](../../Fish_Doku/Filter_Types/trigonometrics.md#cosine)
@@ -73,47 +74,47 @@ A general introduction to constants is given [here](Constants.md).
 
 ## Waves
 
-| Filter | Usage |
+| Filter | Description |
 |--------|-------|
-| [square](../../Fish_Doku/Filter_Types/wave.md#square)
-| [triangle](../../Fish_Doku/Filter_Types/wave.md#triangle)
-| [sawtooth](../../Fish_Doku/Filter_Types/wave.md#sawtooth)
+| [square](../../Fish_Doku/Filter_Types/wave.md#square) | generates a square wave. |
+| [triangle](../../Fish_Doku/Filter_Types/wave.md#triangle) | Generates a triangle wave. |
+| [sawtooth](../../Fish_Doku/Filter_Types/wave.md#sawtooth) | Generates a saw wave. |
 
 ## Time related filters
 
-| Filter | Usage |
-|--------|-------|
-| [time](../../Fish_Doku/Filter_Types/time.md#time)
-| [switch_on_delay_8bit](../../Fish_Doku/Filter_Types/time.md#switch_on_delay_8bit)
-| [switch_on_delay_16bit](../../Fish_Doku/Filter_Types/time.md#switch_on_delay_16bit)
-| [switch_on_delay_double](../../Fish_Doku/Filter_Types/time.md#switch_on_delay_double)
-| [switch_off_delay_8bit](../../Fish_Doku/Filter_Types/time.md#switch_off_delay_8bit)
-| [switch_off_delay_16bit](../../Fish_Doku/Filter_Types/time.md#switch_off_delay_16bit)
-| [switch_off_delay_double](../../Fish_Doku/Filter_Types/time.md#switch_off_delay_double)
+| Filter | Description |
+|--------|-------------|
+| [time](../../Fish_Doku/Filter_Types/time.md#time) | Get iteration time. |
+| [switch_on_delay_8bit](../../Fish_Doku/Filter_Types/time.md#switch_on_delay_8bit) | Delay switching on by specified time for 8bit values. |
+| [switch_on_delay_16bit](../../Fish_Doku/Filter_Types/time.md#switch_on_delay_16bit) | Delay switching off by specified time for 16bit values. |
+| [switch_on_delay_double](../../Fish_Doku/Filter_Types/time.md#switch_on_delay_double) | Delay switching off by specified time for float values. |
+| [switch_off_delay_8bit](../../Fish_Doku/Filter_Types/time.md#switch_off_delay_8bit) | Delay switching off by specified time for 8bit values. |
+| [switch_off_delay_16bit](../../Fish_Doku/Filter_Types/time.md#switch_off_delay_16bit) | Delay switching off by specified time for 16bit values. |
+| [switch_off_delay_double](../../Fish_Doku/Filter_Types/time.md#switch_off_delay_double) | Delay switching off by specified time for float values. |
 
 ## Fader input
 
-| Filter | Usage |
-|--------|-------|
-| [filter_main_brightness_fader](../../Fish_Doku/Filter_Types/fader.md#filter_main_brightness_fader)
-| [filter_fader_column_raw](../../Fish_Doku/Filter_Types/fader.md#filter_fader_column_raw)
-| [filter_fader_column_hsi](../../Fish_Doku/Filter_Types/fader.md#filter_fader_column_hsi)
-| [filter_fader_column_hsia](../../Fish_Doku/Filter_Types/fader.md#filter_fader_column_hsia)
-| [filter_fader_column_hsiu](../../Fish_Doku/Filter_Types/fader.md#filter_fader_column_hsiu)
-| [filter_fader_column_hsiau](../../Fish_Doku/Filter_Types/fader.md#filter_fader_column_hsiau)
+| Filter | Description |
+|--------|-------------|
+| [filter_main_brightness_fader](../../Fish_Doku/Filter_Types/fader.md#filter_main_brightness_fader) | Get global brightness value. |
+| [filter_fader_column_raw](../../Fish_Doku/Filter_Types/fader.md#filter_fader_column_raw) | Get value of a configured fader. |
+| [filter_fader_column_hsi](../../Fish_Doku/Filter_Types/fader.md#filter_fader_column_hsi)| |
+| [filter_fader_column_hsia](../../Fish_Doku/Filter_Types/fader.md#filter_fader_column_hsia) | |
+| [filter_fader_column_hsiu](../../Fish_Doku/Filter_Types/fader.md#filter_fader_column_hsiu) | |
+| [filter_fader_column_hsiau](../../Fish_Doku/Filter_Types/fader.md#filter_fader_column_hsiau) | |
 
 ## Effect-filters
 
-| Filter | Usage |
+| Filter | Description |
 |--------|-------|
 | [cue_list_filter](../../Fish_Doku/Filter_Types/effects.md#cue_list_filter) | [Cue Filter](./Cues.md#cue-filter) |
-| [filter_shift_8bit](../../Fish_Doku/Filter_Types/effects.md#filter_shift_8bit)
-| [filter_shift_16bit](../../Fish_Doku/Filter_Types/effects.md#filter_shift_16bit)
-| [filter_shift_float](../../Fish_Doku/Filter_Types/effects.md#filter_shift_float)
-| [filter_shift_color](../../Fish_Doku/Filter_Types/effects.md#filter_shift_color)
+| [filter_shift_8bit](../../Fish_Doku/Filter_Types/effects.md#filter_shift_8bit) | Shift 8 bit values into specified direction |
+| [filter_shift_16bit](../../Fish_Doku/Filter_Types/effects.md#filter_shift_16bit) | Shift 16 bit values into specified direction |
+| [filter_shift_float](../../Fish_Doku/Filter_Types/effects.md#filter_shift_float) | Shift floats into specified direction |
+| [filter_shift_color](../../Fish_Doku/Filter_Types/effects.md#filter_shift_color) | Shift colors into specified direction |
 
 ## Script filters
 
-| Filter | Usage |
+| Filter | Description |
 |--------|-------|
-| [lua_script_filter](../../Fish_Doku/Filter_Types/script.md#lua_script_filter) | [Lua Filter](./Scripting.md) |
+| [lua_script_filter](../../Fish_Doku/Filter_Types/script.md#lua_script_filter) | Filter to execute user defined scripts in scene. See also: [Scripting](./Scripting.md) |

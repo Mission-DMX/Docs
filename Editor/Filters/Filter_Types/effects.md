@@ -1,4 +1,5 @@
 ---
+title: Effect Filters
 layout: default
 ---
 # Effect filters

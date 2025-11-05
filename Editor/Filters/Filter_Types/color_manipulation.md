@@ -1,4 +1,5 @@
 ---
+title: Color Manipulation Filters
 layout: default
 ---
 # Color Manipulation

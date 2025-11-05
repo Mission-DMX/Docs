@@ -1,4 +1,5 @@
 ---
+title: Editor View
 layout: default
 ---
 # Editor View

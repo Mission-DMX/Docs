@@ -1,4 +1,5 @@
 ---
+title: Using the CLI
 layout: default
 ---
 # Command Line Interface

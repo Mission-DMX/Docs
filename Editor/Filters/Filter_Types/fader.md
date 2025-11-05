@@ -1,4 +1,5 @@
 ---
+title: Fader Input Filters
 layout: default
 ---
 # Fader input

@@ -1,4 +1,5 @@
 ---
+title: Overview of virtual Filters
 layout: default
 ---
 # virtual filter types

@@ -1,4 +1,5 @@
 ---
+title: Importing Filters
 layout: default
 ---
 # Import VFilter

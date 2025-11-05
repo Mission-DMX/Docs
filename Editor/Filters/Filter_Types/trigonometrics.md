@@ -1,4 +1,5 @@
 ---
+title: Trigonometric Function Filters
 layout: default
 ---
 # Trigonometric

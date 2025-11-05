@@ -5,13 +5,15 @@
 
   <body>
     {% include header.html %}
-    <div class="container-full" style="margin-bottom:3cm;margin-top:3cm;">
-	<div>
-		<!-- TODO: put nav here -->
+    <div class="container-full" style="margin:3cm;">
+	<div class="columns container">
+	    <div class="column col-3">
+		{% include nav-sidebar.html %}
+	    </div>
+	    <div class="column col-9">
+	        {{ content }}
+    	    </div>
 	</div>
-	<div class="container grid-xl">
-	    {{ content }}
-    	</div>
     </div>
 
     {% include footer.html %}
