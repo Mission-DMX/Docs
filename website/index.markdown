@@ -14,6 +14,6 @@ TODO build facy index page
 # Latests posts
 <ul>
 {% for post in site.posts limit:5 %}
-    <li><a hred="{{post.url}}">{{ post.title }}</a></li>
+    <li><a href="{{site.url}}{{post.url}}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
