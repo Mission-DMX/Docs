@@ -3,6 +3,10 @@ layout: default
 ---
 # Constants
 
+Constants are filter outputting a static value.
+There exists one constant per data type as well as one for positions, explained below.
+The content of positions can be updated during the show.
+
 ## position constant
 - Type name: `PanTiltConstant`
 - Reference: [PanTiltConstantVirtual](./VirtualFilter/constants.md#position-constant)

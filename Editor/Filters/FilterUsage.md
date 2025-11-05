@@ -8,6 +8,8 @@ All filter are listed here and their usage is linked
 
 ## Constants
 
+A general introduction to constants is given [here](Constants.md).
+
 | Filter | Usage |
 |--------|-------|
 | [8 bit constant](../../Fish_Doku/Filter_Types/constants.md#8-bit-constant)
