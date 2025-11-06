@@ -65,7 +65,25 @@ layout: page
       <div class="column col-12 text-center mt-16">
         <h4>Releases</h4>
       </div>
-      <!-- TODO iterate over release data with one column version and one column divided into download links and changelog. Have the vish version be a small tag. -->
+      {% for release in site.data.releases %}
+      <div class="column col-12">
+        <hr>
+      </div>
+      <div class="column col-4" style="text-align: left;">
+        <h5>{{ release.version }}</h5>
+        <p class="m-0 text-dark">Minimum Fish revision: {{ release.fish_min_rev }}</p><br>
+        <a href="{{ site.url }}{{ release.source_link }}">Source Code</a><br>
+        <a href="{{ site.url }}{{ release.package_link }}">Package</a>
+      </div>
+      <div class="column col-1"></div>
+      <div class="column col-7">
+        <ul style="text-align: left;">
+        {% for change in release.changes %}
+          <li>{{ change }}</li>
+        {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
     </div>
   </div>
 </div>
