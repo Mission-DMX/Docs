@@ -6,10 +6,7 @@ layout: front
 title: Home
 ---
 
-TODO build facy index page
-
-# Downloads
- * [Fish nightly builds](/downloads/fish/nightly)
+<!-- TODO: put descriptive text and some images here -->
 
 # Latests posts
 <ul>
@@ -17,3 +14,4 @@ TODO build facy index page
     <li><a href="{{site.url}}{{post.url}}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
+
