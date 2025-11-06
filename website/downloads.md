@@ -62,6 +62,10 @@ layout: page
         <p style="text-align: justify;">By default, the editor will download a release from <a href="https://open-fixture-library.org/categories">OFL</a>. If a different one is required, they can be downloaded here.</p>
         <a href="">TODO <i class="uil uil-arrow-right arrow-hover"></i></a>
       </div>
+      <div class="column col-12 text-center mt-16">
+        <h4>Releases</h4>
+      </div>
+      <!-- TODO iterate over release data with one column version and one column divided into download links and changelog. Have the vish version be a small tag. -->
     </div>
   </div>
 </div>
