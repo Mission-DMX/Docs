@@ -46,16 +46,16 @@ layout: page
       <div class="column col-5 col-sm-12 p-8 mb-8 col-mx-auto">
         <h5>Nightly Builds</h5>
         <p style="text-align: justify;">Nightly builds are available for all branches but only the main ones are listed below. If you need a different one, replace the branch in the link.</p>
-        <a href="downloads/fish/nightly/main/bin/fish">Fish <i class="uil uil-arrow-right arrow-hover"></i></a><br>
+        <a href="{{ site.url}}/downloads/fish/nightly/main/bin/fish">Fish <i class="uil uil-arrow-right arrow-hover"></i></a><br>
         <a href="">Editor <i class="uil uil-arrow-right arrow-hover"></i></a>
       </div>
       <div class="column col-5 col-sm-12 p-8 mb-8 col-mx-auto">
         <h5>Tools</h5>
         <p style="text-align: justify;">Fish provides a set of tools ranging from ArtNet identification to hardware commanding. These are not part of above packages but can be downloaded below.</p>
-        <a href="downloads/tools/chelpdatagen">Color Data Generator <i class="uil uil-arrow-right arrow-hover"></i></a><br>
-        <a href="downloads/tools/ftdi_test">FTDI Interface Tester <i class="uil uil-arrow-right arrow-hover"></i></a><br>
-        <a href="downloads/tools/ioboardctrl">I/O Board Controller <i class="uil uil-arrow-right arrow-hover"></i></a><br>
-        <a href="downloads/tools/sample_xml_generator">Test file generator <i class="uil uil-arrow-right arrow-hover"></i></a>
+        <a href="{{ site.url}}/downloads/tools/chelpdatagen">Color Data Generator <i class="uil uil-arrow-right arrow-hover"></i></a><br>
+        <a href="{{ site.url}}/downloads/tools/ftdi_test">FTDI Interface Tester <i class="uil uil-arrow-right arrow-hover"></i></a><br>
+        <a href="{{ site.url}}/downloads/tools/ioboardctrl">I/O Board Controller <i class="uil uil-arrow-right arrow-hover"></i></a><br>
+        <a href="{{ site.url}}/downloads/tools/sample_xml_generator">Test file generator <i class="uil uil-arrow-right arrow-hover"></i></a>
       </div>
       <div class="column col-5 col-sm-12 p-8 mb-8 col-mx-auto">
         <h5>Fixture Libraries</h5>
