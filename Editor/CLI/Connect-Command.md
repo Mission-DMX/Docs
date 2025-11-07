@@ -50,7 +50,9 @@ connect "source:output_{{si|add(1)}}" "dest:Red_Group{{si|div(3)|add(1)}}" --sou
 ```
 {% endraw %}
 
+<center>
 <img src="./connected-filters.png" alt="Image displays two filters connected using example above" />
+</center>
 
 ## Errata
 Using this command might require reopening of filter pages in the editor in order to view the created connections.
