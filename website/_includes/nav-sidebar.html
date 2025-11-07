@@ -1,0 +1,37 @@
+{%- assign sections = "" %}
+{%- assign last_loop_page = false %}
+{%- assign set_next_page = false %}
+{%- assign nav = site.pages | sort:"nav_order" | reverse | sort:"dir" %}
+{%- assign last_path = "" %}
+
+<div class="card">
+<div class="card-header">
+<h2>Navigation</h2>
+</div>
+<div class="card-body">
+<ul>
+{%- for nav_item in nav %}
+    {%- if nav_item.hide != true and nav_item.nav_exclude != true and nav_item.layout == "default" %}
+        {%- assign path_array = nav_item.dir | replace: "docs","" | split: "/" %}
+        {%- assign array_size = path_array | size %}
+	    	{%- if last_path != nav_item.dir %}
+		    </ul>
+		    {%- assign last_path = nav_item.dir %}
+	            {%- for part in path_array %}
+		        {%- if part != "" %}<small>{{ part }}</small><i class="uil uil-arrow-right arrow-hover"></i>{%- endif %}
+		    {%- endfor %}
+		    <ul>
+		{%- endif %}
+		{%- if nav_item.url != page.url %}
+	            <a href="{{ nav_item.url }}">
+                {%- endif %}
+		<li>{{ nav_item.title }}
+	    {%- if nav_item.url != page.url %}
+	        </a>
+            {%- endif %}
+		</li>
+    {%- endif %}
+{%- endfor %}
+</ul>
+</div>
+</div>

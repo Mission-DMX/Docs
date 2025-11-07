@@ -1,3 +1,8 @@
+---
+title: Getting Started
+nav_order: -1
+layout: default
+---
 # Mission DMX user guide
 
 This document describes how to use the Mission DMX lighting control desk.
@@ -20,11 +25,15 @@ TODO write manual about CLI (socket and in-editor terminal)
 2. Advanced Topics
     1. Filter Pages and Imports
     2. [Using the Control Desk](Desk.md)
+    3. [Remote Control](Remote.md)
 
 3. [Using ShowUI Tab](ShowGUI.md)
 4. Using the visualizer
 5. [Events](Events.md)
-6. Macros and the Command Line
+6. [Macros and the Command Line](CLI/)
 
 ## Filter reference
 A user guide about filters can be found [here](Filters/).
+
+## Internal behavior
+From time to time, it can be helpful to know a bit about the internals of show files. These are documented [here](internal).

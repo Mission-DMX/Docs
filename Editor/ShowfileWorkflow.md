@@ -1,3 +1,7 @@
+---
+title: Show File Basics
+layout: default
+---
 # Building a show file
 
 This document explains basic show file administration.
@@ -6,7 +10,9 @@ This document explains basic show file administration.
 
 Loading of a show file can be done using the *File* > *Load Showfile* entry from the menu. Alternatively, the hotkey `Ctrl+O` can be used. This action will pop up a dialog asking zou to specify the file you'd like to load. You can load any existing show file, however backups need their file ending renamed first.
 
+<center>
 <img width="300" height="200" alt="open-show-file" src="https://github.com/user-attachments/assets/d0ad034b-fe55-4cf3-b680-f6ced7c55f80" />
+</center>
 
 Loading other files, such as macro presets or stage layouts need to be done using the associated view. Once they're imported into a show file however, they will be opened together with them from the next time on.
 
@@ -20,4 +26,7 @@ If everything went fine, the status indicator will switch to "Showfile Applied".
 ## Settings
 The settings menu can be opened by selecting *File* > *Settings* from the menu. This dialog lets you choose some generic properties regarding your show file and editor behavior. Please keep in mind, that these settings are local to your show file. Therefore it is a good habit to set them right from the beginning.
 
+<center>
 <img width="402" height="353" alt="settings" src="https://github.com/user-attachments/assets/cc7b3570-6340-483d-86e6-d7066a4c86f1" />
+</center>
+

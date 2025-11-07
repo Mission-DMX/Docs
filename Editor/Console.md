@@ -1,8 +1,14 @@
+---
+title: Console View
+layout: default
+---
 # Console View
 
 The quick console view can be reached by pressing *Console Mode* button in the navigation bar or by pressing *Console* on the XTouch. Once you patched in some fixtures, this view allows you to set their channels manually. This is helpful if you like to quickly enable some light on the stage or debug / test your setup.
 
+<center>
 <img src="pictures/console-view.png">
+</center>
 
 In the top, a tab appears for every universe (1). Clicking on them switches between the controlled universe. Within a universe, all patched channels (2), grouped by their fixture (5) are available.
 The scroll bar (6) can also be controlled using the jog wheel of the XTouch.

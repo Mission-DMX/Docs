@@ -1,6 +1,12 @@
+---
+title: Building a GUI
+layout: default
+---
 # Using the Show Controls
 
+<center>
 <img src="pictures/show-ui.png" alt="Show UI" />
+</center>
 
 The show UI view displays any active show UI. They can be built using the [editor](EditorView.md#ui-editor).
 On the left hand side, there is a button group allowing switching between scenes (1).

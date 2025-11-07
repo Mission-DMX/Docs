@@ -1,3 +1,7 @@
+---
+title: Using the Control Desk
+layout: default
+---
 # Using the Control Desk
 
 The control desk (at the moment only controllers implementing the X-Touch protocol are supported) allows more tactile human interfacing than mouse or touchscreen an keyboard.

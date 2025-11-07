@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+    {% include header.html %}
+    <div class="container-full" style="margin:3cm;">
+	<div class="columns container">
+	    <div class="column col-3">
+		{% include nav-sidebar.html %}
+	    </div>
+	    <div class="column col-9 help-container">
+	        {{ content }}
+    	    </div>
+	</div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+</html>
