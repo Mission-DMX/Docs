@@ -7,7 +7,7 @@ layout: default
 The editor consists out of four primary widgets.
 
 <center>
-<img width="1690" height="903" alt="image" src="pictures/editor-view.png" />
+<img alt="image" src="pictures/editor-view.png"/>
 </center>
 
 1. An action bar giving access to
@@ -31,13 +31,13 @@ Within global objects a hirachy exists.
 Most notably, scenes are structured by their contained filter pages, UI pages as well as their fader banks.
 
 <center>
-<img width="423" height="182" alt="image" src="pictures/editor-view-show-browser.png" />
+<img alt="image" src="pictures/editor-view-show-browser.png"/>
 </center>
 
 Right clicking any items opens up a context menu providing appropriate options. Nesting filter pages is possible.
 
 <center>
-<img width="1920" height="1080" alt="20250721_09h54m31s_grim" src="pictures/editor-view-show-browser-context-menu.png" />
+<img alt="20250721_09h54m31s_grim" src="pictures/editor-view-show-browser-context-menu.png"/>
 </center>
 
 Usage of each element is described below.
@@ -45,7 +45,7 @@ Usage of each element is described below.
 ### Universes
 
 <center>
-<img src="pictures/editor-universe-view.png" alt="universe view" />
+<img src="pictures/editor-universe-view.png" alt="universe view"/>
 </center>
 
 The universe view displays all universes, their fixtures and channels. Furthermore it displays associated information and allows automatic placement of
@@ -70,7 +70,7 @@ files after save and reload.
 In order to place a filter inside a page it can be added using the context menu of the cursor, command line or various automatic means.
 
 <center>
-<img src="pictures/editor-filterpage-add-node.png" alt="Adding filters to filter page using context menu" />
+<img src="pictures/editor-filterpage-add-node.png" alt="Adding filters to filter page using context menu"/>
 </center>
 
 A filter is displayed below. It contains out of its type (1), name (2), zero or more input channels (3), zero or more output channels (4) and a button to open the configuration widget (6).

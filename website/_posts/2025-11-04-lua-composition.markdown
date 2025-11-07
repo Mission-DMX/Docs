@@ -3,7 +3,7 @@ layout: post
 title:  "Lua Compositions"
 date:   2025-11-04 10:56:01 +0100
 categories: Tips and Tricks
-author: Doralitze
+author: doralitze
 ---
 # Lua Compositions
 We all love [Tidal](https://tidalcycles.org/), right?

@@ -30,6 +30,7 @@ brand_name: Mission-DMX
 brand_logo: logo.png
 header: Making Light more light
 subheader: Documentation and Downloads for Mission-DMX lighting desk
+use_authors: true
 
 nav_item_one: User Manual
 nav_item_one_link: docs/
@@ -60,7 +61,10 @@ collections:
   posts:
     title: Posts
     output: true
-    permalink: /blog/:year/:month/:day/:slug/
+    permalink: /blog/:year/:slug/
+
+paginate: 15
+paginate_path: "/blog/page:num/"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

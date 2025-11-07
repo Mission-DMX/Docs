@@ -12,7 +12,7 @@ layout: page
               <a href="{{ site.url }}{{ site.baseurl }}">Home</a>
             </li>
             <li class="breadcrumb-item">
-              <a href="../{{ page.category }}">{{ page_category.name }}</a>
+	      <a href="{{ site.url }}{{ site.base_url }}/blog">Blog</a>
             </li>
             <li class="breadcrumb-item">
               <a href="#">{{ page.title }}</a>
@@ -28,7 +28,7 @@ layout: page
                 {% assign post_author = site.data.authors[page.author] %}
                 <div class="flex-vertical-center mb-4">
                   <figure class="avatar d-inline-block" style="align-items: center;">
-                    <img  src="../assets/{{ post_author.image }}" alt="...">
+		    <img  src="{{ site.url }}{{ site.base_url }}/assets/{{ post_author.image }}" alt="...">
                   </figure>
                   <div class="ml-2">
                     <p class="text-dark text-small mb-0">Written by <span class="text-primary">{{ post_author.name }}</span></p>
@@ -41,15 +41,8 @@ layout: page
                     <p class="text-dark text-small text-italic mb-0">{{ page.last_modified_at | date: '%B %d, %Y'  }} - {% include reading-time.html %}</p>
                   </div>
                 {% endif %}
-
               {{ content }}
-
-              
-            
-
-
             </div>
           </div>
         </div>
-        {% include more-help.html %}
       </div>
