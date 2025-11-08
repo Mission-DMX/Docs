@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Developer Documentation
-permalink: /docs/dev
+permalink: /docs/dev/index.html
 ---
 
 # Developer Documentation

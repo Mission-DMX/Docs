@@ -17,4 +17,4 @@ jobs:
       - name: build jekyll
         run: make website
       - name: deploy website
-        run: sudo /home/deploy/deploy.bash website/_site /
+        run: cd website/_site && sudo /home/deploy/deploy.bash * /
