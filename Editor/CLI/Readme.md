@@ -29,3 +29,4 @@ However, this behavior is required to integrate with other production equipment,
 In general you can type `help <command or topic>` to get a brief introduction.
 However, here is a list of special documentation for selected commands:
  * [`connect`](Connect-Command.md)
+ * [`event`](Event-Command.md)
