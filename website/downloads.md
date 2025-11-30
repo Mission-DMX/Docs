@@ -1,5 +1,5 @@
 ---
-permalink: /downloads
+permalink: /downloads/index.html
 title: downloads
 layout: page
 ---
