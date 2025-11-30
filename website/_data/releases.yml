@@ -1,3 +1,11 @@
+- version: 1.1.6
+  fish_min_rev: 5bc67a770e5dad515e95418aaea659d22110e8fa
+  source_link: /downloads/archive/1.1.6/sources.tar.gz
+  package_link: /downloads/archive/1.1.6/mission-dmx.deb
+  changes:
+    - "Added filter connection CLI command"
+    - "Improved Audio Analysis Event Source Settings"
+    - "various internal improvements"
 - version: 1.1.5
   fish_min_rev: ece8f9ed0b6dcabebc77295f8439b4803b41ce6a
   source_link: /downloads/archive/1.1.5/sources.tar.gz
