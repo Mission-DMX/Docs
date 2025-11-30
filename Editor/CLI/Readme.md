@@ -25,6 +25,13 @@ Once enabled, it provides the same access to the CLI as a local user and no auth
 Therefore, this feature should be used with caution and only in air gapped networks or with carefully crafted firewall rules.
 However, this behavior is required to integrate with other production equipment, which usually does not know the concept of computer security.
 
+## Advanced features
+
+While the used command language isn't as feature-rich as a modern shell, it provides some advanced features.
+ * Comments are started by `#`
+ * The set instruction can be used to set variables. If one for example issues ´set var foo´, the value `foo` can be retrieved at a later stage by writing `$var`.
+ * Basic control flow can be managed using `if`. The syntax looks as follows: `if <Expression> then <command>`. Expressions are build using `<value A> <comparison> <value B>`. While values can be anything, supported comparisons are `<`, `>`, `=`, `!=`, `and` and `or`.
+
 ## Command Documentation
 In general you can type `help <command or topic>` to get a brief introduction.
 However, here is a list of special documentation for selected commands:
