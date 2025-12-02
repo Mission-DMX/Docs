@@ -1,6 +1,7 @@
 ---
 title: Connect Command
 layout: default
+nav_exclude: true
 ---
 # Connect Command
 

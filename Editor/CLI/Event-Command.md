@@ -1,6 +1,7 @@
 ---
 title: Event Command
 layout: default
+nav_exclude: true
 ---
 # Event Command
 

@@ -1,6 +1,7 @@
 ---
 title: List Command
 layout: default
+nav_exclude: true
 ---
 # List Command
 
