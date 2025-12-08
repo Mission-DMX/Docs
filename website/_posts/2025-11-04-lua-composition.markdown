@@ -63,6 +63,8 @@ end
 
 The `write_output()` method simply writes the content of the color array to our led bars. It may look as follows:
 ```
+output[universe] = {}
+
 function write_output()
     current_start_addr = bar_start
     for i = 1, num_bars do
