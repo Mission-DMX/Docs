@@ -24,7 +24,11 @@ Besides that, the following global variables have a special meaning:
 Besides the Lua standard library, the following functions are avaiable:
 
 ##### Color Manipulation
- * `Color()` constructs and returns a new color object.
+Color object properties can be accessed and manipulated using the `["r"]`, `["g"]`, `["b"]`, `["h"]`, `["s"]`, `["i"]` indices of the object.
+Hue is a float in the range 0 to 360, while saturation and intensity are in the range 0 to 1.
+For debugging purposes, a humand readable representation can be accessed using `["str"]`.
+Besides this, a few helper functions are available, accepting color objects or tables as input:
+ * `Color()` constructs and returns a new color object. Using this constructor is faster and more convinient than providing a table. It is possible to use no arguments or to provide `h, s, i` arguments.
  * `hsi_to_rgb(color)` Converts pixel data type to three dimensional array of color values. Ussage: `r, g, b = hsi_to_rgb(my_color)`
  * `hsi_to_rgbw(color)` Converts pixel data type to four dimensional array of color values. Ussage: `r, g, b, w = hsi_to_rgbw(my_color)`
  * `mix_color_rgb_additive(color1, color2)` Mix two colors together using the additive rgb algorithm. Ussage: `new_color = mix_color_rgb_additive(color1, color2)`
