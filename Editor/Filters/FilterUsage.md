@@ -47,6 +47,8 @@ A general introduction to constants is given [here](Constants.md).
 | [floats to color](Filter_Types/adapters.md#float-to-color)
 | [color to floats](Filter_Types/adapters.md#color-to-floats)
 | [universe output](Filter_Types/adapters.md#Universe-Output)
+| [Color Brightness Mixin](VirtualFilter/ColorBrightnessMixin.md) | Mix brightness of Color with other value. |
+| [Dimmer Brightness Mixin](VirtualFilter/brightness_mixin.md) | Mix two numerical brightness values | 
 
 ## Arithmetics
 
