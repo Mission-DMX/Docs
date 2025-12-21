@@ -57,3 +57,13 @@ message state_list {
   map<string, string> unspecific_states = 1;
   repeated kvs specific_states = 2;
 }
+
+enum ReadymodeUpdateCause {
+  RUC_ENTERED = 0;
+  RUC_ABORTED = 1;
+  RUC_COMMITED = 2;
+}
+
+message readymode_update {
+  ReadymodeUpdateCause cause = 1;
+}

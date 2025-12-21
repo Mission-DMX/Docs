@@ -28,4 +28,5 @@ enum MsgType {
  MSGT_STATE_LIST = 20; // If fish receives this message empty: it will reply with the same message type, filled in with all states. Otherwise this triggers an update of all specified states
  MSGT_EVENT_SENDER_UPDATE = 21; // If fish receives such a message it will create or update the specified sender. If a GUI connects to fish, all configured event senders will be send to the GUI. If an event sender changed, all connected GUI clients will receive a corresponding message.
  MSGT_EVENT = 22; // If a GUI client sends such a message, the event will be inserted into the buffer. If an event_sender with enabled gui debugging send a new event, all connected GUI clients will receive such a message with the new event.
+ MSGT_READYMODE_UPDATE = 23; // notification of ready mode update that should be followed by the other side.
 }
