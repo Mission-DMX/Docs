@@ -48,3 +48,13 @@ The API provides an enum `event_type` with content `SINGLE_TRIGGER`, `START`, `R
  * `get_event_sender` Get the event sender ID. The specification of the function is optional and defaults to 0. Usage: `get_event_sender(function)` or `get_event_sender()`
  * `get_all_event_senders` Returns a list of all available event senders. Usage: `senders = get_all_event_senders()`
  * `find_event_sender(id: str, function: int = 0)` Get the id of the required event sender (optionally with specified function). This will raise an exception if the name was not found.
+
+##### Scene Management
+Scenes have a unique ID used to identify them, which is fixed by the show file.
+Besides this, scenes have an index which is unique to the object live time of the show file in fish and is considered to be random.
+In order to manage the running scenes, the following functions are available:
+ * `get_scene_count()` Returns the number of loaded scenes. This method returns 0 if something wen't wrong.
+ * `get_own_scene_id()` Get the scene ID of the current scene.
+ * `get_own_scene_index()` Get the scene Index of the current scene.
+ * `switch_to_scene(scene_id)` Switch to the scene with the specified ID.
+ * `get_default_scene_id()` Get the ID of the default scene.
