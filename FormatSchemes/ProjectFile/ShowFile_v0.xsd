@@ -106,6 +106,13 @@
             <element name="filter" minOccurs="0" maxOccurs="unbounded" type="tns:Filter"/>
             <element name="filterpage" minOccurs="0" maxOccurs="unbounded" type="tns:FilterPage"/>
             <element name="uipage" minOccurs="0" maxOccurs="unbounded" type="tns:UIPage"/>
+            <element name="dmxdefaultvalue" minOccurs="0" maxOccurs="unbounded">
+                <complexType>
+                    <attribute name="universe" type="int" />
+                    <attribute name="channel" type="int" />
+                    <attribute name="value" type="int" />
+                </complexType>
+            </element>
         </sequence>
         <attribute name="human_readable_name" type="string">
             <annotation>
