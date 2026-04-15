@@ -108,9 +108,9 @@
             <element name="uipage" minOccurs="0" maxOccurs="unbounded" type="tns:UIPage"/>
             <element name="dmxdefaultvalue" minOccurs="0" maxOccurs="unbounded">
                 <complexType>
-                    <attribute name="universe" type="int" />
-                    <attribute name="channel" type="int" />
-                    <attribute name="value" type="int" />
+                    <attribute name="universe" type="int" use="required"/>
+                    <attribute name="channel" type="int" use="required"/>
+                    <attribute name="value" type="int" use="required"/>
                 </complexType>
             </element>
         </sequence>
