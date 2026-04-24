@@ -114,6 +114,8 @@ A general introduction to constants is given [here](Constants.md).
 | [filter_shift_16bit](Filter_Types/effects.md#filter_shift_16bit) | Shift 16 bit values into specified direction |
 | [filter_shift_float](Filter_Types/effects.md#filter_shift_float) | Shift floats into specified direction |
 | [filter_shift_color](Filter_Types/effects.md#filter_shift_color) | Shift colors into specified direction |
+| [Sequencer](Filter_Types/effects.md#sequencer) | Apply sequenced updates based on events |
+| [Chaser](Filter_Types/effects.md#chaser) | Generate color output for pixels based on parametrizable masks. |
 
 ## Script filters
 
