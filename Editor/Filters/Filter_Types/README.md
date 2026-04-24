@@ -85,6 +85,8 @@ If you're looking for a reference for filters usable in the editor, consult the 
 - [filter_shift_16bit](./effects.md#filter_shift_16bit)
 - [filter_shift_float](./effects.md#filter_shift_float)
 - [filter_shift_color](./effects.md#filter_shift_color)
+- [sequencer](./effects.md#sequencer)
+- [chaser](./effects.md#chaser)
 
 ## [Script filters](./script.md#Lua-List)
 - [lua_script_filter](./script.md#lua_script_filter)
