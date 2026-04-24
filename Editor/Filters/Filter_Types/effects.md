@@ -164,8 +164,8 @@ A chaser is a filter to generate color effects for multiple color outputs.
 - Input channels:
   * `time` of type of type `double`(default time node)
   * `time_scale` of type of type `double`(default 1)
-  * A `color` channel for each configured color parameter with the associated name
-  * A `16bit` channel for each configured number parameter with the associated name
+  * A `color` channel for each configured color parameter with the associated name.
+  * A `16bit` channel for each configured number parameter with the associated name. The values can be either interpreted as direct values or as percentages between 0 and 100%.
 - Output channels: channels up to the configured number of output pixels named ascending of data type `color`
 - Configuration parameters:
   * `number_of_pixels`: Number of configured output channels
@@ -173,7 +173,7 @@ A chaser is a filter to generate color effects for multiple color outputs.
   * `number_parameters`: A list of input channels used as number parameters separated by `:`.
   * `presets`: A list of settings that can be inserted into the `config` GUI update parameters. This configuration parameter is only used by the editor.
 - Initial parameters / GUI updatable parameters:
-  * `config`: A current generator setting. Generator settings are a `;` separated list of layers. Each layer contains the functionality identifier followed by a list of its parameters which can either be a channel name or color constant or number constant. Each layer can set the current alpha mask or use the alpha mask for applying values. The default alpha mask is `1` for all pixels. The following layer functionality identifiers are available:
+  * `config`: A current generator setting. Generator settings are a `;` separated list of layers. Each layer contains the functionality identifier followed by a list of its parameters which can either be a channel name or color constant or number constant. Each layer can set the current alpha mask or use the alpha mask for applying values. The default alpha mask is `1` for all pixels. The default color is white. The following layer functionality identifiers are available:
     - `plain_color`: Accepts a color parameter and sets all pixels to the provided parameter
     - `rainbow`: Accepts two color parameters and sets all pixels on the range between the two colors
     - `sprinkles`: Accepts three number parameters. The first indicates how many random sprinkles should be set on the alpha mask and the second indicates the size. The last parameter indicates the update rate in `ms` where 0 indicates no updates happening.
@@ -184,5 +184,12 @@ A chaser is a filter to generate color effects for multiple color outputs.
     - `mask_multiply`: Multiplies the mask with the accepted number parameter.
     - `mask_shift`: Shifts the mask after the number of `ms` specified by the accepted number parameter.
     - `color_shift`: Shifts the pixels after the number of `ms` specified by the accepted number parameter.
-    - `trig_XXX`: Where `XXX` is one of the supported trigonometric functions. Takes in three number parameters (lowest value, highest value and phase) and updates the alpha mask based on the output of the function.
+    - `trig__XXX`: Where `XXX` is one of the supported trigonometric functions. Takes in three number parameters (lowest value, highest value and phase) and updates the alpha mask based on the output of the function.
     - `strobe`: Accepts one number input and enables the alpha mask based on this parameter interpreted as BPM.
+    - `maskmod__XXX`: Where `XXX` is either `add`, `mul`, or `div`. Modifies the values of the mask with the accepted number parameter.
+    - `colormix`: Mix the two provided color parameters and apply the result using the mask
+    - `color_chanmod_X` where X is either `r`, `g`, `b`, `h`, `s`, or `i`. Set the represented channel to the value provided by the number parameter.
+    - `color_chancalc_Y_XXX where Y is either `r`, `g`, `b`, `h`, `s`, or `i` and `XXX` is either `sub` or `add` or `mult`: Modify the channel with the selected operation using the accepted number parameter.
+    - `random_color`: Generate N random colors and change them every M `ms`, where N and M are number parameters.
+    - `gaussian_blur`: Apply gaussian blur to the pixels where the mask allows using a number parameter as filter size in percent of pixel width.
+    - `gaussian_curve_on_mask`: Draw a gaussian curve on the alpha mask using the first number parameter as position, the second as width and the third as height.
