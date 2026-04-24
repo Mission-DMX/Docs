@@ -156,3 +156,31 @@ Unlike the Cue filter, it overlaps all currently running transitions and starts 
       6. Interleaving method. (`average`, `min` or `max`)
   * `transitions`: Transition definitions, separated by `;`. Each transition consists out of the following: `<encoded trigger event>#<transition name>#<keyframe_0>#<keyframe_1>#...#<keyframe_n>`. The event is encoded as `<sender id>:<sender_function>:<sender argument 1>:<...>:<sender argument 7>`. A keyframe is encoded as `<target channel name [string]>:<target value[default encoded]>:<transition[edg, lin, sig, e_i or e_o]>:<duration [double ms]>`. Transition names are only relevant for human reference.
 - update Message for GUI: `active_transition_list` with a `;` separated list of their names as its value
+
+## Chaser
+A chaser is a filter to generate color effects for multiple color outputs.
+- Type name: `chase_filter`
+- Type id: `75`
+- Input channels:
+  * `time` of type of type `double`(default time node)
+  * `time_scale` of type of type `double`(default 1)
+  * A `color` channel for each configured color parameter with the associated name
+  * A `16bit` channel for each configured number parameter with the associated name
+- Output channels: channels up to the configured number of output pixels named ascending of data type `color`
+- Configuration parameters:
+  * `number_of_pixels`: Number of configured output channels
+  * `color_parameters`: A list of input channels used as color parameters separated by `:`.
+  * `number_parameters`: A list of input channels used as number parameters separated by `:`.
+  * `presets`: A list of settings that can be inserted into the `config` GUI update parameters. This configuration parameter is only used by the editor.
+- Initial parameters / GUI updatable parameters:
+  * `config`: A current generator setting. Generator settings are a `;` separated list of layers. Each layer contains the functionality identifier followed by a list of its parameters which can either be a channel name or color constant or number constant. Each layer can set the current alpha mask or use the alpha mask for applying values. The default alpha mask is `1` for all pixels. The following layer functionality identifiers are available:
+    - `plain_color`: Accepts a color parameter and sets all pixels to the provided parameter
+    - `rainbow`: Accepts two color parameters and sets all pixels on the range between the two colors
+    - `sprinkles`: Accepts three number parameters. The first indicates how many random sprinkles should be set on the alpha mask and the second indicates the size. The last parameter indicates the update rate in `ms` where 0 indicates no updates happening.
+    - `dots`: Like `sprinkles` but uses an even distribution instead of a random one
+    - `scale`: Accepts two number parameters. The first one indicates where the cutoff in the alpha mask should start and the second indicated where it should end.
+    - `scale_inv`: Like `scale` but setting the alpha mask in the other direction.
+    - `flat_mask`: Accepts one number parameter, setting the mask to it.
+    - `mask_multiply`: Multiplies the mask with the accepted number parameter.
+    - `mask_shift`: Shifts the mask after the number of `ms` specified by the accepted number parameter.
+    - `color_shift`: Shifts the pixels after the number of `ms` specified by the accepted number parameter.
