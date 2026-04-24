@@ -184,3 +184,5 @@ A chaser is a filter to generate color effects for multiple color outputs.
     - `mask_multiply`: Multiplies the mask with the accepted number parameter.
     - `mask_shift`: Shifts the mask after the number of `ms` specified by the accepted number parameter.
     - `color_shift`: Shifts the pixels after the number of `ms` specified by the accepted number parameter.
+    - `trig_XXX`: Where `XXX` is one of the supported trigonometric functions. Takes in three number parameters (lowest value, highest value and phase) and updates the alpha mask based on the output of the function.
+    - `strobe`: Accepts one number input and enables the alpha mask based on this parameter interpreted as BPM.
