@@ -171,9 +171,9 @@ A chaser is a filter to generate color effects for multiple color outputs.
   * `number_of_pixels`: Number of configured output channels
   * `color_parameters`: A list of input channels used as color parameters separated by `:`.
   * `number_parameters`: A list of input channels used as number parameters separated by `:`.
-  * `presets`: A list of settings that can be inserted into the `config` GUI update parameters. This configuration parameter is only used by the editor.
+  * `presets`: A list of settings that can be inserted into the `config` GUI update parameters. This configuration parameter is only used by the editor. It is separated by `#`.
 - Initial parameters / GUI updatable parameters:
-  * `config`: A current generator setting. Generator settings are a `;` separated list of layers. Each layer contains the functionality identifier followed by a list of its parameters which can either be a channel name or color constant or number constant. Each layer can set the current alpha mask or use the alpha mask for applying values. The default alpha mask is `1` for all pixels. The default color is white. The following layer functionality identifiers are available:
+  * `config`: A current generator setting. Generator settings are a `;` separated list of layers. Each layer contains the functionality identifier followed by a list of its parameters which can either be a channel name or color constant or number constant. Each layer can set the current alpha mask or use the alpha mask for applying values. The default alpha mask is `100%` for all pixels. The default color is white. Parameters are separated from each other using `|`. The following layer functionality identifiers are available:
     - `plain_color`: Accepts a color parameter and sets all pixels to the provided parameter
     - `rainbow`: Accepts two color parameters and sets all pixels on the range between the two colors
     - `sprinkles`: Accepts three number parameters. The first indicates how many random sprinkles should be set on the alpha mask and the second indicates the size. The last parameter indicates the update rate in `ms` where 0 indicates no updates happening.
