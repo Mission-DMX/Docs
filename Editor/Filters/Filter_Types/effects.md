@@ -178,7 +178,7 @@ A chaser is a filter to generate color effects for multiple color outputs.
     - `rainbow`: Accepts two color parameters and sets all pixels on the range between the two colors
     - `sprinkles`: Accepts five number parameters. The first indicates how many random sprinkles should be set on the alpha mask and the second indicates the size. The third parameter indicates the update rate in `ms` where 0 indicates no updates happening. The forth and last parameters set the values that the mask should get if there is no vs there is a spinkle at the given location.
     - `dots`: Like `sprinkles` but uses an even distribution instead of a random one
-    - `scale`: Accepts two number parameters. The first one indicates where the cutoff in the alpha mask should start and the second indicated where it should end.
+    - `scale`: Accepts four number parameters. The first one indicates where the cutoff in the alpha mask should start and the second indicated where it should end. The second set of parameters indicate the start mask value and the end mask value.
     - `scale_inv`: Like `scale` but setting the alpha mask in the other direction.
     - `flat_mask`: Accepts one number parameter, setting the mask to it.
     - `mask_multiply`: Multiplies the mask with the accepted number parameter.
