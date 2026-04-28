@@ -193,3 +193,5 @@ A chaser is a filter to generate color effects for multiple color outputs.
     - `random_color`: Generate N random colors and change them every M `ms`, where N and M are number parameters.
     - `gaussian_blur`: Apply gaussian blur to the pixels where the mask allows using a number parameter as filter size in percent of pixel width.
     - `gaussian_curve_on_mask`: Draw a gaussian curve on the alpha mask using the first number parameter as position, the second as width and the third as height.
+    - `invert_color`: Takes no parameters and inverts the color values.
+    - `invert_mask`: Takes no parameters and inverts the mask.
