@@ -181,7 +181,6 @@ A chaser is a filter to generate color effects for multiple color outputs.
     - `scale`: Accepts four number parameters. The first one indicates where the cutoff in the alpha mask should start and the second indicated where it should end. The second set of parameters indicate the start mask value and the end mask value.
     - `scale_inv`: Like `scale` but setting the alpha mask in the other direction.
     - `flat_mask`: Accepts one number parameter, setting the mask to it.
-    - `mask_multiply`: Multiplies the mask with the accepted number parameter.
     - `mask_shift`: Shifts the mask after the number of `ms` specified by the accepted number parameter.
     - `color_shift`: Shifts the pixels after the number of `ms` specified by the accepted number parameter.
     - `trig__XXX`: Where `XXX` is one of the supported trigonometric functions. Takes in three number parameters (lowest value, highest value and phase) and updates the alpha mask based on the output of the function.
