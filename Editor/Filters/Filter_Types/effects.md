@@ -172,6 +172,7 @@ A chaser is a filter to generate color effects for multiple color outputs.
   * `color_parameters`: A list of input channels used as color parameters separated by `:`.
   * `number_parameters`: A list of input channels used as number parameters separated by `:`.
   * `presets`: A list of settings that can be inserted into the `config` GUI update parameters. This configuration parameter is only used by the editor. It is separated by `#`.
+  * `trigger_event`: If this parameter exist and is not empty, the chaser will advance on the defined event instead of the time. As a rule of thumb, one event trigger has the same significance as 1000ms having passed. Speed parameters can be adjusted of course. An event is encoded in the following manner: `<sender id>:<sender_function>:<sender argument 1>:<...>:<sender argument 7>` (the arguments are optional).
 - Initial parameters / GUI updatable parameters:
   * `config`: A current generator setting. Generator settings are a `;` separated list of layers. Each layer contains the functionality identifier followed by a list of its parameters which can either be a channel name or color constant or number constant. Each layer can set the current alpha mask or use the alpha mask for applying values. The default alpha mask is `100%` for all pixels. The default color is white. Parameters are separated from each other using `|`. The following layer functionality identifiers are available:
     - `plain_color`: Accepts a color parameter and sets all pixels to the provided parameter
