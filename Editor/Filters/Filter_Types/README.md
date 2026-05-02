@@ -81,12 +81,19 @@ If you're looking for a reference for filters usable in the editor, consult the 
 
 ## [Effect-filters](./effects.md#Effect-filters)
 - [cue_list_filter](./effects.md#cue_list_filter)
-- [filter_shift_8bit](./effects.md#filter_shift_8bit)
-- [filter_shift_16bit](./effects.md#filter_shift_16bit)
-- [filter_shift_float](./effects.md#filter_shift_float)
-- [filter_shift_color](./effects.md#filter_shift_color)
 - [sequencer](./effects.md#sequencer)
 - [chaser](./effects.md#chaser)
 
 ## [Script filters](./script.md#Lua-List)
 - [lua_script_filter](./script.md#lua_script_filter)
+
+## Signal Routing
+- [filter_shift_8bit](./signal_routing.md#filter_shift_8bit)
+- [filter_shift_16bit](./signal_routing.md#filter_shift_16bit)
+- [filter_shift_float](./signal_routing.md#filter_shift_float)
+- [filter_shift_color](./signal_routing.md#filter_shift_color)
+- [filter_switch_8bit](./signal_routing.md#filter_switch_8bit)
+- [filter_switch_16bit](./signal_routing.md#filter_switch_16bit)
+- [filter_switch_float](./signal_routing.md#filter_switch_float)
+- [filter_switch_color](./signal_routing.md#filter_switch_color)
+

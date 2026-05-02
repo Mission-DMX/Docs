@@ -110,10 +110,6 @@ A general introduction to constants is given [here](Constants.md).
 | Filter | Description |
 |--------|-------|
 | [cue_list_filter](Filter_Types/effects.md#cue_list_filter) | [Cue Filter](./Cues.md#cue-filter) |
-| [filter_shift_8bit](Filter_Types/effects.md#filter_shift_8bit) | Shift 8 bit values into specified direction |
-| [filter_shift_16bit](Filter_Types/effects.md#filter_shift_16bit) | Shift 16 bit values into specified direction |
-| [filter_shift_float](Filter_Types/effects.md#filter_shift_float) | Shift floats into specified direction |
-| [filter_shift_color](Filter_Types/effects.md#filter_shift_color) | Shift colors into specified direction |
 | [Sequencer](Filter_Types/effects.md#sequencer) | Apply sequenced updates based on events |
 | [Chaser](Filter_Types/effects.md#chaser) | Generate color output for pixels based on parametrizable masks. |
 
@@ -122,3 +118,17 @@ A general introduction to constants is given [here](Constants.md).
 | Filter | Description |
 |--------|-------|
 | [lua_script_filter](Filter_Types/script.md#lua_script_filter) | Filter to execute user defined scripts in scene. See also: [Scripting](./Scripting.md) |
+
+## Signal Routing
+
+| Filter | Description |
+|--------|-------|
+| [filter_shift_8bit](Filter_Types/signal_routing.md#filter_shift_8bit) | Shift 8 bit values into specified direction |
+| [filter_shift_16bit](Filter_Types/signal_routing.md#filter_shift_16bit) | Shift 16 bit values into specified direction |
+| [filter_shift_float](Filter_Types/signal_routing.md#filter_shift_float) | Shift floats into specified direction |
+| [filter_shift_color](Filter_Types/signal_routing.md#filter_shift_color) | Shift colors into specified direction |
+| [filter_switch_8bit](Filter_Types/signal_routing.md#filter_switch_8bit) | Select one of the provided inputs and forward it to the output |
+| [filter_switch_16bit](Filter_Types/signal_routing.md#filter_switch_16bit) | Select one of the provided inputs and forward it to the output |
+| [filter_switch_float](Filter_Types/signal_routing.md#filter_switch_float) | Select one of the provided inputs and forward it to the output |
+| [filter_switch_color](Filter_Types/signal_routing.md#filter_switch_color) | Select one of the provided inputs and forward it to the output |
+
