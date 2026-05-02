@@ -133,4 +133,4 @@ A chaser is a filter to generate color effects for multiple color outputs.
     - `invert_mask`: Takes no parameters and inverts the mask.
     - `close_to_center`: Applys a pattern on the mask that travels from the edges to the center. Accepted number parameters are the update speed and mask application intensity.
     - `open_from_center`: Applys a pattern on the mask that travels from the center to the edges. Accepted number parameters are the update speed and mask application intensity.
-    - `wave__DIR` where `DIR` is either `fwd` or `rev`: This layer generates a decaing wave on the mask in the specified direction. Accepted number parameters are the update speed and mask application intensity.
+    - `wave__DIR` where `DIR` is either `fwd` or `rev`: This layer generates a decaing wave on the mask in the specified direction. Accepted number parameters are the update speed, decay rate and mask application intensity.
