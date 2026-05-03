@@ -125,7 +125,7 @@ A chaser is a filter to generate color effects for multiple color outputs.
     - `johnson__DIR`: Where `DIR` is either `fwd` or `rev`. Generates a johnson counter effect on the mask. This layer accepts two number parameters indicating the update speed of the effect (in `ms`) and the desired mask target.
     - `colormix`: Mix the two provided color parameters and apply the result using the mask
     - `color_chanmod_X` where X is either `r`, `g`, `b`, `h`, `s`, or `i`. Set the represented channel to the value provided by the number parameter.
-    - `color_chancalc_Y_XXX where Y is either `r`, `g`, `b`, `h`, `s`, or `i` and `XXX` is either `sub` or `add` or `mult`: Modify the channel with the selected operation using the accepted number parameter.
+    - `color_chancalc_Y_XXX` where Y is either `r`, `g`, `b`, `h`, `s`, or `i` and `XXX` is either `sub` or `add` or `mult` or `div`: Modify the channel with the selected operation using the accepted number parameter.
     - `random_color`: Generate N random colors and change them every M `ms`, where N and M are number parameters.
     - `gaussian_blur`: Apply gaussian blur to the pixels where the mask allows using a number parameter as filter size in percent of pixel width.
     - `gaussian_curve_on_mask`: Draw a gaussian curve on the alpha mask using the first number parameter as position, the second as width and the third as height.
