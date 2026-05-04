@@ -8,7 +8,7 @@ permalink: /docs/dev/index.html
 Welcome to the developer documentation. Please find the required resources below:
 
  * [Fish Class Documentation](/docs/fish-dev/)
- * Editor Class Documentation
+ * [Editor Class Documentation](/docs/editor-class-doc/)
  * Debugging Tools
  * Hardware Documentation
  * Operating System Documentation
