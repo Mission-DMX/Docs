@@ -121,7 +121,7 @@ A chaser is a filter to generate color effects for multiple color outputs.
     - `color_shift`: Shifts the pixels after the number of `ms` specified by the accepted number parameter.
     - `trig__XXX`: Where `XXX` is one of the supported trigonometric functions. Takes in four number parameters (lowest value, highest value, phase and frequency) and updates the alpha mask based on the output of the function. The frequency ranges from one period over the entire output range up to one period per mask entry.
     - `strobe`: Accepts one number input and enables the alpha mask based on this parameter interpreted as BPM.
-    - `maskmod__XXX`: Where `XXX` is either `add`, `mul`, or `div`. Modifies the values of the mask with the accepted number parameter.
+    - `maskmod__XXX`: Where `XXX` is either `add`, `mul`, or `div`. Accepts three number parameters. Modifies the values of the mask with the first accepted number parameter. The second and third parameters indicate the start and end range of the application, interpreted as percent of the overall pixel width.
     - `johnson__DIR`: Where `DIR` is either `fwd` or `rev`. Generates a johnson counter effect on the mask. This layer accepts two number parameters indicating the update speed of the effect (in `ms`) and the desired mask target.
     - `colormix`: Mix the two provided color parameters and apply the result using the mask
     - `color_chanmod_X` where X is either `r`, `g`, `b`, `h`, `s`, or `i`. Set the represented channel to the value provided by the number parameter.
