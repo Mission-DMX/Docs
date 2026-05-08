@@ -67,8 +67,8 @@ option optimize_for = LITE_RUNTIME;
    BTN_PLUGIN_PATCH = 44; // Open the patching menu and review current transmitted values
    BTN_INST_DEBUG = 45; // Open the debug view
 
-   BTN_NAMEVALUE_COMMITSHOW = 46; // Apply the changes of the edited show
-   BTN_BEATS_OOPS = 47; // Undo the commit of show file or column updates (whichever was last); internally handled
+   BTN_NAMEVALUE = 46; // Apply the changes of the edited show
+   BTN_BEATS = 47; // Undo the commit of show file or column updates (whichever was last); internally handled
    BTN_GLOBALVIEW_COMMITRDY = 48; // Apply the chanes of all columns in READY-Mode; is blinking as long as some colums are in Ready/Wait mode; internally handled
    BTN_MIDITRACKS_FIND = 49; // Find fixture button, further documentation in x-touch driver
    BTN_INPUTS_EVENTS = 50; // Configure event sources and review incomming data
@@ -76,8 +76,8 @@ option optimize_for = LITE_RUNTIME;
    BTN_AUDIOINST = 52;
    BTN_AUX_ASSETS = 53; // Open the assets manager
    BTN_BUSSES = 54;
-   BTN_OUTPUTS = 55;
-   BTN_USER = 56;
+   BTN_OUTPUTS_COMMITSHOW = 55;
+   BTN_USER_OOPS = 56;
 
    BTN_FLIP_MAINDARK = 57; // If enabled: makes the brightness of all attached fixtures 0; button led should be blinking if enabled
 
