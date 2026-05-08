@@ -361,6 +361,16 @@
                 </documentation>
             </annotation>
         </attribute>
+        <attribute name="is_dummy" type="boolean" default="false">
+            <annotation>
+                <documentation>
+                    If set to true, a dummy universe will be created which
+                    will not output data but can still be used in the visualizer.
+                    A typical use case is the updating of a show while a
+                    different one is running which should not be disturbed.
+                </documentation>
+            </annotation>
+        </attribute>
     </complexType>
 
     <complexType name="ArtnetLocation">
