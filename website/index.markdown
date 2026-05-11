@@ -33,7 +33,7 @@ The choice is entirely yours.
     <div class="column col-4">
         <div class="card" style="height:100%;">
             <div class="card-body">
-                <img src="/assets/card-console-tmp.png" class="card-image" style="width: 100%;">
+                <img src="/assets/card-console-tmp.png" class="card-image" style="width: 100%;" alt="Screenshot of someone building a scene using the virtual console.">
             </div>
             <div class="card-footer">
                 <h3>Use the console to dial up a quick setting.</h3>
@@ -43,7 +43,7 @@ The choice is entirely yours.
     <div class="column col-4">
         <div class="card" style="height:100%;">
             <div class="card-body">
-                <img src="/assets/card-visualizer-tmp.png" class="card-image" style="width: 100%;">
+                <img src="/assets/card-visualizer-tmp.png" class="card-image" style="width: 100%;" alt="Screenshot of someone preparing for a light show using the integrated visualizer.">
             </div>
             <div class="card-footer">
                 <h3>Use the visualizer to prepare.</h3>
@@ -53,7 +53,7 @@ The choice is entirely yours.
     <div class="column col-4">
         <div class="card" style="height:100%;">
             <div class="card-body">
-                <img src="/assets/card-show-tmp.jpg" class="card-image" style="width: 100%;">
+                <img src="/assets/card-show-tmp.jpg" class="card-image" style="width: 100%;" alt="Photo of the light console being used at a large concert.">
             </div>
             <div class="card-footer">
                 <h3>Enjoy the show.</h3>
