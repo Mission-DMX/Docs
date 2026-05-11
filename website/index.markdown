@@ -4,7 +4,6 @@
 
 layout: front
 title: Home
-tagline: Free Open Source light control desk
 ---
 
 <div class="card">
