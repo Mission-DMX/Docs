@@ -23,7 +23,7 @@ tagline: Free Open Source light control desk
 meta_image: meta.jpg
 email: doralitze@chaotikum.org
 description: >- # this means to ignore newlines until "baseurl:"
-  MissionDMX - A fully featured light control desk in open source
+  MissionDMX - A fully featured open source light control desk software. Runs on Linux or embedded operating systems and supports various hardware interfaces as well as network light control protocols. It is optimized to provide high real time performance for large live shows.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mission-dmx.org" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  Mission-DMX
