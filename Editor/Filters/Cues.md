@@ -69,13 +69,42 @@ Clicking a key frame will load the settings of the set into the current live pre
 
 The following transition types are available:
 
-|  Key  |                     Curve                     |                     Description                     |
-|-------|-----------------------------------------------|-----------------------------------------------------|
-| lin   | ![Linear curve](images/cue-trans-lin.png)     | Linear Transition from last key frame to current    |
-| edg   | ![Edge Transition](images/cue-trans-edg.png)  | The transition to the current value occurs instantly|
-| sig   | ![Sigmoidal Curve](images/cue-trans-sig.png)  | The transition from the last frame to the current follows a sigmoidal curve. |
-| e_i   | ![Ease In](images/cue-trans-e-i.png)          | Transition starts slowly with increasing speed      |
-| e_o   | ![Ease In](images/cue-trans-e-o.png)          | Transition starts fast with decreasing speed        |
+<table style="padding: 10px;">
+  <thead>
+    <tr>
+      <th style="padding: 5px;border-bottom: 1px solid;border-right: 1px solid;">Key</th>
+      <th style="padding: 5px;border-bottom: 1px solid;border-right: 1px solid;">Curve</th>
+      <th style="padding: 5px;border-bottom: 1px solid;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 5px;border-bottom: 1px solid;border-right: 1px solid;">lin</td>
+      <td style="padding: 5px;border-bottom: 1px solid;border-right: 1px solid;"><img src="/docs/Filters/images/cue-trans-lin.png" alt="Linear curve" height="32"></td>
+      <td style="padding: 5px;border-bottom: 1px solid;">Linear Transition from last key frame to current</td>
+    </tr>
+    <tr>
+      <td style="padding: 5px;border-bottom: 1px solid;border-right: 1px solid;">edg</td>
+      <td style="padding: 5px;border-bottom: 1px solid;border-right: 1px solid;"><img src="/docs/Filters/images/cue-trans-edg.png" alt="Edge Transition" height="32"></td>
+      <td style="padding: 5px;border-bottom: 1px solid;">The transition to the current value occurs instantly</td>
+    </tr>
+    <tr>
+      <td style="padding: 5px;border-bottom: 1px solid;border-right: 1px solid;">sig</td>
+      <td style="padding: 5px;border-bottom: 1px solid;border-right: 1px solid;"><img src="/docs/Filters/images/cue-trans-sig.png" alt="Sigmoidal Curve" height="32"></td>
+      <td style="padding: 5px;border-bottom: 1px solid;">The transition from the last frame to the current follows a sigmoidal curve.</td>
+    </tr>
+    <tr>
+      <td style="padding: 5px;border-bottom: 1px solid;border-right: 1px solid;">e_i</td>
+      <td style="padding: 5px;border-bottom: 1px solid;border-right: 1px solid;"><img src="/docs/Filters/images/cue-trans-e-i.png" alt="Ease In" height="32"></td>
+      <td style="padding: 5px;border-bottom: 1px solid;">Transition starts slowly with increasing speed</td>
+    </tr>
+    <tr>
+      <td style="padding: 5px;border-right: 1px solid;">e_o</td>
+      <td style="padding: 5px;border-right: 1px solid;"><img src="/docs/Filters/images/cue-trans-e-o.png" alt="Ease In" height="32"></td>
+      <td style="padding: 5px;">Transition starts fast with decreasing speed</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Settings panel
 
