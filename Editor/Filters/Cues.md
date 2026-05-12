@@ -57,20 +57,59 @@ Besides renaming, the context menu also allows moving the cue around, duplicatin
 
 ### Using the Timeline Editor
 
-The timeline editor consists out of the channel list and the keyframes that are layed out through their time slots.
-The cursor can be moved by clicking on the time code bar at the top or by turning the control desk jog wheel. The seven segment displays on the control desk display the current time code as well.
+The timeline editor consists out of the channel list and the keyframes (2) that are layed out through their time slots.
+The cursor (3) can be moved by clicking on the time code bar (1) at the top or by turning the control desk jog wheel. The seven segment displays on the control desk display the current time code as well.
 
-By clicking the plus and minus buttons, or by holding the zoom button while simultaneusly turning the jog wheel, the time frame (i.e. zoom level) can be changed.
+By clicking the plus and minus buttons, or by holding the zoom button while simultaneously turning the jog wheel, the time frame (i.e. zoom level) can be changed.
 
 If the user clicks the record button on the control desk (if in live preview mode) or inside the GUI, a set of key frames are inserted at the current location with the selected transition types and currently dialed in values.
 Clicking a key frame will load the settings of the set into the current live preview if the mode was chosen. Clicking them a second time opens up a dialog which allows the user to change the settings of the selected frame.
 
-TODO include image with multiple channels of different data types.
+![Timeline widget with different key frames](images/cues-timeline-widget.png "Timeline Widget")
+
+The following transition types are available:
+
+|  Key  |                     Curve                     |                     Description                     |
+|-------|-----------------------------------------------|-----------------------------------------------------|
+| lin   | ![Linear curve](images/cue-trans-lin.png)     | Linear Transition from last key frame to current    |
+| edg   | ![Edge Transition](images/cue-trans-edg.png)  | The transition to the current value occurs instantly|
+| sig   | ![Sigmoidal Curve](images/cue-trans-sig.png)  | The transition from the last frame to the current follows a sigmoidal curve. |
+| e_i   | ![Ease In](images/cue-trans-e-i.png)          | Transition starts slowly with increasing speed      |
+| e_o   | ![Ease In](images/cue-trans-e-o.png)          | Transition starts fast with decreasing speed        |
 
 ### Settings panel
 
-TODO describe general settings and cue settings panel
+The general settings panel provides settings modifying the behavior of the entire cue filter as well as the current selected cue.
+It consists out of
+ * A section widget to select the end action of the current selected cue (1)
+ * A check box to enable restarting the current active cue on received play command (2)
+ * A zoom indicator (3) and buttons to zoom without requiring a connected controller
+ * A selector for a default cue that will be started on filter loading
+ * (If applicable) a checkbox to enable inter scene state persistence
+
+![General settings panel of cue editor](images/cues-general-settings.png "General Settings Panel")
+
+The following end actions are available:
+ * Hold current Values: If the cue reaches its end, execution is paused and all values are maintained. Use this setting to build transitions into static configurations.
+ * Restart Cue: If the cue reaches its end, the same cue will be scheduled again. Use this setting to build repeating effects.
+ * Jump to next cue: At the end of the current cue, the next cue from the stack will be scheduled.
 
 ## Control UI Widget
 
-TODO describe show UI widget usage
+In order to control a cue filter from the show UI, a special widget, called `Cue Control`, exist.
+
+![Cue Control Show UI widget](images/cues-control-widget.png "Cue Control Widget")
+
+The following functionality is provided:
+ * Resume Playback of current active cue (1)
+ * Pause Playback of current active cue (2)
+ * Restart Playback of current active cue (3)
+ * Stop Playback of current active cue (4)
+ * Load selected cue and begin playback immediately (5)
+ * Load selected cue and begin playback once the current active cue reached its end (6)
+
+The time code label (7) displays the current cursor position in the current active cue as well as it length.
+The current active cue is also displayed by a play or pause icon (depending on state) in the cue stack display (8).
+Besides listing of cues, they can also be selected for loading.
+Finally each cue control displays the connected cue filter (9).
+
