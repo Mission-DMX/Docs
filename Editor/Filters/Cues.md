@@ -69,13 +69,13 @@ Clicking a key frame will load the settings of the set into the current live pre
 
 The following transition types are available:
 
-|  Key  |                         Curve                         |                     Description                     |
-|-------|-------------------------------------------------------|-----------------------------------------------------|
-| lin   | ![Linear curve](images/cue-trans-lin.png =x32)        | Linear Transition from last key frame to current    |
-| edg   | ![Edge Transition](images/cue-trans-edg.png =x32)     | The transition to the current value occurs instantly|
-| sig   | ![Sigmoidal Curve](images/cue-trans-sig.png =x32)     | The transition from the last frame to the current follows a sigmoidal curve. |
-| e_i   | ![Ease In](images/cue-trans-e-i.png =x32)             | Transition starts slowly with increasing speed      |
-| e_o   | ![Ease In](images/cue-trans-e-o.png =x32)             | Transition starts fast with decreasing speed        |
+|  Key  |                     Curve                     |                     Description                     |
+|-------|-----------------------------------------------|-----------------------------------------------------|
+| lin   | ![Linear curve](images/cue-trans-lin.png)     | Linear Transition from last key frame to current    |
+| edg   | ![Edge Transition](images/cue-trans-edg.png)  | The transition to the current value occurs instantly|
+| sig   | ![Sigmoidal Curve](images/cue-trans-sig.png)  | The transition from the last frame to the current follows a sigmoidal curve. |
+| e_i   | ![Ease In](images/cue-trans-e-i.png)          | Transition starts slowly with increasing speed      |
+| e_o   | ![Ease In](images/cue-trans-e-o.png)          | Transition starts fast with decreasing speed        |
 
 ### Settings panel
 
