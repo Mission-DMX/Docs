@@ -63,15 +63,34 @@ The choice is entirely yours.
 </div>
 
 <br />
+
+<div class="card">
+<div class="card-header"><h2>Limitations</h2></div>
+<div class="card-body">
+Like any tool, Mission-DMX has it's limits. We wish not to hide them.
+<ul>
+<li><b>Only works on Linux.</b> We do not target Windows or Mac installations. While we're aware that some people are using Mission-DMX on both platforms, installation is quite hard. As we neither have the need (Debian is a fine OS) to support those nor the resources, this will not change in the near future.</li>
+<li><b>Initially steep learning curve.</b> While we're working a lot on improving the situation, the Mission-DMX project was started to overcome the restrictions of other affordable light consoles. As a result this flexibility is intimidating to new users. People familliar with tools like Blender will feel right at home though.</li>
+<li><b>No show file compatibility with other consoles.</b>While we're using <a href="https://open-fixture-library.org/manufacturers" target="_blank">OFL</a> as a fixture repository, we're not trying to achieve compatibility with the big players out there. The legal hassle isn't worth it ;-)</li>
+</ul>
+</div>
+</div>
+
+
+<br />
 <br />
 
 <div class="card">
-<div class="card-header"><h2>Latests posts</h2></div>
+<div class="card-header"><h2>Latests posts and tutorials</h2></div>
 <div class="card-body">
 <ul>
 {% for post in site.posts limit:5 %}
     <li><a href="{{site.url}}{{post.url}}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
+</div>
+<br />
+<div class="card-footer">
+    <a href="{{site.url}}/blog" style="margin-left: 1em;">See More</a>
 </div>
 </div>
