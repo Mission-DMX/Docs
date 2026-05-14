@@ -7,6 +7,8 @@ layout: default
 The sequencer filter is a filter that reacts on events and applies selected transitions on its output channels if these events occur.
 General ussage is quite simmilar to the [Cue Editor](Cues.md) but transitions may run in parallel and may only affect a subset of available channels.
 
+## Configuration
+
 ![Screenshot of Mission-DMX Sequencer Editor](images/sequencer-total.png "Sequencer Editor")
 
 The editor consist out of four section:
@@ -16,13 +18,16 @@ The editor consist out of four section:
 3. Timeline Controls. They work just like the Cue Editor and provide transfer function selection, a record button and zoom controls.
 4. The timeline Editor. Unlike its counterpart from the Cue editor, it will only display channels present in the current selected transition.
 
-## Managing channels
+If no transition is active, each channel can have its default value to which it may return.
+Otherwise the last active value remains.
+
+### Managing channels
 
 Channels are managed using the channel editor (1).
 They may be added using the `Add Channel` or `Add Multiple Channels` buttons.
 Selected channels might be removed using the `Remove Channel` button.
 
-## Managing transitions
+### Managing transitions
 
 Adding of a transition is done using the `Add Transition` button.
 It is advisable to have all desired target channels added beforehand.
@@ -44,8 +49,16 @@ It might be advisable to log and rename events prior to event assignment as it's
 
 Finally, selected transitions can be removed using the `Remove Transition` button.
 
-## Recording
+### Recording
 
 Recording of transitions works much like the the Cue editor.
 Keep in mind that live preview recording mode will only disable fader columns not in use by the active transition but will not remove them.
 As a result, you may need to switch pages in order to find the selected columns.
+
+## Sequence Listing in Show UI
+
+![Transition listing show UI widget](images/sequencer-active-transitions-widget.png "Transition Listing Widget")
+
+For show debugging purposes, a UI widget called `Sequence Listing` exists.
+At any given time, it displays all currently active transitions.
+
