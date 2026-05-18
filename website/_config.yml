@@ -29,7 +29,7 @@ url: "https://mission-dmx.org" # the base hostname & protocol for your site, e.g
 github_username:  Mission-DMX
 brand_name: Mission-DMX
 brand_logo: logo.png
-header: Making Light more light
+header: Open Source High Performance Light Console
 subheader: Documentation and Downloads for Mission-DMX lighting desk
 use_authors: true
 
