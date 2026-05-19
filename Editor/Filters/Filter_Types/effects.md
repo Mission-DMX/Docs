@@ -111,7 +111,7 @@ A chaser is a filter to generate color effects for multiple color outputs.
 - Initial parameters / GUI updatable parameters:
   * `config`: A current generator setting. Generator settings are a `;` separated list of layers. Each layer contains the functionality identifier followed by a list of its parameters which can either be a channel name or color constant or number constant. Each layer can set the current alpha mask or use the alpha mask for applying values. The default alpha mask is `100%` for all pixels. The default color is white. Parameters are separated from each other using `|`. The following layer functionality identifiers are available:
     - `plain_color`: Accepts a color parameter and sets all pixels to the provided parameter
-    - `rainbow`: Accepts two color parameters and sets all pixels on the range between the two colors
+    - `rainbow`: Accepts two color parameters and sets all pixels on the range between the two colors. The last parameter (number) indicates the number of segments.
     - `sprinkles`: Accepts five number parameters. The first indicates how many random sprinkles should be set on the alpha mask and the second indicates the size. The third parameter indicates the update rate in `ms` where 0 indicates no updates happening. The forth and last parameters set the values that the mask should get if there is no vs there is a spinkle at the given location.
     - `dots`: Like `sprinkles` but uses an even distribution instead of a random one
     - `scale`: Accepts four number parameters. The first one indicates where the cutoff in the alpha mask should start and the second indicated where it should end. The second set of parameters indicate the start mask value and the end mask value.
