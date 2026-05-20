@@ -230,6 +230,7 @@ option optimize_for = LITE_RUNTIME;
 
      bool top_lcd_row_inverted = 9;
      bool bottom_lcd_row_inverted = 10;
+     bool enabled = 11; // If enabled is set to false, the column will stay blank and not respond to inputs
    }
  
  message add_fader_bank_set {
