@@ -27,7 +27,7 @@ opened if you trust the source.
     3. [Remote Control](Remote.md)
 
 3. [Using ShowUI Tab](ShowGUI.md)
-4. Using the visualizer
+4. [Using the Visualizer](Visualizer.md)
 5. [Events](Events.md)
 6. [Macros and the Command Line](CLI/)
 
