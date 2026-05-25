@@ -24,6 +24,7 @@ Furthermore, there is a set of supported filters for the templating available.
  * `sub(arg)` subtracts `arg` from a number
  * `mul(arg)` multiplies a number with `arg`
  * `div(arg)` divides a number by `arg`
+ * `mod(arg)` calculate number modulus arg
 
 Within iterations, the channel guards can be used to skip connections.
 The following checks are available:
