@@ -24,3 +24,9 @@ The following trigger conditions are available at time of writing:
 
 While macros can call other macros, recursion is not supported and will raise an error.
 
+## Sharing Context
+Macros can share a common context and therefore their variables data.
+This is especially useful for having a macro initialize some state (using the startup trigger) and other macros using this state to control the show.
+
+In order to create or join a shared context, specify a none empty ID when prompted while creating the macro.
+Already existing shared context can be selected from the drop down.
