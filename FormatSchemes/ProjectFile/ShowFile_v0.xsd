@@ -597,9 +597,14 @@
                 </complexType>
             </element>
         </sequence>
-        <attribute name="name" type="string">
+        <attribute name="name" type="string" use="required">
             <annotation>
                 <documentation>Human readable, non-unique name</documentation>
+            </annotation>
+        </attribute>
+        <attribute name="contextID" type="string">
+            <annotation>
+                <documentation>ID of shared context or none</documentation>
             </annotation>
         </attribute>
     </complexType>
