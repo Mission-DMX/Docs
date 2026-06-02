@@ -43,3 +43,142 @@ message request_universe_list {
 message delete_universe {
   int32 id = 1;
 }
+
+message artnet_device_enumeration_reply {
+
+  message DiscoveredArtnetDevice {
+  
+    enum OperationMode {
+      STATE_UNKNOWN = 0;
+      STATE_LOCATE_IDENTIFY = 1;
+      STATE_MUTE_BLACK = 2;
+      STATE_NORMAL_OPERATION = 3;
+    }
+    
+    enum PortProgrammingAuthority {
+      PROGRAMMING_AUTHORITY_UNKNOWN = 0;
+      FRONT_PANEL_CONFIGURES_PORTS = 1;
+      NETWORK_CONFIGURES_PORTS = 2;
+      DOES_NOT_APPLY = 3;
+    }
+    
+    message PortCapabilities {
+      enum PortType {
+        DMX = 0;
+        MIDI = 1;
+        AVAB = 2;
+        CMX = 3;
+        ADB = 4;
+        ART_NET = 5;
+        DALI = 6;
+      }
+    
+      bool port_can_receive_data_from_network = 1;
+      bool port_can_publish_data_to_network = 2;
+      PortType port_type = 3;
+      bool input_converts_to_sacn = 4; // Field 21.0
+      bool input_receive_errors_detected = 5; // Field 21.2
+      bool input_is_disabled = 6; // Field 21.3
+      bool input_channel_includes_text_packages = 7; // Field 21.4
+      bool input_channel_includes_sip_packages = 8; // Field 21.5
+      bool input_channel_includes_test_packages = 9; // Field 21.6
+      bool input_channel_received_data = 10; // Field 21.7
+      bool output_converts_to_sacn = 11; // Field 22.0
+      bool output_merge_mode_is_ltp = 12; // Field 22.1
+      bool output_dmx_wiring_short_detected = 13; // Field 22.2
+      bool output_is_merging_artnet_data = 14; // Field 22.3
+      bool output_channel_includes_text_packages = 15; // Field 22.4
+      bool output_channel_includes_sip_packages = 16; // Field 22.5
+      bool output_channel_includes_test_packages = 17; // Field 22.6
+      bool output_channel_transmitting_data = 18; // Field 22.7
+      int32 input_switch = 19; // Field 23
+      int32 output_switch = 20; // Field 24
+      bool output_background_discovery_enabled = 21; // Field 41.4, inverted
+      bool output_background_discovery_currently_running = 22; // Field 41.5, inverted
+      bool output_style_is_delta = 23; // Field 41.6, inverted
+      bool output_rdm_enabled = 24; // Field 41.7, inverted
+    }
+    
+    enum DeviceStyle {
+      ARTNET_DMX_CONVERTER_NODE = 0;
+      LIGHTING_CONSOLE = 1;
+      MEDIA_SERVER = 2;
+      NETWORK_ROUTER = 3;
+      BACKUP_DEVICE = 4;
+      DIAGNOSTIC_TOOL = 5;
+      VISUALIZER = 6;
+    }
+    
+    enum FailsafeState {
+      HOLD_LAST_STATE = 0;
+      ALL_OUTPUT_ZERO = 1;
+      ALL_OUTPUT_FULL = 2;
+      PLAYBACK_FAILSAFE_SCENE = 3;
+    }
+    
+    enum BackgroundQueuePolicy {
+      STATUS_NONE = 1;
+      STATUS_ADVISORY = 2;
+      STATUS_WARNING = 3;
+      STATUS_ERROR = 4;
+      STATUS_DISABLED = 5;
+      STATUS_MANUFACTURER_INFO = 6;
+    }
+  
+    string device_hostname_or_ip = 1;
+    int32 device_port = 2;
+    int32 device_firmware_revision = 3;
+    int32 assigned_network_switch_id = 4;
+    int32 assigned_network_sub_switch_id = 5;
+    int32 oem_profuct_code = 6;
+    int32 ueba_bios_version = 7;
+    OperationMode operation_mode = 8;
+    PortProgrammingAuthority configuration_authority = 9;
+    bool booted_from_secondary_source = 10;
+    bool rdm_supported = 11;
+    bool ueba_bios_configured = 12;
+    int32 esta_manufacturer_id = 13;
+    string port_programming_identifier = 14;
+    string device_status_report = 15;
+    int32 device_port_count = 16;
+    repeated PortCapabilities port_capabilities_and_status = 17;
+    int32 configured_sacn_priority = 18;
+    repeated bool macro_active = 19;
+    repeated bool switch_inputs_active = 20;
+    DeviceStyle device_style_code = 21; // Field 31
+    string mac_address = 22;
+    string ip_of_bound_root_device = 23;
+    uint32 device_position_in_bound_hirachy = 24; // Field 39
+    bool device_supports_webbrowser_configuration = 25; // Field 40.0
+    bool device_ip_configured_by_dhcp = 26; // Field 40.1
+    bool device_supports_dhcp = 27; // Field 40.2
+    bool device_supports_15bit_port_addresses = 28; // Field 40.3
+    bool device_supports_switching_between_artnet_and_sacn = 29; // Field 40.4
+    bool device_is_squawking = 30; // Field 40.5
+    bool device_supports_remote_output_configuration_using_artnet = 31; // Field 40.6
+    bool device_supports_rdm_setup_over_artnet = 32; // Field 40.7
+    bool background_discovery_can_be_controlled_by_artnet = 33; // Field 42.0
+    bool background_queue_supported = 34; // Field 42.1
+    bool device_supports_rdmnet = 35; // Field 42.2
+    bool device_port_direction_can_be_reconfigured = 36; // Field 42.3
+    bool device_supports_llrp = 37; // Field 42.4
+    bool device_supports_programmable_failsafe = 38; // Field 42.5
+    FailsafeState failsafe_state = 39; // Field 42[7:6]
+    string rdmnet_llrp_default_responder_uid = 40; // Field 43-48
+    uint32 device_user_data = 41; // Field 49,50
+    uint32 device_maximum_refresh_rate_in_hz = 42; // Field 51,52
+    BackgroundQueuePolicy background_queue_policy = 43; // Field 53
+    uint32 background_queue_policy_raw = 44; // Field 53
+  }
+  
+  message USBDevice {
+    uint32 manufacturer_id = 1;
+    uint32 product_id = 2;
+  }
+
+  uint64 last_update_timestamp = 1;
+  repeated DiscoveredArtnetDevice artnet_devices = 2;
+  repeated USBDevice usb_devices = 3;
+  uint32 integrated_dmx_ports = 4;
+  uint32 integrated_midi_ports = 5;
+}
