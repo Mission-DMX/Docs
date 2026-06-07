@@ -16,7 +16,7 @@ By default it is displayed at the bottom of the main window but can be moved aro
 
 ![Screenshot showing the display of the embedded terminal.](images/gui-terminal.png "GUI terminal")
 
-*Known Limitations* After toggling the terminal, the scroll bar jumps to the bottom of the terminal and the user needs to scroll to the cursor position manually.
+Only within the GUI integrated terminal, a history is maintained. Accessing it is possible using the up and down arrow keys.
 
 ## Remote Access
 
@@ -35,7 +35,10 @@ While the used command language isn't as feature-rich as a modern shell, it prov
 ## Command Documentation
 In general you can type `help <command or topic>` to get a brief introduction.
 However, here is a list of special documentation for selected commands:
+ * [`asset`](Asset-Command.md)
+ * [`bankset`](Bankset-Command.md)
  * [`connect`](Connect-Command.md)
  * [`event`](Event-Command.md)
  * [`list`](List-Command.md)
+ * [`showctl`](Showctl-Command.md)
 
