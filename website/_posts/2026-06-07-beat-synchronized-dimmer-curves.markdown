@@ -5,7 +5,7 @@ date:   2026-06-06 10:59:01 +0200
 categories: Tips and Tricks
 author: doralitze
 ---
-# Beat Synchronied Dimmer Curves
+# Beat Synchronized Dimmer Curves
 
 A common quirk at music events are beat syncronized effects.
 In this blog post, we're going through setup of dimmer curves that are matched to the beat.
