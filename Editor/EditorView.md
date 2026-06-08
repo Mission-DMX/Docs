@@ -139,7 +139,20 @@ Finally, if changes are made to the bank set, they need to be applied using the 
 
 ### Media Management Editor
 
-TODO
+Media assets can be managed from the Asset Management Dialog.
+It can be accessed from the `Tools` menu.
+
+![Dialog window to manage media assets.](pictures/media-asset-mgmt-dialog.png "Media Asset Management Dialog")
+
+In order to load new assets, the button in the top left needs to be used.
+The correct decoder will be chosen based on the file extension of the selected file.
+The table down lists all assets, which can be filtered using the search bar or by selecting the corresponding types.
+
+Internally, assets are referenced by ID.
+Changing the name is therefore transparent to the show file.
+If type conversion (for example inlining) is desired, the context menu of an entry will be used.
+This operation does not alter the asset ID.
+Keep in mind that inlining, especially larger assets, will slow down saving and loading of show files.
 
 ### Scene Default editor
 A scene has default DMX values for the universe that are applied upon switching to the scene.
