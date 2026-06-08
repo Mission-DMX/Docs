@@ -4,11 +4,12 @@
 {%- assign nav = site.pages | sort:"nav_order" | reverse | sort:"dir" %}
 {%- assign last_path = "" %}
 
-<div class="card">
+<div class="sidebar">
+<div class="card" style="min-width: 250px;">
 <div class="card-header">
 <h2>Navigation</h2>
 </div>
-<div class="card-body">
+<div class="card-body" style="min-width: 90%;">
 <ul>
 {%- for nav_item in nav %}
     {%- if nav_item.hide != true and nav_item.nav_exclude != true and nav_item.layout == "default" %}
@@ -33,5 +34,6 @@
     {%- endif %}
 {%- endfor %}
 </ul>
+</div>
 </div>
 </div>
