@@ -11,7 +11,7 @@ layout: page
         <h1>Downloads</h1>
       </div>
       <div class="column col-4 col-md-6 col-sm-12">
-        <a href="">
+        <a href="https://github.com/Mission-DMX/Project-Editor/archive/refs/heads/main.zip">
           <div class="card card-link">
             <div class="card-body text-center my-4">
               <h5 class="text-bold">Source Code</h5>
@@ -31,7 +31,7 @@ layout: page
         </a>
       </div>
       <div class="column col-4 col-md-6 col-sm-12">
-        <a href="">
+        <a href="https://mission-dmx.org/downloads/packages/missiondmx-editor.deb">
           <div class="card card-link">
             <div class="card-body text-center my-4">
               <h5 class="text-bold">Packaged Installer</h5>

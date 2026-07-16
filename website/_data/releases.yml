@@ -1,3 +1,25 @@
+- version: 1.2.1
+  fish_min_rev: a4f519e4967b7c994fd5e8d37bc581d3973ff1ff
+  source_link: /downloads/archive/1.1.6/sources.tar.gz
+  package_link: /downloads/packages/missiondmx-editor-1.2.1.deb
+  changes:
+    - "Show UI Multi Monitor Support"
+    - "CLI Gui Terminal"
+    - "fix: 324 loading a show file makes import filters loose their channels"
+    - "Improved Asset Management"
+    - "Chaser Filter"
+    - "fix: Mux filter generation"
+    - "fix: Sequencer Editor missing management functions"
+    - "fix: Dimmer Brightness Mixin vFilter"
+    - "Color To Color Wheel adapter vFilter"
+    - "GUI Ready mode handling"
+    - "fix: duplicate saving of fixtures"
+    - "fix: import filter failing to instantiate vfilter"
+    - "fix: crash in seqeunce editor"
+    - "fix: error causing debug vis widget deletion to fail"
+    - "various smaller fixes"
+    - "Fixture Matrix Channel Support"
+    - "chg: lua number color to be better visible"
 - version: 1.1.6
   fish_min_rev: 5bc67a770e5dad515e95418aaea659d22110e8fa
   source_link: /downloads/archive/1.1.6/sources.tar.gz
