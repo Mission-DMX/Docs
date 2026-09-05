@@ -1,3 +1,12 @@
+- version: 1.3.0
+  fish_min_rev: 56f0e68b708e7e9ca3626e1aa146c2ba19d2a909
+  source_link: /downloads/archive/1.3.0/sources.tar.gz
+  package_link: /downloads/packages/missiondmx-editor-1.3.0.deb
+  changes:
+    - "added scene static DMX default values"
+    - "added feature to export show files for fish in standalone mode"
+    - "added recently used showfiles recall feature"
+    - "various bug fixes"
 - version: 1.2.1
   fish_min_rev: a4f519e4967b7c994fd5e8d37bc581d3973ff1ff
   source_link: /downloads/archive/1.1.6/sources.tar.gz
