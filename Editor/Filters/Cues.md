@@ -106,6 +106,18 @@ The following transition types are available:
   </tbody>
 </table>
 
+Using the `Record from image` button, the color channels at the current cursor location can be filled with pixel data from a selected image.
+The opening dialog queries the user to select an image asset. The provided image should provide at least as many pixels as there are channels to be filled.
+Otherwise the remaining channels will be filled in blank.
+
+Using the radio buttons, the traversal can be switched from column-first to row-first. This option affects the filling order of channels and should match the layout used in the show file.
+Usually, this matches the layout used by the controlled fixtures.
+
+Below, the user may enter the after how many channels the cursor should wrap to the next row (or column). Leaving the value at `0` causes the wizard to use the dimensions of the provided image.
+Use this option if your image does not provide the exact dimensions of your pixel matrix.
+
+Submit the entry by clicking the accept button.
+
 ### Settings panel
 
 The general settings panel provides settings modifying the behavior of the entire cue filter as well as the current selected cue.
