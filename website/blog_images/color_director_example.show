@@ -1,0 +1,62 @@
+<bord_configuration xmlns="http://www.asta.uni-luebeck.de/MissionDMX/ShowFile" xsi:schemaLocation="http://www.asta.uni-luebeck.de/MissionDMX/ShowFile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" show_name="Color Director Example" default_active_scene="0" notes="This example demonstrates instantiation of a color director filter.">
+  <scene id="0" human_readable_name="t" linkedBankset="99654d44-9781-4ecd-bae0-2832ba074521">
+    <filter id="Color Director.0" type="-15" pos="19.675763016157987,-19.441113105924615">
+      <filterConfiguration name="colorgroups" value="g1|mo1|mo2#g2|so_0|so_1|so_2|so_3|so_4" />
+      <filterConfiguration name="presets" value="75|lin|0.0,0.0,1.0$75|lin|0.0,1.0,1.0$75|lin|18.0,1.0,1.0$75|lin|36.0,1.0,1.0$75|lin|54.0,1.0,1.0$75|lin|72.0,1.0,1.0$75|lin|90.0,1.0,1.0$75|lin|108.0,1.0,1.0$75|lin|126.0,1.0,1.0$75|lin|144.0,1.0,1.0$75|lin|162.0,1.0,1.0$75|lin|180.0,1.0,1.0$75|lin|198.0,1.0,1.0$75|lin|216.0,1.0,1.0$75|lin|234.0,1.0,1.0$75|lin|252.0,1.0,1.0$75|lin|270.0,1.0,1.0$75|lin|288.0,1.0,1.0$75|lin|306.0,1.0,1.0$75|lin|324.0,1.0,1.0$75|lin|342.0,1.0,1.0" />
+      <filterConfiguration name="recalls" value="" />
+      <filterConfiguration name="format_version" value="1" />
+      <channellink input_channel_id="time" output_channel_id="Time.0:value" />
+    </filter>
+    <filter id="Color Filter (Debug, Remote).mo1" type="68" pos="197.86817235202562,-74.68203593312963">
+      <channellink input_channel_id="value" output_channel_id="Color Director.0:g1__mo1" />
+    </filter>
+    <filter id="Color Filter (Debug, Remote).mo2" type="68" pos="197.32526391396453,-18.943436292196083">
+      <channellink input_channel_id="value" output_channel_id="Color Director.0:g1__mo2" />
+    </filter>
+    <filter id="Color Filter (Debug, Remote).so0" type="68" pos="344.6344201078608,11.640405718575948">
+      <channellink input_channel_id="value" output_channel_id="Color Director.0:g2__so_0" />
+    </filter>
+    <filter id="Color Filter (Debug, Remote).so1" type="68" pos="343.5486032317384,67.7409443182168">
+      <channellink input_channel_id="value" output_channel_id="Color Director.0:g2__so_1" />
+    </filter>
+    <filter id="Color Filter (Debug, Remote).so2" type="68" pos="343.910542190445,123.84148291785775">
+      <channellink input_channel_id="value" output_channel_id="Color Director.0:g2__so_2" />
+    </filter>
+    <filter id="Color Filter (Debug, Remote).so3" type="68" pos="344.4534506285069,179.39911307943757">
+      <channellink input_channel_id="value" output_channel_id="Color Director.0:g2__so_3" />
+    </filter>
+    <filter id="Color Filter (Debug, Remote).so4" type="68" pos="344.81538958721336,236.94740751390793">
+      <channellink input_channel_id="value" output_channel_id="Color Director.0:g2__so_4" />
+    </filter>
+    <filter id="Time.0" type="32" pos="-177.7297875882746,34.695387825760236" />
+    <filterpage name="default" parent="">
+      <filterid>Color Director.0</filterid>
+      <filterid>Color Filter (Debug, Remote).mo1</filterid>
+      <filterid>Color Filter (Debug, Remote).mo2</filterid>
+      <filterid>Color Filter (Debug, Remote).so0</filterid>
+      <filterid>Color Filter (Debug, Remote).so1</filterid>
+      <filterid>Color Filter (Debug, Remote).so2</filterid>
+      <filterid>Color Filter (Debug, Remote).so3</filterid>
+      <filterid>Color Filter (Debug, Remote).so4</filterid>
+      <filterid>Time.0</filterid>
+    </filterpage>
+    <uipage title="">
+      <widget posX="111" posY="94" sizeW="0" sizeH="0" filterID="" variante="label">
+        <configurationEntry name="text" value="MO Group&#10;&#10;" />
+      </widget>
+      <widget posX="100" posY="148" sizeW="0" sizeH="0" filterID="" variante="label">
+        <configurationEntry name="text" value="SO Group&#10;&#10;" />
+      </widget>
+      <widget posX="277" posY="90" sizeW="0" sizeH="0" filterID="Color Filter (Debug, Remote).mo1" variante="debug_color" />
+      <widget posX="408" posY="90" sizeW="0" sizeH="0" filterID="Color Filter (Debug, Remote).mo2" variante="debug_color" />
+      <widget posX="279" posY="148" sizeW="0" sizeH="0" filterID="Color Filter (Debug, Remote).so0" variante="debug_color" />
+      <widget posX="408" posY="150" sizeW="0" sizeH="0" filterID="Color Filter (Debug, Remote).so1" variante="debug_color" />
+      <widget posX="531" posY="152" sizeW="0" sizeH="0" filterID="Color Filter (Debug, Remote).so2" variante="debug_color" />
+      <widget posX="652" posY="149" sizeW="0" sizeH="0" filterID="Color Filter (Debug, Remote).so3" variante="debug_color" />
+      <widget posX="777" posY="150" sizeW="0" sizeH="0" filterID="Color Filter (Debug, Remote).so4" variante="debug_color" />
+      <widget posX="117" posY="289" sizeW="0" sizeH="0" filterID="Color Director.0" variante="color_director" />
+    </uipage>
+  </scene>
+  <bankset linked_by_default="true" id="99654d44-9781-4ecd-bae0-2832ba074521" />
+  <uihint name="media_assets" value="[]" />
+</bord_configuration>

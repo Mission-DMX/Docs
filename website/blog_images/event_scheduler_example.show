@@ -1,0 +1,54 @@
+<bord_configuration xmlns="http://www.asta.uni-luebeck.de/MissionDMX/ShowFile" xsi:schemaLocation="http://www.asta.uni-luebeck.de/MissionDMX/ShowFile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" show_name="Event Scheduler Example" default_active_scene="0" notes="This example show file highlights how to use the event scheduler.">
+  <scene id="0" human_readable_name="test" linkedBankset="cb43098e-5be7-4922-acab-0d2b6a7df4e5">
+    <filter id="Event Scheduler.0" type="80" pos="-94.33500897666067,-91.28599640933574">
+      <initialParameters name="length" value="3" />
+      <initialParameters name="update_triggers" value="1,1,TRUE;2,0,TRUE" />
+      <initialParameters name="step" value="0" />
+      <initialParameters name="synchronization_target" value="1,1" />
+      <filterConfiguration name="event_data" value="0,0,0,;0,1,0," />
+      <filterConfiguration name="event_names" value="a;b" />
+    </filter>
+    <filter id="Sequencer.0" type="-12" pos="-34.07217235188509,-25.05116696588871">
+      <filterConfiguration name="channels" value="a:8bit:0:true:false:max;b:8bit:0:true:false:max" />
+      <filterConfiguration name="transitions" value="0:0#No Name#a:255:lin:1170.0;0:1#No Name#b:255:lin:1190.0" />
+      <channellink input_channel_id="time" output_channel_id="Time.0:value" />
+    </filter>
+    <filter id="Time.0" type="32" pos="-176.1332136445241,-29.394434470377035" />
+    <filter id="8 Bit Filter (Debug, Remote).0" type="65" pos="144.18276481149013,-29.75637342908439">
+      <channellink input_channel_id="value" output_channel_id="Sequencer.0:a" />
+    </filter>
+    <filter id="8 Bit Filter (Debug, Remote).1" type="65" pos="155.58384201077195,45.345960502692975">
+      <channellink input_channel_id="value" output_channel_id="Sequencer.0:b" />
+    </filter>
+    <filterpage name="default" parent="">
+      <filterid>Event Scheduler.0</filterid>
+      <filterid>Sequencer.0</filterid>
+      <filterid>Time.0</filterid>
+      <filterid>8 Bit Filter (Debug, Remote).0</filterid>
+      <filterid>8 Bit Filter (Debug, Remote).1</filterid>
+    </filterpage>
+    <uipage title="">
+      <widget posX="319" posY="220" sizeW="0" sizeH="0" filterID="Event Scheduler.0" variante="event_scheduler_ctrl">
+        <configurationEntry name="width" value="800" />
+        <configurationEntry name="height" value="600" />
+      </widget>
+      <widget posX="331" posY="74" sizeW="0" sizeH="0" filterID="8 Bit Filter (Debug, Remote).0" variante="debug_number">
+        <configurationEntry name="mode" value="Illumination" />
+      </widget>
+      <widget posX="338" posY="130" sizeW="0" sizeH="0" filterID="8 Bit Filter (Debug, Remote).1" variante="debug_number">
+        <configurationEntry name="mode" value="Illumination" />
+      </widget>
+      <widget posX="604" posY="25" sizeW="0" sizeH="0" filterID="" variante="macrobuttons">
+        <configurationEntry name="items" value="[{&quot;text&quot;: &quot;Trigger&quot;, &quot;icon&quot;: &quot;&quot;, &quot;command&quot;: &quot;event send -i 1 --function 1&quot;}]" />
+        <configurationEntry name="width" value="128" />
+        <configurationEntry name="height" value="134" />
+      </widget>
+    </uipage>
+  </scene>
+  <bankset linked_by_default="true" id="cb43098e-5be7-4922-acab-0d2b6a7df4e5" />
+  <uihint name="media_assets" value="[]" />
+  <eventsource id="trigger_sender" type="fish.builtin.plain" name="trigger_sender" />
+  <macro name="New Macro">
+    <content>None</content>
+  </macro>
+</bord_configuration>
