@@ -13,10 +13,10 @@ So here they are.
 
 ## Event Router
 Please download the show file <a href="/blog_images/event_scheduler_example.show" download>here</a>.
-The basis of the show file is a [Sequencer](https://mission-dmx.org/docs/Filters/Sequences.html) filter reacting on events that are scheduled by [Event Scheduler.0](/docs/Filters/EventScheduler.md).
+The basis of the show file is a [Sequencer](https://mission-dmx.org/docs/Filters/Sequences.html) filter reacting on events that are scheduled by [Event Scheduler.0](https://mission-dmx.org/docs/Filters/EventScheduler.html).
 Within the show UI, the output of the sequencer channels can be observed, the step of the event scheduler can be advanced using the macro button and the event scheduler can be reconfigured.
 
 ## Color Director
 Please download the show file <a href="/blog_images/color_director_example.show" download>here</a>.
-This example instantes a [color director](/docs/Filters/ColorDirector.md), controlled by a UI widget.
+This example instantes a [color director](https://mission-dmx.org/docs/Filters/ColorDirector.html), controlled by a UI widget.
 The outputs are piped back into the show UI for visual inspection.
