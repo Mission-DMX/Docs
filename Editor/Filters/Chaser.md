@@ -5,6 +5,9 @@ layout: default
 # Using the Chaser Filter
 
 The chaser filter generates effects for a defined number of output color channels by applying selected layers after each other on the color data using an intensity mask.
+A mask value for a given pixel of 0 means that the next overriding color will not be applied at all.
+A value of 65535 means that the new color will override the old one completely.
+All values in between mix both colors in a linear fashion.
 For each output pixel, a numbered output channel is created, starting at `0`.
 Updates to effects can either be synchronized to time (in which case the time and time scaling inputs are used) or to events.
 Layers can be set up using static color or number parameters or the parameters values can be gathered from corresponding input channels.
@@ -54,6 +57,15 @@ Some layers provide multiple possible behaviors.
 If such a layer is selected, the desired settings can be entered on top of the parameter view (`C1`).
 
 Pressing the test button (`B5`) sends the current selected configuration to fish.
+
+## Layers
+
+TODO finish table
+| Layer       | Description                                                     | Parameters                                                                                                                                                                                                                                                                                                                                                                      |
+|-------------|-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Plain Color | This layer colors each pixel in accordance to the current mask. |                                                                                                                                                                                                                                                                                                                                                                                 |
+| Rainbow     | This layer interpolates between both given colors.              | <ul><li>Start Color: the color of the first pixel of a segment</li><li>End Color: the color of the last pixel of a segment</li><li>Number of Segments</li></ul>                                                                                                                                                                                                                 |
+| Sprinkles   | Distributes "sprinkles" randomly across the mask.               | <ul><li>Number of Sprinkles</li><li>Sprinkle Size</li><li>Update Rate: How many milliseconds should pass before a new change is generated? 0 indicates no updates.</li><li>No dot value:The value the mask should obtain if there is no something at the given index.</li><li>Dot Value: The value the mask should obtain if there is a something at the given index.</li></ul> |
 
 ## UI Widget
 
