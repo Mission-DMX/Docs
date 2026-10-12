@@ -61,11 +61,45 @@ Pressing the test button (`B5`) sends the current selected configuration to fish
 ## Layers
 
 TODO finish table
-| Layer       | Description                                                     | Parameters                                                                                                                                                                                                                                                                                                                                                                      |
-|-------------|-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Plain Color | This layer colors each pixel in accordance to the current mask. |                                                                                                                                                                                                                                                                                                                                                                                 |
-| Rainbow     | This layer interpolates between both given colors.              | <ul><li>Start Color: the color of the first pixel of a segment</li><li>End Color: the color of the last pixel of a segment</li><li>Number of Segments</li></ul>                                                                                                                                                                                                                 |
-| Sprinkles   | Distributes "sprinkles" randomly across the mask.               | <ul><li>Number of Sprinkles</li><li>Sprinkle Size</li><li>Update Rate: How many milliseconds should pass before a new change is generated? 0 indicates no updates.</li><li>No dot value:The value the mask should obtain if there is no something at the given index.</li><li>Dot Value: The value the mask should obtain if there is a something at the given index.</li></ul> |
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Plain Color</td>
+<td>This layer colors each pixel in accordance to the current mask.</td>
+<td></td>
+</tr>
+<tr>
+<td>Rainbow</td>
+<td>This layer interpolates between both given colors.</td>
+<td>
+  <ul>
+    <li>Start Color: the color of the first pixel of a segment</li>
+    <li>End Color: the color of the last pixel of a segment</li>
+    <li>Number of Segments</li>
+  </ul>
+</td>
+</tr>
+<tr>
+<td>Sprinkles</td>
+<td>Distributes "sprinkles" randomly across the mask.</td>
+<td>
+  <ul>
+    <li>Number of Sprinkles</li>
+    <li>Sprinkle Size</li>
+    <li>Update Rate: How many milliseconds should pass before a new change is generated? 0 indicates no updates.</li>
+    <li>No dot value:The value the mask should obtain if there is no something at the given index.</li>
+    <li>Dot Value: The value the mask should obtain if there is a something at the given index.</li>
+  </ul>
+</td>
+</tr>
+</tbody>
+</table>
 
 ## UI Widget
 
