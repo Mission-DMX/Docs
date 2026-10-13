@@ -60,12 +60,12 @@ Pressing the test button (`B5`) sends the current selected configuration to fish
 
 ## Layers
 
-TODO finish table
-<table>
+TODO finish table and insert lazy loading videos from visualizer
+<table class="table">
 <thead>
 <tr>
 <th>Layer</th>
-<th>Description</th>
+<th>Description and Example</th>
 <th>Parameters</th>
 </tr>
 </thead>
