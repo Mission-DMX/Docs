@@ -61,7 +61,7 @@ Pressing the test button (`B5`) sends the current selected configuration to fish
 ## Layers
 
 TODO finish table and insert lazy loading videos from visualizer
-<table class="table">
+<table class="table table-striped">
 <thead>
 <tr>
 <th>Layer</th>
@@ -72,7 +72,11 @@ TODO finish table and insert lazy loading videos from visualizer
 <tbody><tr>
 <td>Plain Color</td>
 <td>This layer colors each pixel in accordance to the current mask.</td>
-<td></td>
+<td>
+  <ul>
+    <li>Color: The color to apply based on the current mask.</li>
+  </ul>
+</td>
 </tr>
 <tr>
 <td>Rainbow</td>

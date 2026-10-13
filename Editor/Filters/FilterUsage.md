@@ -18,6 +18,7 @@ A general introduction to constants is given [here](Constants.md).
 | [float constant](Filter_Types/constants.md#float-constant)
 | [color constant](Filter_Types/constants.md#color-constant)
 | [position constant](Filter_Types/constants.md#position-constant) | [position constant](./Constants.md#position-constant)
+{: .table .table-striped}
 
 ## Debug
 
@@ -27,6 +28,7 @@ A general introduction to constants is given [here](Constants.md).
 | [16 bit output](Filter_Types/debug.md#16-bit-constant)
 | [float output](Filter_Types/debug.md#float-constant)
 | [color output](Filter_Types/debug.md#color-constant)
+{: .table .table-striped}
 
 ## Adapter
 
@@ -49,6 +51,7 @@ A general introduction to constants is given [here](Constants.md).
 | [universe output](Filter_Types/adapters.md#Universe-Output)
 | [Color Brightness Mixin](VirtualFilter/ColorBrightnessMixin.md) | Mix brightness of Color with other value. |
 | [Dimmer Brightness Mixin](VirtualFilter/brightness_mixin.md) | Mix two numerical brightness values | 
+{: .table .table-striped}
 
 ## Arithmetics
 
@@ -62,6 +65,7 @@ A general introduction to constants is given [here](Constants.md).
 | [exponential](Filter_Types/arithmetics.md#exponential)
 | [minimum](Filter_Types/arithmetics.md#minimum)
 | [maximum](Filter_Types/arithmetics.md#maximum)
+{: .table .table-striped}
 
 ## Trigonometric
 
@@ -73,6 +77,7 @@ A general introduction to constants is given [here](Constants.md).
 | [arcsine](Filter_Types/trigonometrics.md#arcsine)
 | [arccosine](Filter_Types/trigonometrics.md#arccosine)
 | [arctangent](Filter_Types/trigonometrics.md#arctangent)
+{: .table .table-striped}
 
 ## Waves
 
@@ -81,6 +86,7 @@ A general introduction to constants is given [here](Constants.md).
 | [square](Filter_Types/wave.md#square) | generates a square wave. |
 | [triangle](Filter_Types/wave.md#triangle) | Generates a triangle wave. |
 | [sawtooth](Filter_Types/wave.md#sawtooth) | Generates a saw wave. |
+{: .table .table-striped}
 
 ## Time related filters
 
@@ -93,6 +99,7 @@ A general introduction to constants is given [here](Constants.md).
 | [switch_off_delay_8bit](Filter_Types/time.md#switch_off_delay_8bit) | Delay switching off by specified time for 8bit values. |
 | [switch_off_delay_16bit](Filter_Types/time.md#switch_off_delay_16bit) | Delay switching off by specified time for 16bit values. |
 | [switch_off_delay_double](Filter_Types/time.md#switch_off_delay_double) | Delay switching off by specified time for float values. |
+{: .table .table-striped}
 
 ## Fader input
 
@@ -104,6 +111,7 @@ A general introduction to constants is given [here](Constants.md).
 | [filter_fader_column_hsia](Filter_Types/fader.md#filter_fader_column_hsia) | |
 | [filter_fader_column_hsiu](Filter_Types/fader.md#filter_fader_column_hsiu) | |
 | [filter_fader_column_hsiau](Filter_Types/fader.md#filter_fader_column_hsiau) | |
+{: .table .table-striped}
 
 ## Effect-filters
 
@@ -112,12 +120,14 @@ A general introduction to constants is given [here](Constants.md).
 | [cue_list_filter](Filter_Types/effects.md#cue_list_filter) | [Cue Filter](./Cues.md#cue-filter) |
 | [Sequencer](Filter_Types/effects.md#sequencer) | Apply sequenced updates based on events |
 | [Chaser](Filter_Types/effects.md#chaser) | Generate color output for pixels based on parametrizable masks. |
+{: .table .table-striped}
 
 ## Script filters
 
 | Filter | Description |
 |--------|-------|
 | [lua_script_filter](Filter_Types/script.md#lua_script_filter) | Filter to execute user defined scripts in scene. See also: [Scripting](./Scripting.md) |
+{: .table .table-striped}
 
 ## Signal Routing
 
@@ -131,4 +141,5 @@ A general introduction to constants is given [here](Constants.md).
 | [filter_switch_16bit](Filter_Types/signal_routing.md#filter_switch_16bit) | Select one of the provided inputs and forward it to the output |
 | [filter_switch_float](Filter_Types/signal_routing.md#filter_switch_float) | Select one of the provided inputs and forward it to the output |
 | [filter_switch_color](Filter_Types/signal_routing.md#filter_switch_color) | Select one of the provided inputs and forward it to the output |
+{: .table .table-striped}
 

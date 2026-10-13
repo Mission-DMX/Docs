@@ -18,6 +18,7 @@ It provides a set of sub‑commands for creating a new bank set, adding columns 
 | **commit** | Commit (save) all pending changes made to the current bank set. |
 | **info**   | Display the contents and configuration of the selected bank set. |
 | **activate** | Switch the active bank set to the one currently selected. |
+{: .table .table-striped}
 
 ---
 

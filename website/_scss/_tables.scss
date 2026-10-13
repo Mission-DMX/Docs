@@ -63,3 +63,11 @@
     border-bottom-width: $border-width-lg;
   }
 }
+
+.table tbody tr,
+.table td,
+.table th {
+  border-bottom-color: $gray-color-dark;
+}
+
+

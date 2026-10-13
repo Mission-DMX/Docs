@@ -17,6 +17,7 @@ The **showctl** command is used to manage show files and control scene selection
 | **select-scene** | Switch to a specific scene in the actived show. |
 | **filtermsg** | Send an update to a filter associated with a scene. |
 | **readymode** | Control ready‑mode actions such as enable, abort, commit, or query. |
+{: .table .table-striped}
 
 ---
 
