@@ -135,3 +135,51 @@ A chaser is a filter to generate color effects for multiple color outputs.
     - `open_from_center`: Applys a pattern on the mask that travels from the center to the edges. Accepted number parameters are the update speed, decay rate and mask application intensity.
     - `segwave__DIR` where `DIR` is either `fwd` or `rev`: This layer generates a segmented waves on the mask in the specified direction. Accepted number parameters are the update speed, decay rate, the number of waves and mask application intensity.
     - `wave__DIR` where `DIR` is either `fwd` or `rev`: This layer generates a decaing wave on the mask in the specified direction. Accepted number parameters are the update speed, decay rate, the number of waves and mask application intensity.
+
+## filter_series_strobe_generator_8bit
+A series strobe generator gates a brightness channel through a square-wave strobe whose frequency and duty cycle are driven by two 8bit input channels.
+ - Type name: `filter_series_strobe_generator_8bit`
+ - Type id: `81`
+ - Input channels:
+   * `brightness` of type `8bit` (default 0): the brightness value that will be gated into the strobe output.
+   * `frequency` of type `8bit` (default 0): 0 disables strobing (brightness is forwarded unchanged); 1 selects the slowest configured frequency; 255 selects the maximum frequency, at which the output toggles every update tick (20 Hz full cycles on a 40 Hz update loop). Intermediate values interpolate linearly in Hz between the slowest configured frequency and the maximum.
+   * `duty_cycle` of type `8bit` (default 128): 0 means exactly one update tick per cycle outputs the brightness and the rest output 0; 255 means exactly one update tick per cycle outputs 0 and the rest output the brightness. Intermediate values linearly interpolate the number of ON ticks.
+ - Output channels:
+   * `value` of type `8bit`
+ - Configuration parameters:
+   * `slowest_period_ms`: a `double` (parsed via `std::stod`) giving the full-cycle period in milliseconds that is selected when `frequency == 1`. Must be at least 50 ms (two update ticks at 40 Hz).
+ - initial parameters: None
+ - GUI update keys: None
+ - Notes
+   * At `frequency == 255` the cycle is only two update ticks long, so the `duty_cycle` input has no observable effect.
+   * The internal cycle counter is reset on scene activation and whenever `frequency` is 0.
+
+## filter_series_strobe_generator_16bit
+ - Type name: `filter_series_strobe_generator_16bit`
+ - Type id: `82`
+ - Input channels:
+   * `brightness` of type `16bit` (default 0)
+   * `frequency` of type `8bit` (default 0): same semantics as the 8bit variant.
+   * `duty_cycle` of type `8bit` (default 128): same semantics as the 8bit variant.
+ - Output channels:
+   * `value` of type `16bit`
+ - Configuration parameters:
+   * `slowest_period_ms`: see `filter_series_strobe_generator_8bit`.
+ - initial parameters: None
+ - GUI update keys: None
+ - Notes: see `filter_series_strobe_generator_8bit`.
+
+## filter_series_strobe_generator_float
+ - Type name: `filter_series_strobe_generator_float`
+ - Type id: `83`
+ - Input channels:
+   * `brightness` of type `float` (default 0.0)
+   * `frequency` of type `8bit` (default 0): same semantics as the 8bit variant.
+   * `duty_cycle` of type `8bit` (default 128): same semantics as the 8bit variant.
+ - Output channels:
+   * `value` of type `float`
+ - Configuration parameters:
+   * `slowest_period_ms`: see `filter_series_strobe_generator_8bit`.
+ - initial parameters: None
+ - GUI update keys: None
+ - Notes: see `filter_series_strobe_generator_8bit`.

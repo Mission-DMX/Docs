@@ -83,6 +83,9 @@ If you're looking for a reference for filters usable in the editor, consult the 
 - [cue_list_filter](./effects.md#cue_list_filter)
 - [sequencer](./effects.md#sequencer)
 - [chaser](./effects.md#chaser)
+- [filter_series_strobe_generator_8bit](./effects.md#filter_series_strobe_generator_8bit)
+- [filter_series_strobe_generator_16bit](./effects.md#filter_series_strobe_generator_16bit)
+- [filter_series_strobe_generator_float](./effects.md#filter_series_strobe_generator_float)
 
 ## [Script filters](./script.md#Lua-List)
 - [lua_script_filter](./script.md#lua_script_filter)
