@@ -33,3 +33,8 @@ message update_parameter {
   string parameter_value = 3; // The value of the parameter to set
   int32 scene_id = 4; // The scene where the filter is located
 }
+
+message channel_scope {
+  string channel_id = 1;
+  string current_value = 2;
+}

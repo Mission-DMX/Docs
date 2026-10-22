@@ -31,4 +31,5 @@ enum MsgType {
  MSGT_READYMODE_UPDATE = 23; // notification of ready mode update that should be followed by the other side.
  MSGT_REQUEST_DISCOVERED_DEVICES = 24; // Request discovered DMX and ArtNet Devices
  MSGT_REPLY_DISCOVERED_DEVICES = 25;
+ MSGT_CHANNEL_SCOPE = 26; // Request and reply for a channel scope
 }
