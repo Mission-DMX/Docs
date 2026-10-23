@@ -117,12 +117,12 @@ message artnet_device_enumeration_reply {
     }
     
     enum BackgroundQueuePolicy {
-      STATUS_NONE = 1;
-      STATUS_ADVISORY = 2;
-      STATUS_WARNING = 3;
-      STATUS_ERROR = 4;
-      STATUS_DISABLED = 5;
-      STATUS_MANUFACTURER_INFO = 6;
+      STATUS_NONE = 0;
+      STATUS_ADVISORY = 1;
+      STATUS_WARNING = 2;
+      STATUS_ERROR = 3;
+      STATUS_DISABLED = 4;
+      STATUS_MANUFACTURER_INFO = 5;
     }
   
     string device_hostname_or_ip = 1;
