@@ -183,3 +183,51 @@ A series strobe generator gates a brightness channel through a square-wave strob
  - initial parameters: None
  - GUI update keys: None
  - Notes: see `filter_series_strobe_generator_8bit`.
+
+## filter_dimmer_director
+Fans a single 16bit dimmer input per group out to an `X*Y*Z` grid of 16bit outputs. Each output cell is modulated by a shared pre-sampled effect curve whose index is shifted per axis by the cell's `(x, y, z)` coordinate, then passed through a dimmer response curve (linear, sigmoidal or custom cubic Bézier) that is selected per group at runtime.
+ - Type name: `filter_dimmer_director`
+ - Type id: `84`
+ - Input channels:
+   * One 16bit channel per group with the group's name (e.g. a group named `wash` requires an input `wash`).
+   * `mixin_<i>` of type `16bit` for every global mixin input, with `<i>` running from `0` up to the configured count. Each mixin is normalized to `[0, 1]` and multiplied into every group's post-normalization value.
+   * `offset_<i>` of type `16bit` for every global offset input. Each offset is normalized to `[0, 1]` and added after the mixins.
+   * `mixin_<group>_<j>` of type `16bit` for every per-group mixin input declared on `<group>`.
+   * `offset_<group>_<l>` of type `16bit` for every per-group offset input declared on `<group>`.
+ - Output channels:
+   * `<group>_<x>_<y>_<z>` of type `16bit` for every cell of every group (`x ∈ [0, X)`, `y ∈ [0, Y)`, `z ∈ [0, Z)`).
+ - Configuration parameters:
+   * `groups`: Group definitions separated by `;`. A single group definition is a list of values separated by `:`:
+      1. `name`: the group's name (used as prefix for every output channel and for runtime curve selection).
+      2. `X`: the first axis extent (unsigned integer, must be > 0).
+      3. `Y`: the second axis extent.
+      4. `Z`: the third axis extent.
+      5. `n_mix_group`: the number of per-group mixin input channels. These are expected under the name `mixin_<name>_<j>`.
+      6. `n_off_group`: the number of per-group offset input channels. These are expected under the name `offset_<name>_<l>`.
+      7. `phase_x`: integer tick offset multiplier for the first axis. The effect curve index at cell `(x, y, z)` is `tick + phase_x*x + phase_y*y + phase_z*z`.
+      8. `phase_y`: integer tick offset multiplier for the second axis.
+      9. `phase_z`: integer tick offset multiplier for the third axis.
+      * Example (a single 3×2×6 group named `wash` with one per-group mixin, no per-group offset and a sweep along X): `wash:3:2:6:1:0:1:0:0`.
+   * `effect_curves`: Effect curve definitions separated by `;`. A single curve definition is a list of values separated by `:`:
+      1. `name`: human-readable name of the curve (informational).
+      2. `mode`: either `REPEAT` (curve loops forever) or `TRIGGER` (curve plays once when the normalized input delta exceeds `threshold` across the last `window` ticks).
+      3. `threshold`: `float` in `[0, 1]`, defaults to `0.1` if unused. Only consulted in `TRIGGER` mode.
+      4. `window`: unsigned integer count of previous update ticks used for the trigger-detection delta. Clamped to a minimum of `1`.
+      5. `samples`: comma-separated list of float samples in `[-1, 1]`. The sample count also defines the curve's duration in update ticks (40 Hz).
+      * Example (an eight-tick repeating sawtooth): `sweep:REPEAT:0.1:1:-1,-0.75,-0.5,-0.25,0,0.25,0.5,0.75`.
+   * `dimmer_curves`: Dimmer curve definitions separated by `;`. A single dimmer curve definition is a list of values separated by `:`:
+      1. `name`: human-readable name (informational).
+      2. `type`: either `LIN` (identity), `SIG` (steepened logistic centered at `0.5`) or `BEZIER`.
+      3. `params`: only required for `BEZIER` — four control-point y-values separated by `,` interpreted as the y coordinates of a cubic Bézier on `[0, 1] → [0, 1]` with `t = x` (so the control points define the response of a monotone y-interpolation along the normalized input).
+      * Example: `lin:LIN:` and `custom:BEZIER:0,0.1,0.9,1`.
+ - initial parameters:
+   * `active_effect` with value `<group>:<index>`: the effect curve index to activate on scene entry for the named group. The index is zero-based into the `effect_curves` list.
+   * `active_dimmer` with value `<group>:<index>`: the dimmer curve index to activate on scene entry.
+ - GUI update keys:
+   * `active_effect` with value `<group>:<index>`: switch the group's effect curve starting with the next update tick. Returns `false` if the group name or index is unknown.
+   * `active_dimmer` with value `<group>:<index>`: switch the group's dimmer curve starting with the next update tick.
+ - Notes
+   * Per-group signal flow: `f = clamp(dimmer / 65535 × ∏mixins + Σoffsets, 0, 1); out = clamp(f × effect_curve[idx], 0, 1); out = dimmer_curve(out) × 65535`.
+   * A `TRIGGER`-mode effect curve is not re-triggered until the input value has settled (`|delta| ≤ threshold` across the full window) and the curve has reached its last sample; otherwise the curve finishes and then holds its last sample.
+   * The internal tick counter is reset on scene activation; so are all per-cell trigger flags, trigger timestamps and value-window ring buffers.
+   * The acceptance performance budget for this filter is `≤ 3 ms` for 5 groups of `50×50×50` cells per `update()` call.
