@@ -226,8 +226,16 @@ Fans a single 16bit dimmer input per group out to an `X*Y*Z` grid of 16bit outpu
  - GUI update keys:
    * `active_effect` with value `<group>:<index>`: switch the group's effect curve starting with the next update tick. Returns `false` if the group name or index is unknown.
    * `active_dimmer` with value `<group>:<index>`: switch the group's dimmer curve starting with the next update tick.
+   * `pause_effect` with value `<group>`: pause the effect curve of the named group, holding the current sample. Returns `false` for `TRIGGER`-mode curves, already-paused curves and unknown groups.
+   * `resume_effect` with value `<group>`: resume playback of a paused effect curve. No-op (reported as success) if the group is not currently paused; returns `false` only for unknown groups. Switching the active effect curve via `active_effect` also implicitly resumes playback.
+ - update Messages for GUI (feedback from fish → editor):
+   * `parameter_key = "effect_state"`, `parameter_value = "<group>:<index>:<running|paused>"`
+   * `parameter_key = "dimmer_state"`, `parameter_value = "<group>:<index>"`
+
+   Fish emits these whenever a group's active curve or run-state changes so the show-mode UI widget can highlight the correct buttons and toggle the play/pause state.
  - Notes
    * Per-group signal flow: `f = clamp(dimmer / 65535 × ∏mixins + Σoffsets, 0, 1); out = clamp(f × effect_curve[idx], 0, 1); out = dimmer_curve(out) × 65535`.
    * A `TRIGGER`-mode effect curve is not re-triggered until the input value has settled (`|delta| ≤ threshold` across the full window) and the curve has reached its last sample; otherwise the curve finishes and then holds its last sample.
-   * The internal tick counter is reset on scene activation; so are all per-cell trigger flags, trigger timestamps and value-window ring buffers.
+   * `pause_effect` only applies to `REPEAT` curves. While paused, the filter keeps re-emitting the sample the curve last reached, so changes to the dimmer input or mixin/offset channels still propagate through the normal signal flow — only the effect-curve index is frozen. After `resume_effect`, playback picks up at the next sample, independent of how many ticks were spent paused.
+   * The internal tick counter and per-group virtual-time are reset on scene activation; so are all per-cell trigger flags, trigger timestamps, value-window ring buffers and pause flags.
    * The acceptance performance budget for this filter is `≤ 3 ms` for 5 groups of `50×50×50` cells per `update()` call.
