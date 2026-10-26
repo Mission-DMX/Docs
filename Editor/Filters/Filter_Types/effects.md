@@ -217,9 +217,11 @@ Fans a single 16bit dimmer input per group out to an `X*Y*Z` grid of 16bit outpu
       * Example (an eight-tick repeating sawtooth): `sweep:REPEAT:0.1:1:-1,-0.75,-0.5,-0.25,0,0.25,0.5,0.75`.
    * `dimmer_curves`: Dimmer curve definitions separated by `;`. A single dimmer curve definition is a list of values separated by `:`:
       1. `name`: human-readable name (informational).
-      2. `type`: either `LIN` (identity), `SIG` (steepened logistic centered at `0.5`) or `BEZIER`.
-      3. `params`: only required for `BEZIER` — four control-point y-values separated by `,` interpreted as the y coordinates of a cubic Bézier on `[0, 1] → [0, 1]` with `t = x` (so the control points define the response of a monotone y-interpolation along the normalized input).
-      * Example: `lin:LIN:` and `custom:BEZIER:0,0.1,0.9,1`.
+      2. `type`: either `LIN` (affine `f(x) = a·x + b`), `SIG` (steepened logistic centered at `0.5`) or `BEZIER`.
+      3. `params`: type-dependent and optional for `LIN`:
+         * `LIN` accepts the two coefficients `a,b` separated by `,`. If omitted (empty params field) the default is `a=1, b=0`, which reproduces the identity. The output is clipped to `[0, 1]` after evaluation.
+         * `BEZIER` requires exactly four control-point y-values separated by `,` interpreted as the y coordinates of a cubic Bézier on `[0, 1] → [0, 1]` with `t = x` (so the control points define the response of a monotone y-interpolation along the normalized input).
+      * Examples: `identity:LIN:` or `identity:LIN:1,0`, `halve:LIN:0.5,0`, `bias:LIN:0.6,0.2`, `custom:BEZIER:0,0.1,0.9,1`.
  - initial parameters:
    * `active_effect` with value `<group>:<index>`: the effect curve index to activate on scene entry for the named group. The index is zero-based into the `effect_curves` list.
    * `active_dimmer` with value `<group>:<index>`: the dimmer curve index to activate on scene entry.
