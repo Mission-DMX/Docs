@@ -45,14 +45,54 @@ Bézier) is applied for each output.
 
 ## Configuring the Filter
 
+The filter can be configured using four tabs (see the next image):
+ * Global Inputs (1)
+ * Dimmer Groups (2)
+ * Dimmer and Effect Curves (3)
+ * Recalls (4)
+
 ### Inputs Tab
+
+![Picture displays the global input tab.](images/dimmer_director-settings-global_input_tab.png "Global Inputs Tab")
+
+The gloabl inputs tab configures global mixins and offsets that are applied to all dimmer groups.
+A mixin is treated as a multiplication (where `255`, `65535`, and `1.0` are treated as `100%` for their respective data type) of the brightness.
+The offset brightness inputs are added.
+The number of mixin inputs can be controlled using (5) and offsets using (6).
+A summary ov available inputs is presented at (7).
 
 ### Groups Tab
 
-### Effects Tab
+![Picture displays the group settings tab.](images/dimmer_director-settings-groups_tab.png "Group Settings Tab")
 
-### Dimmer Curves Tab
+TODO explain tab
+
+### Curves Tab
+
+![Picture displays general over view over curves tab.](images/dimmer_director-settings-curves_overview.png "Curves Tab")
+
+TODO explain tab in general
+
+#### Effect Curves
+
+![Pictures displays effect curve editing.](images/dimmer_director-settings-curves_effects.png "Editing Effect Curves")
+
+TODO explain editing of effect curves
+
+#### Dimmer Curves
+
+![Picture displays dimmer curve editing.](images/dimmer_director-settings-curves_dimmer.png "Editing Dimmer Curves")
+
+TODO explain editing of dimmer curves
 
 ### Recalls Tab
 
+TODO explain recalls tab
+
+![Picture displays recalls list.](images/dimmer_director-settings-recalls_tab.png "Recalls Tab")
+
 ## Show UI Widget
+
+TODO create screenshot
+
+TODO explain usage of show UI widget
