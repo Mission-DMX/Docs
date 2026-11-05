@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Mission-DMX/docs/FormatSchemes/effect_preset_schema.json",
+  "title": "EffectPreset",
+  "description": "Format of a single effect preset file consumed by the property-based cue vfilter. Built-in presets live under src/resources/cuepresets/ and user presets under ~/.local/share/missionDMX/cuepresets/.",
+  "type": "object",
+  "required": ["name", "applies_for", "kf_requests"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Human-readable preset name shown in the editor. Also used as the filename stem when a user preset is saved."
+    },
+    "description": {
+      "type": "string",
+      "description": "Optional free-form description displayed in the preset editor."
+    },
+    "applies_for": {
+      "type": "string",
+      "description": "Which property this preset can be bound to.",
+      "enum": ["dimmer", "position", "colour", "gobo", "beam", "focus", "frost"]
+    },
+    "hints": {
+      "type": "array",
+      "description": "Optional parameters the preset exposes to the user. Each hint is referenced from kf_requests expressions by its id (e.g. {{ speed }}).",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "default"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Identifier used to reference this hint from a Jinja expression."
+          },
+          "type": {
+            "description": "Hint value kind. 'color' values are H,S,I strings (hue in [0,360), saturation and intensity in [0,1]).",
+            "enum": ["float", "int", "color"]
+          },
+          "default": {
+            "description": "Default value used when the user has not entered an override. Must match the declared type."
+          },
+          "min": {
+            "type": "number",
+            "description": "Optional inclusive lower bound for float/int hints."
+          },
+          "max": {
+            "type": "number",
+            "description": "Optional inclusive upper bound for float/int hints."
+          }
+        }
+      }
+    },
+    "kf_requests": {
+      "type": "array",
+      "description": "Ordered list of keyframe-request entries evaluated when the preset renders onto a step. Each entry advances the running time cursor by its 'duration' (in seconds). If the step is longer than the cumulative duration the list is repeated from the beginning; if it is shorter the list is truncated.",
+      "items": {
+        "type": "object",
+        "required": ["duration", "channels"],
+        "additionalProperties": false,
+        "properties": {
+          "duration": {
+            "type": "string",
+            "description": "Jinja expression that renders to the entry's length in seconds (float). May reference hint ids and use the math filters add, sub, mul, div, mod."
+          },
+          "channels": {
+            "type": "object",
+            "description": "Per-channel value expressions. Keys are channel names owned by the target property (e.g. 'brightness', 'pan_value', 'pan_curvesel', 'color', 'goboslot_0'). Values are Jinja expressions. Expressions resolving to an 'H,S,I' string are decoded as ColorHSI; otherwise they are treated as float.",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "name": "Circle",
+      "description": "This effect lets moving heads perform a circle rotation.",
+      "applies_for": "position",
+      "hints": [
+        {"id": "speed", "type": "float", "default": 60},
+        {"id": "size", "type": "float", "default": 1, "min": 0.0}
+      ],
+      "kf_requests": [
+        {"duration": "{{ speed }}", "channels": {
+          "pan_value": "0.0", "pan_curvesel": "1",
+          "tilt_value": "{{ size|mul(128) }}", "tilt_curvesel": "2"
+        }},
+        {"duration": "{{ speed }}", "channels": {
+          "pan_value": "{{ size|mul(128) }}", "pan_curvesel": "2",
+          "tilt_value": "{{ size|mul(255) }}", "tilt_curvesel": "1"
+        }},
+        {"duration": "{{ speed }}", "channels": {
+          "pan_value": "{{ size|mul(255) }}", "pan_curvesel": "1",
+          "tilt_value": "{{ size|mul(128) }}", "tilt_curvesel": "2"
+        }},
+        {"duration": "{{ speed }}", "channels": {
+          "pan_value": "128.0", "pan_curvesel": "2",
+          "tilt_value": "{{ size|mul(128) }}", "tilt_curvesel": "1"
+        }}
+      ]
+    }
+  ]
+}
