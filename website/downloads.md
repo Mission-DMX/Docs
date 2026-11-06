@@ -21,11 +21,12 @@ layout: page
         </a>
       </div>
       <div class="column col-4 col-md-6 col-sm-12">
-        <a href="">
+        <a href="{{ site.url }}/downloads/mdmx-os-factory.wic.xz">
           <div class="card card-link">
             <div class="card-body text-center my-4">
               <h5 class="text-bold">Embedded Image</h5>
               <p class="m-0">Run on bare metal!</p>
+              <p class="m-0"><small>See the <a href="{{ site.url }}/install-factory-image.html">installation guide</a>. Sparse map: <a href="{{ site.url }}/downloads/mdmx-os-factory.wic.bmap">.bmap</a></small></p>
             </div>
           </div>
         </a>
