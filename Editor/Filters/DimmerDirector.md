@@ -239,6 +239,12 @@ the matching number of cells.
 
 ## Show UI Widget
 
-TODO create screenshot
+![Screenshot of dimmer director control UI widget.](images/dimmer_director-show-widget.png "Show UI Widget")
 
-TODO explain usage of show UI widget
+For each dimmer group, the effect and dimmer curve can be selected.
+Above each curve, the curve can be applied to all groups.
+Recalls can be entered through the text box in the top left corner.
+On the right, the effect can be paused or resumed for a selected group.
+
+## Tipps and Tricks
+ * Always generate a neutral effect and dimmer curve
